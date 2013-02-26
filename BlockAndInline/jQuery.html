@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="script/jquery-1.4.1.js"></script>
+<script type="text/javascript">
+$(function(){	
+//var eleP=$("div > p")[0];
+//alert($("div > p")[0]);
+//alert(eleP.innerHTML);
+//alert($("input:radio")[0]);
+//    $(document.body).css( "background", "black" );
+	$("<div><p>appendTo</p></div>").appendTo("body");
+	$("<input type='checkbox'>").appendTo("body");			
+	})
+
+</script>
+
+<body>
+</head>
+<p>one</p>
+<div>
+  <p>two</p>
+</div>
+<p>three</p>
+<label for="radFond">
+  <input name="rad" id="radFond" type="radio" value="radio"/>
+  前端</label>
+<label for="radCoder">
+  <input name="rad" id="radCoder" type="radio" value="radio"/>
+  程序员</label>
+</body>
+</html>
