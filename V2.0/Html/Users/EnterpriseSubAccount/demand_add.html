@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li class="current_2"><a href="demand_list.html">需求</a></li>
+        <li><a href="position_1.html">招聘跟踪</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        需求<i> » </i>提交招聘需求
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <h3 class="font_black">提交招聘需求</h3>
+        </div>
+        <table class="table_form mg_b_20">
+          <colgroup>
+            <col width="100" />
+            <col width="320" />
+            <col width="100" />
+            <col />
+          </colgroup>
+          <tr>
+            <th>所属部门：</th>
+            <td colspan="3">市场部</td>
+          </tr>
+          <tr>
+            <th>申请人：</th>
+            <td colspan="3">李珊珊</td>
+          </tr>
+          <tr>
+            <th><span class="required">*</span>招聘负责人：</th>
+            <td colspan="3"><input type="text" class="input_text" /></td>
+          </tr>
+          <tr>
+            <th><span class="required">*</span>招聘理由：</th>
+            <td colspan="3"><textarea class="input_text" style="height:100px;width:600px;"></textarea></td>
+          </tr>
+          <tr>
+            <th>职位优先级：</th>
+            <td colspan="3"><div class="select_box" style="width:180px;"><select style="width:180px;"><option>一般</option><option>紧急</option><option>非常紧急</option></select></div></td>
+          </tr>
+          <tr>
+            <th><span class="required">*</span>职位名称：</th>
+            <td><input type="text" class="input_text" /></td>
+            <th><span class="required">*</span>招聘人数：</th>
+            <td><input type="text" class="input_text" /></td>
+          </tr>
+          <tr>
+            <th><span class="required">*</span>开始日期：</th>
+            <td><input type="text" class="input_text" /></td>
+            <th><span class="required">*</span>截止日期：</th>
+            <td><input type="text" class="input_text" /></td>
+          </tr>
+          <tr>
+            <th>工作经验：</th>
+            <td colspan="3"><div class="select_box" style="width:180px;"><select style="width:180px;"><option>不限</option><option>1~3年</option><option>3~5年</option></select></div></td>
+          </tr>
+          <tr>
+            <th><span class="required">*</span>职位要求：</th>
+            <td colspan="3"><textarea class="input_text" style="height:100px;width:600px;"></textarea></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td colspan="3">
+              <input type="button" class="input_button_blue" value="提交" />
+              <input type="button" class="input_button" value="取消" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_demand">需求</span></h4>
+        <ul>
+          <li><a href="demand_add.html" class="current">提交招聘需求</a></li>
+          <li><a href="demand_list.html">已提交的需求</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav" class="mg_t_30">
+        <li class="add_job"><a href="demand_add.html" class="current">提交新需求</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="candidate_entry"><a href="candidate_entry.html">上岗人员</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="companyinfo_1.html">公司信息</a></li>
+        <li><a href="accounts_1.html">账号管理</a></li>
+        <li class="current_2"><a href="setting_1.html">系统设置</a></li>
+        <li><a href="log_1.html">系统日志</a></li>
+        <li><a href="myaccount_1.html">我的帐户</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="myaccount_1.html">帐户设置</a></li>
+          <li><a href="myaccount_2.html">修改头像</a></li>
+          <li><a href="myaccount_3.html">修改密码</a></li>
+          <li><a href="myaccount_4.html">密码安全</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        系统设置<i> » </i>简历抓取设置
+      </div>
+      <div class="remind_block">
+        <p>从企业的招聘邮箱中自动抓取简历数据到系统中：</p>
+        <p>1.自动忽略邮箱中不是有效简历的邮件（如垃圾邮件，广告等）</p>
+        <p>2.邮箱中包含同一个求职者重复投递的简历时，系统导入时只保留一份</p>
+        <p>3.请您准确录入需要设置的信息</p>
+        <p>4.您可以添加多个招聘邮箱信息</p>
+        <span class="remind_close"></span>
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <div class="title_tab">
+            <ul>
+              <li class="current"><a href="demand_1.html">邮件导入</a></li>
+            </ul>
+          </div>
+          <input type="button" value="添加邮箱" class="input_button_green fr" onclick="addEmail()" />
+        </div>
+        <table class="common_table_tc zebra" id="table_list">
+          <tr>
+            <th class="first">招聘渠道</th>
+            <th class="left">邮箱</th>
+            <th class="left">接收邮件服务器</th>
+            <th class="left">发送邮件服务器（SMTP）</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td class="first">智联招聘</td>
+            <td class="left">hr_5i5j@bacic5i5j.com</td>
+            <td class="left">pop.bacic5i5j.com</td>
+            <td class="left">smtp.bacic5i5j.com</td>
+            <td><a href="javascript:addEmail()">编辑</a> <a href="?">删除</a></td>
+          </tr>
+          <tr>
+            <td class="first">智联招聘</td>
+            <td class="left">hr_5i5j@bacic5i5j.com</td>
+            <td class="left">pop.bacic5i5j.com</td>
+            <td class="left">smtp.bacic5i5j.com</td>
+            <td><a href="javascript:addEmail()">编辑</a> <a href="?">删除</a></td>
+          </tr>
+          <tr>
+            <td class="first">中华英才网</td>
+            <td class="left">jeffrey.yu@future-career.com.cn</td>
+            <td class="left">pop3.future-career.com.cn</td>
+            <td class="left">smtp.future-career.com.cn</td>
+            <td><a href="javascript:addEmail()">编辑</a> <a href="?">删除</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="admin">系统设置</span></h4>
+        <ul>
+          <li><a href="setting_1.html">存储空间</a></li>
+          <li><a href="setting_2.html">邮件群发设置</a></li>
+          <li><a href="setting_3.html">渠道设置</a></li>
+          <li class="current"><a href="setting_4.html">简历抓取设置</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<!--添加邮件开始-->
+<div id="addEmail" title="添加邮件">
+  <h4>招聘渠道</h4>
+  <table>
+    <tr>
+      <th>请选择招聘渠道：</th>
+      <td>
+        <div class="select_box">
+          <select><option>中华英才网</option><option>智联招聘</option></select>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <h4>服务器信息</h4>
+  <table>
+    <tr>
+      <th>接收邮件服务器：</th>
+      <td><input type="text" class="input_text" /></td>
+    </tr>
+    <tr>
+      <th>发送邮件服务器(SMTP)：</th>
+      <td><input type="text" class="input_text" /></td>
+    </tr>
+  </table>
+  <h4>登录信息</h4>
+  <table width="100%" class="tbl_td">
+    <tr>
+      <th>邮箱账号：</th>
+      <td><input type="text" class="input_text" /></td>
+    </tr>
+    <tr>
+      <th>邮箱密码：</th>
+      <td><input type="text" class="input_text" /></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><input type="button" value="添加" class="input_button_blue mg_t_10" /></td>
+    </tr>
+  </table>
+</div>
+<!--添加邮件结束-->
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+function addEmail(){
+	$("#addEmail").dialog({
+		bgiframe: true, 
+		width: 500,
+		modal:true
+   });
+}
+</script>

@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li class="current_2"><a href="kpi_1.html">KPI</a></li>
+        <li><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        KPI<i> » </i>KPI报表
+      </div>
+      <h2 class="title">招聘需求报表</h2>
+      <div class="tbl_block" style="background:#f6f6f6">
+        <div class="toolbar">
+          <div class="fl" style="margin-top:2px">
+            <div class="select_box">
+              <select class="select floatl"><option>人事总监</option><option>人事经理</option><option>人事专员</option></select>
+            </div>
+            <div class="select_box">
+              <select class="select floatl"><option>全部</option><option>高云霄</option><option>刘同</option></select>
+            </div>
+            <input type="text" class="input_text floatl" style="width:120px" value="起始时间" info="起始时间" onfocus="delInfo(this)" onblur="addInfo(this)" />
+            <span class="floatl">-</span>
+            <input type="text" class="input_text floatl" style="width:120px" value="截止时间" info="截止时间" onfocus="delInfo(this)" onblur="addInfo(this)" />
+            <input type="button" class="input_button_search" value="" />
+            <input type="button" class="input_button_s" value="重置" />
+          </div>
+        </div>
+        <div class="clearfix state_detail_block">
+          <div class="state">
+            <div id="chart_demand" style="width:350px;height:205px;"></div>
+            <div class="btn">
+              <a href="javascript:exportSelect()" class="button_kpi"><i class="excel">导出Excel</i></a>
+            </div>
+          </div>
+          <div id="detail_table">
+            <div id="div_state_1" class="state_div" style="display:block">
+              <h5>新需求：<span>12个</span></h5>
+              <table class="common_table_tc">
+                  <colgroup>
+                    <col />
+                    <col width="85" />
+                    <col width="110" />
+                  </colgroup>
+                  <tr>
+                    <th class="even first">职位名称</th>
+                    <th class="even">申请人</th>
+                    <th class="even">提交时间</th>
+                  </tr>
+              </table>
+              <div class="state_table">
+                <table class="common_table_tc zebra" id="table_list">
+                  <colgroup>
+                    <col />
+                    <col width="85" />
+                    <col width="110" />
+                  </colgroup>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div id="div_state_2" class="state_div">
+              <h5>批准的需求：<span>5个</span></h5>
+              <table class="common_table_tc">
+                  <colgroup>
+                    <col />
+                    <col width="120" />
+                    <col width="90" />
+                    <col width="110" />
+                  </colgroup>
+                  <tr>
+                    <th class="even first">职位名称</th>
+                    <th class="even left">申请人</th>
+                    <th class="even">操作人</th>
+                    <th class="even">操作时间</th>
+                  </tr>
+              </table>
+              <div class="state_table">
+                <table class="common_table_tc zebra" id="table_list">
+                  <colgroup>
+                    <col />
+                    <col width="120" />
+                    <col width="90" />
+                    <col width="110" />
+                  </colgroup>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div id="div_state_3" class="state_div">
+              <h5>搁置的需求：<span>6个</span></h5>
+              <table class="common_table_tc">
+                  <colgroup>
+                    <col />
+                    <col width="120" />
+                    <col width="90" />
+                    <col width="110" />
+                  </colgroup>
+                  <tr>
+                    <th class="even first">职位名称</th>
+                    <th class="even left">申请人</th>
+                    <th class="even">操作人</th>
+                    <th class="even">操作时间</th>
+                  </tr>
+              </table>
+              <div class="state_table">
+                <table class="common_table_tc zebra" id="table_list">
+                  <colgroup>
+                    <col />
+                    <col width="120" />
+                    <col width="90" />
+                    <col width="110" />
+                  </colgroup>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div id="div_state_4" class="state_div">
+              <h5>拒绝的需求：<span>3个</span></h5>
+              <table class="common_table_tc">
+                  <colgroup>
+                    <col />
+                    <col width="120" />
+                    <col width="90" />
+                    <col width="110" />
+                  </colgroup>
+                  <tr>
+                    <th class="even first">职位名称</th>
+                    <th class="even left">申请人</th>
+                    <th class="even">操作人</th>
+                    <th class="even">操作时间</th>
+                  </tr>
+              </table>
+              <div class="state_table">
+                <table class="common_table_tc zebra" id="table_list">
+                  <colgroup>
+                    <col />
+                    <col width="120" />
+                    <col width="90" />
+                    <col width="110" />
+                  </colgroup>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                  <tr>
+                    <td class="first">金融猎头顾问_1</td>
+                    <td class="left"><span class="gray">销售部_李大强</span></td>
+                    <td>王丽敏</td>
+                    <td>2012-04-07</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<!--导出选择开始-->
+<div id="exportSelect" title="系统职位数据">
+  <ul class="clearfix">
+    <li><input type="checkbox" name="ListItem" class="checkbox" /><label class="label">新需求</label></li>
+    <li><input type="checkbox" name="ListItem" class="checkbox" /><label class="label">批准的</label></li>
+    <li><input type="checkbox" name="ListItem" class="checkbox" /><label class="label">搁置的</label></li>
+    <li><input type="checkbox" name="ListItem" class="checkbox" /><label class="label">拒绝的</label></li>
+  </ul>
+  <div class="all_check"><input type="checkbox" id="AllCheck" class="checkbox" /><label class="label">全选</label></div>
+  <div class="clearfix tc mg_t_10">
+    <a href="javascript:void(0)" class="button_kpi"><i class="export_1">导出数据值</i></a>
+    <a href="javascript:void(0)" class="button_kpi"><i class="export_2">导出数据内容</i></a>
+  </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript" src="../../../Scripts/highcharts.js"></script>
+<script type="text/javascript">
+var chart;
+$(function() {
+	//求职者信息
+	//招聘需求
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'chart_demand',
+			type: 'column',
+			backgroundColor:'#f6f6f6'
+		},
+		title: {
+			text: ''
+		},
+		xAxis: {
+			categories: ['新需求','批准的','搁置的','拒绝的'],
+			tickWidth: 0,  
+			lineWidth:0   
+		},
+		yAxis: {
+			min: 0,
+			title: {
+				text: ''
+			}
+		},
+		legend: {enabled:false},
+		tooltip: {
+			formatter: function() {
+				return '<b>'+ this.x +'</b>: '+ Highcharts.numberFormat(this.y, 0, ',') +' 个)';
+			}
+		},
+		plotOptions: {
+			column: {
+				pointWidth: 25,    
+				borderWidth: 0,
+				cursor: 'pointer',
+				shadow: false,
+				borderRadius:3,
+				events: {   
+					  click: function(e) {
+						  $(".state_div").hide();
+						  $("#" + e.point.divstate).show();
+
+					  }
+				}
+			}
+		},
+		series: [{
+			data: [{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 75, 0)']]},'y':10,divstate: 'div_state_1'}, 
+				   {color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},'y':25,divstate: 'div_state_2'}, 
+				   {color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 75, 0)']]},'y':35,divstate: 'div_state_3'},
+				   {color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},'y':18,divstate: 'div_state_4'}]
+		}]
+	});
+	
+});	
+
+
+function exportSelect(){
+	$("#exportSelect").dialog({
+		bgiframe: true, 
+		width: 400,
+		modal:true
+   });
+}
+</script>

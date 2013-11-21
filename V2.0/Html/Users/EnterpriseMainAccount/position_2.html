@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li class="current_2"><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        职位<i> » </i>职位搜索
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <div class="fl">
+            <div class="select_box">
+              <select class="select floatl"><option>请选择公司</option><option>腾讯(深圳)股份有限公司</option><option>腾讯(北京)股份有限公司</option></select>
+            </div>
+            <div class="select_box">
+              <select class="select floatl"><option>请选择部门</option><option>市场部</option><option>开发部</option></select>
+            </div>
+            <div class="keywords_input_box flb">
+              <input type="text" value="请输入关键字" info="请输入关键字" onfocus="delInfo(this)" onblur="addInfo(this)" />
+              <span cid="000001">全文</span>
+              <ul>
+                <li cid="000001">全文</li>
+                <li cid="000002">项目经理</li>
+                <li cid="000003">职位名称</li>
+                <li cid="000004" class="last">职位编号</li>
+              </ul>
+            </div>
+            <input type="button" class="input_button_search" value="" />
+            <input type="button" class="input_button_s" value="重置" />
+          </div>
+          <div id="view_as">
+            <span id="view_as_list" class="on" title="列表"></span>
+            <span id="view_as_detail" title="详情"></span>
+          </div>
+        </div>
+        <table class="common_table_tc zebra">
+          <colgroup>
+            <col width="40" />
+            <col width="90" />
+            <col />
+            <col width="95" />
+            <col width="95" />
+            <col width="80" />
+            <col width="65" />
+            <col width="65" />
+            <col width="80" />
+            <col width="80" />
+            <col width="80" />
+            <col width="30" />
+          </colgroup>
+          <tr>
+            <th>选择</th>
+            <th class="left">
+              <select class="select_th">
+                <option>全部状态</option><option>已发布</option><option>已完成</option><option>已暂停</option>
+                <option>草稿箱</option><option>已过期</option><option>已删除</option>
+              </select>
+            </th>
+            <th class="left">职位名称</th>
+            <th>发布日期</th>
+            <th><select class="select_th"><option>截止日期</option><option>升序</option><option>降序</option></select></th> 
+            <th>工作地点</th>
+            <th>招聘人数</th>
+            <th>应聘人数</th>
+            <th>项目经理</th> 
+            <th>创建人</th>
+            <th>操作</th>
+            <th></th>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" /></td>
+            <td class="left">已发布</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>2012-01-01</td>
+            <td>2013-01-01</td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">45</a></td>
+            <td>李丽</td>
+            <td>杨丽坤</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_edit.html" class="position_edit" title="编辑"></a>
+                <a href="position_print.html" class="position_pdf" title="打印职位"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="12" class="tr_td_detail description_1">
+              <dl class="clearfix">
+                <dt>职位编号：</dt>
+                <dd><span class="mg_r">2000112233</span> <span class="mg_r">学历要求：本科</span><span class="mg_r">工作经验：3-5年</span><span>职位类型：全职</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>公司名称：</dt>
+                <dd><span class="mg_r">腾讯（北京）科技有限公司</span><span class="mg_r"></span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>所属部门：</dt>
+                <dd>市场部</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>渠道同步：</dt>
+                <dd class="channel_synchro"><span class="zhilian">智联</span><span class="wuyou">前程无忧</span><span class="chinahr">中华英才</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位描述：</dt>
+                <dd>职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button_blue" onclick="window.location.href='position_candidate.html'" value="推荐候选人" />
+                <input type="button" class="input_button_green_l" onclick="window.location.href='position_info_3.html'" value="改变职位状态" /> 
+                <input type="button" class="input_button_green" onclick="window.location.href='position_info_4.html'" value="执行团队" />
+                <input type="button" class="input_button" onclick="window.location.href='position_info_6.html'" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_7.html'" value="项目支出" />
+                <input type="button" class="input_button" value="复制职位" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_8.html'" value="系统日志" />
+              </div>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" /></td>
+            <td class="left">已发布</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>2012-01-01</td>
+            <td>2013-01-01</td>
+            <td>齐齐哈尔</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">45</a></td>
+            <td>李丽</td>
+            <td>杨丽坤</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_edit.html" class="position_edit" title="编辑"></a>
+                <a href="position_print.html" class="position_pdf" title="打印职位"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="12" class="tr_td_detail description_1">
+              <dl class="clearfix">
+                <dt>职位编号：</dt>
+                <dd><span class="mg_r">2000112233</span> <span class="mg_r">学历要求：本科</span><span class="mg_r">工作经验：3-5年</span><span>职位类型：全职</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>公司名称：</dt>
+                <dd><span class="mg_r">腾讯（北京）科技有限公司</span><span class="mg_r"></span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>所属部门：</dt>
+                <dd>市场部</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>渠道同步：</dt>
+                <dd class="channel_synchro"><span class="zhilian">智联</span><span class="wuyou">前程无忧</span><span class="chinahr">中华英才</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位描述：</dt>
+                <dd>职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button_blue" onclick="window.location.href='position_candidate.html'" value="推荐候选人" />
+                <input type="button" class="input_button_green_l" onclick="window.location.href='position_info_3.html'" value="改变职位状态" /> 
+                <input type="button" class="input_button_green" onclick="window.location.href='position_info_4.html'" value="执行团队" />
+                <input type="button" class="input_button" onclick="window.location.href='position_info_6.html'" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_7.html'" value="项目支出" />
+                <input type="button" class="input_button" value="复制职位" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_8.html'" value="系统日志" />
+              </div>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" /></td>
+            <td class="left">已发布</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>2012-01-01</td>
+            <td>2013-01-01</td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">45</a></td>
+            <td>李丽</td>
+            <td>杨丽坤</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_edit.html" class="position_edit" title="编辑"></a>
+                <a href="position_print.html" class="position_pdf" title="打印职位"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="12" class="tr_td_detail description_1">
+              <dl class="clearfix">
+                <dt>职位编号：</dt>
+                <dd><span class="mg_r">2000112233</span> <span class="mg_r">学历要求：本科</span><span class="mg_r">工作经验：3-5年</span><span>职位类型：全职</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>公司名称：</dt>
+                <dd><span class="mg_r">腾讯（北京）科技有限公司</span><span class="mg_r"></span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>所属部门：</dt>
+                <dd>市场部</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>渠道同步：</dt>
+                <dd class="channel_synchro"><span class="zhilian">智联</span><span class="wuyou">前程无忧</span><span class="chinahr">中华英才</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位描述：</dt>
+                <dd>职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button_blue" onclick="window.location.href='position_candidate.html'" value="推荐候选人" />
+                <input type="button" class="input_button_green_l" onclick="window.location.href='position_info_3.html'" value="改变职位状态" /> 
+                <input type="button" class="input_button_green" onclick="window.location.href='position_info_4.html'" value="执行团队" />
+                <input type="button" class="input_button" onclick="window.location.href='position_info_6.html'" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_7.html'" value="项目支出" />
+                <input type="button" class="input_button" value="复制职位" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_8.html'" value="系统日志" />
+              </div>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" /></td>
+            <td class="left">已发布</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>2012-01-01</td>
+            <td>2013-01-01</td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">45</a></td>
+            <td>李丽</td>
+            <td>杨丽坤</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_edit.html" class="position_edit" title="编辑"></a>
+                <a href="position_print.html" class="position_pdf" title="打印职位"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="12" class="tr_td_detail description_1">
+              <dl class="clearfix">
+                <dt>职位编号：</dt>
+                <dd><span class="mg_r">2000112233</span> <span class="mg_r">学历要求：本科</span><span class="mg_r">工作经验：3-5年</span><span>职位类型：全职</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>公司名称：</dt>
+                <dd><span class="mg_r">腾讯（北京）科技有限公司</span><span class="mg_r"></span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>所属部门：</dt>
+                <dd>市场部</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>渠道同步：</dt>
+                <dd class="channel_synchro"><span class="zhilian">智联</span><span class="wuyou">前程无忧</span><span class="chinahr">中华英才</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位描述：</dt>
+                <dd>职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button_blue" onclick="window.location.href='position_candidate.html'" value="推荐候选人" />
+                <input type="button" class="input_button_green_l" onclick="window.location.href='position_info_3.html'" value="改变职位状态" /> 
+                <input type="button" class="input_button_green" onclick="window.location.href='position_info_4.html'" value="执行团队" />
+                <input type="button" class="input_button" onclick="window.location.href='position_info_6.html'" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_7.html'" value="项目支出" />
+                <input type="button" class="input_button" value="复制职位" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_8.html'" value="系统日志" />
+              </div>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" /></td>
+            <td class="left">已发布</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>2012-01-01</td>
+            <td>2013-01-01</td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">45</a></td>
+            <td>李丽</td>
+            <td>杨丽坤</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_edit.html" class="position_edit" title="编辑"></a>
+                <a href="position_print.html" class="position_pdf" title="打印职位"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="12" class="tr_td_detail description_1">
+              <dl class="clearfix">
+                <dt>职位编号：</dt>
+                <dd><span class="mg_r">2000112233</span> <span class="mg_r">学历要求：本科</span><span class="mg_r">工作经验：3-5年</span><span>职位类型：全职</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>公司名称：</dt>
+                <dd><span class="mg_r">腾讯（北京）科技有限公司</span><span class="mg_r"></span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>所属部门：</dt>
+                <dd>市场部</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>渠道同步：</dt>
+                <dd class="channel_synchro"><span class="zhilian">智联</span><span class="wuyou">前程无忧</span><span class="chinahr">中华英才</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位描述：</dt>
+                <dd>职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button_blue" onclick="window.location.href='position_candidate.html'" value="推荐候选人" />
+                <input type="button" class="input_button_green_l" onclick="window.location.href='position_info_3.html'" value="改变职位状态" /> 
+                <input type="button" class="input_button_green" onclick="window.location.href='position_info_4.html'" value="执行团队" />
+                <input type="button" class="input_button" onclick="window.location.href='position_info_6.html'" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_7.html'" value="项目支出" />
+                <input type="button" class="input_button" value="复制职位" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_8.html'" value="系统日志" />
+              </div>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" /></td>
+            <td class="left">已发布</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>2012-01-01</td>
+            <td>2013-01-01</td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">45</a></td>
+            <td>李丽</td>
+            <td>杨丽坤</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_edit.html" class="position_edit" title="编辑"></a>
+                <a href="position_print.html" class="position_pdf" title="打印职位"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="12" class="tr_td_detail description_1">
+              <dl class="clearfix">
+                <dt>职位编号：</dt>
+                <dd><span class="mg_r">2000112233</span> <span class="mg_r">学历要求：本科</span><span class="mg_r">工作经验：3-5年</span><span>职位类型：全职</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>公司名称：</dt>
+                <dd><span class="mg_r">腾讯（北京）科技有限公司</span><span class="mg_r"></span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>所属部门：</dt>
+                <dd>市场部</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>渠道同步：</dt>
+                <dd class="channel_synchro"><span class="zhilian">智联</span><span class="wuyou">前程无忧</span><span class="chinahr">中华英才</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位描述：</dt>
+                <dd>职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button_blue" onclick="window.location.href='position_candidate.html'" value="推荐候选人" />
+                <input type="button" class="input_button_green_l" onclick="window.location.href='position_info_3.html'" value="改变职位状态" /> 
+                <input type="button" class="input_button_green" onclick="window.location.href='position_info_4.html'" value="执行团队" />
+                <input type="button" class="input_button" onclick="window.location.href='position_info_6.html'" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_7.html'" value="项目支出" />
+                <input type="button" class="input_button" value="复制职位" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_8.html'" value="系统日志" />
+              </div>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" /></td>
+            <td class="left">已发布</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>2012-01-01</td>
+            <td>2013-01-01</td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">45</a></td>
+            <td>李丽</td>
+            <td>杨丽坤</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_edit.html" class="position_edit" title="编辑"></a>
+                <a href="position_print.html" class="position_pdf" title="打印职位"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="12" class="tr_td_detail description_1">
+              <dl class="clearfix">
+                <dt>职位编号：</dt>
+                <dd><span class="mg_r">2000112233</span> <span class="mg_r">学历要求：本科</span><span class="mg_r">工作经验：3-5年</span><span>职位类型：全职</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>公司名称：</dt>
+                <dd><span class="mg_r">腾讯（北京）科技有限公司</span><span class="mg_r"></span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>所属部门：</dt>
+                <dd>市场部</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>渠道同步：</dt>
+                <dd class="channel_synchro"><span class="zhilian">智联</span><span class="wuyou">前程无忧</span><span class="chinahr">中华英才</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位描述：</dt>
+                <dd>职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button_blue" onclick="window.location.href='position_candidate.html'" value="推荐候选人" />
+                <input type="button" class="input_button_green_l" onclick="window.location.href='position_info_3.html'" value="改变职位状态" /> 
+                <input type="button" class="input_button_green" onclick="window.location.href='position_info_4.html'" value="执行团队" />
+                <input type="button" class="input_button" onclick="window.location.href='position_info_6.html'" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_7.html'" value="项目支出" />
+                <input type="button" class="input_button" value="复制职位" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_8.html'" value="系统日志" />
+              </div>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" /></td>
+            <td class="left">已发布</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>2012-01-01</td>
+            <td>2013-01-01</td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">45</a></td>
+            <td>李丽</td>
+            <td>杨丽坤</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_edit.html" class="position_edit" title="编辑"></a>
+                <a href="position_print.html" class="position_pdf" title="打印职位"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="12" class="tr_td_detail description_1">
+              <dl class="clearfix">
+                <dt>职位编号：</dt>
+                <dd><span class="mg_r">2000112233</span> <span class="mg_r">学历要求：本科</span><span class="mg_r">工作经验：3-5年</span><span>职位类型：全职</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>公司名称：</dt>
+                <dd><span class="mg_r">腾讯（北京）科技有限公司</span><span class="mg_r"></span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>所属部门：</dt>
+                <dd>市场部</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>渠道同步：</dt>
+                <dd class="channel_synchro"><span class="zhilian">智联</span><span class="wuyou">前程无忧</span><span class="chinahr">中华英才</span></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位描述：</dt>
+                <dd>职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描述职位描</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button_blue" onclick="window.location.href='position_candidate.html'" value="推荐候选人" />
+                <input type="button" class="input_button_green_l" onclick="window.location.href='position_info_3.html'" value="改变职位状态" /> 
+                <input type="button" class="input_button_green" onclick="window.location.href='position_info_4.html'" value="执行团队" />
+                <input type="button" class="input_button" onclick="window.location.href='position_info_6.html'" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_7.html'" value="项目支出" />
+                <input type="button" class="input_button" value="复制职位" /> 
+                <input type="button" class="input_button" onclick="window.location.href='position_info_8.html'" value="系统日志" />
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_position">职位</span></h4>
+        <ul>
+          <li><a href="position_1.html">职位搜索</a></li>
+          <li><a href="position_2.html" class="current">我的职位</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+</body>
+</html>

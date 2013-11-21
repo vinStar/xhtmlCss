@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li class="current_2"><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        设置<i> » </i>Offer模板
+      </div>
+      <div class="tab_button">
+         <a href="setting_5.html" class="input_button">Offer模板</a>
+         <a href="setting_5_add.html" class="input_button_blue">添加模板</a>
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <h3 class="font_black">添加职位模板</h3>
+        </div>
+        <table class="table_form mg_b_15">
+            <colgroup>
+              <col width="100" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>模板名称：</th>
+              <td><input type="text" value="如：销售模板Offer" info="如：销售模板Offer" onfocus="delInfo(this)" onblur="addInfo(this)" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>模板内容：</th>
+              <td>
+                <textarea class="input_text" name="txtContent" id="txtContent" onfocus="objcontent=this" style="width:700px; height:280px;"></textarea>
+                <p class="mg_t_10">
+                  <input type="button" class="button" onclick="ecode('[姓名]')" value="插入应聘者姓名" />
+                  <input type="button" class="button" onclick="ecode('[公司名]')" value="插入公司名称" />
+                  <input type="button" class="button" onclick="ecode('[职位名]')" value="插入职位名称" />
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_setting">设置</span></h4>
+        <ul>
+          <li><a href="setting_1.html">职位模板</a></li>
+          <li><a href="setting_2.html">面试流程</a></li>
+          <li><a href="setting_3.html">题库</a></li>
+          <li><a href="setting_4.html">专业测试</a></li>
+          <li><a href="setting_5.html" class="current">Offer模板</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+function ecode(text){
+	objcontent.value  += text;
+	objcontent.focus();
+}
+</script>

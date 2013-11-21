@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li class="current_2"><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        职位<i> » </i>职位搜索<i> » </i>职位详情
+      </div>
+      <div class="highlight">
+        <ul class="clearfix">
+          <li>职位编号：<span class="gray">0000000015</span></li>
+          <li>职位名称：<span class="gray">技术总监</span></li>
+          <li>职位状态：<span class="gray">已发布</span></li>
+          <li>用人部门：<span class="gray">市场部</span></li>
+          <li>项目经理：<span class="gray">陈经理</span></li>
+          <li>开始日期：<span class="gray">2012-2-18</span></li>
+          <li>截止日期：<span class="gray">2013-2-18</span></li>
+          <li>已申请人数：<span class="gray">2</span></li>
+          <li>招聘人数：<span class="gray">2</span>/5人</li>
+          <li class="channel_display"><em class="fl">同步渠道：</em><span class="ch_zhilian" title="智联招聘"></span><span class="ch_51" title="前程无忧"></span><span class="ch_chinahr" title="中华英才网"></span><span class="ch_58" title="58同城"></span></li>
+        </ul>
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <h3 class="font_black">专业测试</h3>
+          <div class="fr">
+            <input type="text" class="input_text floatl" value="请输入姓名" info="请输入姓名" onfocus="delInfo(this)" onblur="addInfo(this)" /><input type="button" class="input_button_search flb" value="" />
+          </div>
+        </div>
+        <table class="common_table_tc zebra" id="table_list">
+          <colgroup>
+            <col width="40" />
+            <col width="80" />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+          </colgroup>
+          <tr>
+            <th>选择</th>
+            <th>姓名</th>
+            <th>申请状态</th>
+            <th>问卷状态</th> 
+            <th>问卷发送时间</th>
+            <th>问卷提交时间</th>
+            <th>得分</th>
+            <th>总分</th>
+            <th>试卷结果</th>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="ListItem" /></td>
+            <td><a href="candidate_preview.html" target="_blank">欧阳宏</a></td>
+            <td>新候选人</td>
+            <td><span class="red">未答</span></td>
+            <td>2013-02-12</td>
+            <td>2013-02-13 17:54</td>
+            <td></td>
+            <td>100</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="ListItem" /></td>
+            <td><a href="candidate_preview.html" target="_blank">欧阳宏</a></td>
+            <td>一面</td>
+            <td><span class="green">已答</span></td>
+            <td>2013-02-12</td>
+            <td>2013-02-13 17:54</td>
+            <td><em class="red">80</em></td>
+            <td>100</td>
+            <td><a href="applicant_questionnaire_detail.html" target="_blank">查看</a></td>
+          </tr>
+        </table>
+        <div class="all_after_table clearfix">
+          <div class="fl">
+            <input type="checkbox" class="checkbox" id="AllCheck" /><label class="label">全选</label>
+            <input type="button" class="input_button_green_l" onclick="openSuccessMsg('成功', '已将所选候选人移至发给用人部门阶段！', 300, 150, 'position_app_2.html')" value="发给用人部门" />
+            <input type="button" class="input_button_green" onclick="openSuccessMsg('成功', '已将所选候选人移至一面阶段！', 300, 150, 'position_app_3.html')" value="一面" />
+            <input type="button" class="input_button_green" onclick="openSuccessMsg('成功', '已将所选候选人移至二面阶段！', 300, 150, 'position_app_4.html')" value="二面" />
+            <input type="button" class="input_button_green" onclick="openSuccessMsg('成功', '已将所选候选人移至背景调查阶段！', 300, 150, 'position_app_7.html')" value="背景调查" />
+            <input type="button" class="input_button_green" onclick="openSuccessMsg('成功', '已将所选候选人移至发Offer阶段！', 300, 150, 'position_app_5.html')" value="发Offer" />
+            <input type="button" class="input_button" value="拒绝" />
+            <input type="button" class="input_button" value="搁置" />
+            <input type="button" class="input_button" value="比较" />
+            <input type="button" class="input_button_blue_l" onclick="export_test_results()" value="导出测试结果" />
+          </div>
+          <div class="fr page">翻页处</div>
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_position">职位信息</span></h4>
+        <ul id="position_info_nav">
+          <li><a href="position_info_1.html">基础信息</a></li>
+          <li><a href="position_info_2.html">渠道同步</a></li>
+          <li><a href="position_info_3.html">改变职位状态</a></li>
+          <li><a href="position_info_4.html">执行团队</a></li>
+          <li><a href="position_info_5.html">发送邮件</a></li>
+          <li id="position_nav_more"><a href="javascript:void(0)">更多 »</a></li>
+          <li id="position_nav_more_1" class="undis"><a href="position_info_6.html">沟通记录</a></li>
+          <li id="position_nav_more_2" class="undis"><a href="position_info_7.html">项目支出</a></li>
+          <li id="position_nav_more_3" class="undis"><a href="position_info_8.html">系统日志</a></li>
+        </ul>
+      </div>
+      <div class="left_nav">
+        <h4 class="mg_t_10"><span class="left_nav_applicant">申请人</span></h4>
+        <ul class="clearfix">
+          <li><a href="position_app_1.html">新候选人</a></li>
+          <li><a href="position_app_2.html">发给用人部门</a></li>
+          <li><a href="position_app_3.html">一面</a></li>
+          <li><a href="position_app_4.html">二面</a></li>
+          <li><a href="position_app_5.html">发Offer</a></li>
+          <li><a href="position_app_6.html" class="current">专业测试</a></li>
+          <li><a href="position_app_7.html">背景调查</a></li>
+          <li><a href="position_app_8.html">上岗</a></li>
+          <li><a href="position_app_9.html" class="bg_none">搁置</a></li>
+          <li><a href="position_app_10.html" class="bg_none">拒绝</a></li>
+<li><a href="position_candidate.html">推荐候选人</a></li>
+        </ul>
+      </div>
+      <div class="left_nav" id="applicant_operation_nav">
+        <h4 class="mg_t_10"><span class="left_nav_shortcut">快捷方式</span></h4>
+        <div class="undis">
+          <ul id="operation_nav">
+            <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+            <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+            <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+            <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+            <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<!--导出专业测试结果-->
+<div id="export_test_results" class="applicant_dialog" title="导出测试结果">
+  <h4>候选人阶段选择</h4>
+  <ul class="clearfix">
+    <li><input type="checkbox" class="checkbox" name="exportTestResultsItem" /><label>新候选人</label></li>
+    <li><input type="checkbox" class="checkbox" name="exportTestResultsItem" /><label>一面</label></li>
+    <li><input type="checkbox" class="checkbox" name="exportTestResultsItem" /><label>二面</label></li>
+    <li><input type="checkbox" class="checkbox" name="exportTestResultsItem" /><label>发Offer</label></li>
+    <li><input type="checkbox" class="checkbox" name="exportTestResultsItem" /><label>背景调查</label></li>
+    <li><input type="checkbox" class="checkbox" name="exportTestResultsItem" /><label>上岗</label></li>
+    <li><input type="checkbox" class="checkbox" name="exportTestResultsItem" /><label>搁置</label></li>
+    <li><input type="checkbox" class="checkbox" name="exportTestResultsItem" /><label>拒绝</label></li>
+  </ul>
+  <h4>测试结果</h4>
+  <ul class="clearfix">
+    <li><input type="checkbox" class="checkbox" /><label>已答</label></li>
+    <li><input type="checkbox" class="checkbox" /><label>未答</label></li>
+  </ul>
+  <p><input type="checkbox" class="checkbox" id="AllCheck" /><label class="label">全选</label><input type="button" class="input_button_blue_l" value="导出测试结果" /></p>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript" src="../../../Scripts/applicant.js"></script>

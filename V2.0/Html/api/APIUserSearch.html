@@ -1,0 +1,101 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>API用户列表</title>
+<link rel="stylesheet" type="text/css" href="../../Style/Common.css"/>
+<link rel="stylesheet" type="text/css" href="../../Style/Enterprise/style.css"/>
+<link rel="stylesheet" type="text/css" href="../../Style/JQuery-ui.css"/>
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1> </h1>
+    <div id="nav">
+      <ul>
+        <li class="current_2"><a href="#">API</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black"> <span class="local">当前位置</span> API<i> » </i>API用户列表 </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <div class="fl">
+            <input type="text" class="input_text" value="请输入公司名" info="请输入公司名" onFocus="delInfo(this)" onBlur="addInfo(this)" />
+            <input class="input_text"  type="text" value="请输入用户名" info="请输入用户名" onFocus="delInfo(this)" onBlur="addInfo(this)" />
+            <input type="button" class="input_button_search" value="" />
+            <input type="button" class="input_button_s" value="重置" />
+          </div>
+          <div id="view_as"> <span id="view_as_list" class="on" title="列表"></span> <span id="view_as_detail" title="详情"></span> </div>
+        </div>
+        <table class="common_table_tc zebra">
+          <colgroup>
+          <col />
+          <col width="95" />
+          <col width="80" />
+          <col width="150" />
+          <col width="65" />
+          <col width="65" />
+          <col width="80" />
+          <col width="80" />
+          <col width="80" />
+          <col width="30" />
+          </colgroup>
+          <tr>
+            <th class="left">公司名称</th>
+            <th>用户名</th>
+            <th> 电话</th>
+            <th>邮箱</th>
+            <th>状态</th>
+            <th>购买次数</th>
+            <th>创建人</th>
+            <th>创建时间</th>
+            <th>操作</th>
+            <th></th>
+          </tr>
+          <tr class="tr_list">
+            <td class="left"><a href="User/position_info_1.html">职位名称（有权限的）</a></td>
+            <td>2012-01-01</td>
+            <td>2013-01-01</td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="User/position_app_1.html">45</a></td>
+            <td>张三三</td>
+            <td>2013-01-01</td>
+            <td><a>禁用</a><a>启用</a></td>
+            <td><img src="../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="9" class="tr_td_detail description_1"><dl class="clearfix">
+                <dt>地址：</dt>
+                <dd><span class="mg_r">2000112233</span> </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>公司介绍：</dt>
+                <dd><span class="mg_r">腾讯（北京）科技有限公司</span><span class="mg_r"></span></dd>
+              </dl></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_setting">API</span></h4>
+        <ul>
+          <li class="current"><a href="#" >用户列表</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="bottom"> <a href="User/?"><img src="../../Images/default/edgehire.png" /></a> <span>才智创鑫版权所有</span> </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../Scripts/base.js"></script>

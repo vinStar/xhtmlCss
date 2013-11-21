@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li class="current_2"><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        设置<i> » </i>职位模板
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <h3 class="font_black">面试流程</h3>
+        </div>
+        <table class="common_table_tc zebra" id="table_list">
+          <colgroup>
+            <col width="70" />
+            <col width="160" />
+            <col />
+            <col width="100" />
+          </colgroup>
+          <tr>
+            <th>流程序号</th>
+            <th class="left">名称</th>
+            <th class="left">备注</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="left">电话面试</td>
+            <td class="left">电话面试电话面试电话面试电话面试</td>
+            <td><a href="#interview_process_add">编辑</a> <a href="javascript:openConfirmMsg('删除确认', '确定要删除此信息吗？', 300, 150,'')">删除</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="left">笔试</td>
+            <td class="left">电话面试电话面试电话面试电话面试</td>
+            <td><a href="#interview_process_add">编辑</a> <a href="javascript:openConfirmMsg('删除确认', '确定要删除此信息吗？', 300, 150,'')">删除</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="left">面谈</td>
+            <td class="left">电话面试电话面试电话面试电话面试</td>
+            <td><a href="#interview_process_add">编辑</a> <a href="javascript:openConfirmMsg('删除确认', '确定要删除此信息吗？', 300, 150,'')">删除</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td class="left">复试</td>
+            <td class="left">电话面试电话面试电话面试电话面试</td>
+            <td><a href="#interview_process_add">编辑</a> <a href="javascript:openConfirmMsg('删除确认', '确定要删除此信息吗？', 300, 150,'')">删除</a></td>
+          </tr>
+        </table>
+        <table class="table_form mg_b_15" id="interview_process_add">
+          <colgroup>
+            <col width="80" />
+            <col />
+          </colgroup>
+          <tr>
+            <th>名称：</th>
+            <td><input type="text" class="input_text" /></td>
+          </tr>
+          <tr>
+            <th>备注：</th>
+            <td><textarea class="input_text" style="width:600px;height:100px;"></textarea></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" /></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_setting">设置</span></h4>
+        <ul>
+          <li><a href="setting_1.html">职位模板</a></li>
+          <li><a href="setting_2.html" class="current">面试流程</a></li>
+          <li><a href="setting_3.html">题库</a></li>
+          <li><a href="setting_4.html">专业测试</a></li>
+          <li><a href="setting_5.html">Offer模板</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>

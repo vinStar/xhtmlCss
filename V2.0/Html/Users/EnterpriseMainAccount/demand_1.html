@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li class="current_2"><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        需求<i> » </i>新招聘需求
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <div class="title_tab">
+            <ul>
+              <li class="current"><a href="demand_1.html">新需求</a></li>
+              <li><a href="demand_2.html">批准的</a></li>
+              <li><a href="demand_3.html">搁置的</a></li>
+              <li><a href="demand_4.html">拒绝的</a></li>
+            </ul>
+          </div>
+          <div id="view_as">
+            <span id="view_as_list" class="on" title="列表"></span>
+            <span id="view_as_detail" title="详情"></span>
+          </div>
+        </div>
+        <table class="common_table_tc zebra">
+          <colgroup>
+            <col />
+            <col width="180" />
+            <col width="100" />
+            <col width="80" />
+            <col width="80" />
+            <col width="85" />
+            <col width="90" />
+            <col width="105" />
+            <col width="150" />
+            <col width="30" />
+          </colgroup>
+          <tr>
+            <th class="first">招聘职位</th>
+            <th class="left">用人部门</th>
+            <th>申请人</th>
+            <th>招聘人数</th>
+            <th>职位优先级</th>
+            <th>工作经验</th>
+            <th>提交时间</th>
+            <th>截止时间</th>
+            <th>操作</th>
+            <th></th>
+          </tr>
+          <tr class="tr_list">
+            <td class="first">市场推广专员</td>
+            <td class="left">市场部</td>
+            <td>欧阳姗姗</td>
+            <td>5</td>
+            <td>紧急</td>
+            <td>3~5年</td>
+            <td>2013-03-31</td>
+            <td>2013-12-31</td>
+            <td>
+              <a href="javascript:void(0)" onclick="openSuccessMsg('保存成功', '已经成功批准！', 300, 150, '')" class="demand_operate_1">批准</a>
+              <a href="javascript:void(0)" onclick="recruiterDelay()" class="demand_operate_2">搁置</a>
+              <a href="javascript:void(0)" onclick="recruiterRefuse()" class="demand_operate_3">拒绝</a>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="10" class="tr_td_detail">
+              <dl class="clearfix">
+                <dt>招聘理由：</dt>
+                <dd>招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位要求：</dt>
+                <dd>1，热情积极，责任心强<br />2，有良好的职业道德和职业素养<br />3，认真仔细，服从管理<br />4，沟通能力强<br />5，负责区域内老客户的维护</dd>
+              </dl>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td class="first">市场推广专员</td>
+            <td class="left">市场部</td>
+            <td>欧阳姗姗</td>
+            <td>5</td>
+            <td>紧急</td>
+            <td>3~5年</td>
+            <td>2013-03-31</td>
+            <td>2013-12-31</td>
+            <td>
+              <a href="javascript:void(0)" onclick="openSuccessMsg('保存成功', '已经成功批准！', 300, 150, '')" class="demand_operate_1">批准</a>
+              <a href="javascript:void(0)" onclick="recruiterDelay()" class="demand_operate_2">搁置</a>
+              <a href="javascript:void(0)" onclick="recruiterRefuse()" class="demand_operate_3">拒绝</a>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="10" class="tr_td_detail">
+              <dl class="clearfix">
+                <dt>招聘理由：</dt>
+                <dd>招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位要求：</dt>
+                <dd>1，热情积极，责任心强<br />2，有良好的职业道德和职业素养<br />3，认真仔细，服从管理<br />4，沟通能力强<br />5，负责区域内老客户的维护</dd>
+              </dl>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td class="first">市场推广专员</td>
+            <td class="left">市场部</td>
+            <td>欧阳姗姗</td>
+            <td>5</td>
+            <td>紧急</td>
+            <td>3~5年</td>
+            <td>2013-03-31</td>
+            <td>2013-12-31</td>
+            <td>
+              <a href="javascript:void(0)" onclick="openSuccessMsg('保存成功', '已经成功批准！', 300, 150, '')" class="demand_operate_1">批准</a>
+              <a href="javascript:void(0)" onclick="recruiterDelay()" class="demand_operate_2">搁置</a>
+              <a href="javascript:void(0)" onclick="recruiterRefuse()" class="demand_operate_3">拒绝</a>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="10" class="tr_td_detail">
+              <dl class="clearfix">
+                <dt>招聘理由：</dt>
+                <dd>招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位要求：</dt>
+                <dd>1，热情积极，责任心强<br />2，有良好的职业道德和职业素养<br />3，认真仔细，服从管理<br />4，沟通能力强<br />5，负责区域内老客户的维护</dd>
+              </dl>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td class="first">市场推广专员</td>
+            <td class="left">市场部</td>
+            <td>欧阳姗姗</td>
+            <td>5</td>
+            <td>紧急</td>
+            <td>3~5年</td>
+            <td>2013-03-31</td>
+            <td>2013-12-31</td>
+            <td>
+              <a href="javascript:void(0)" onclick="openSuccessMsg('保存成功', '已经成功批准！', 300, 150, '')" class="demand_operate_1">批准</a>
+              <a href="javascript:void(0)" onclick="recruiterDelay()" class="demand_operate_2">搁置</a>
+              <a href="javascript:void(0)" onclick="recruiterRefuse()" class="demand_operate_3">拒绝</a>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="10" class="tr_td_detail">
+              <dl class="clearfix">
+                <dt>招聘理由：</dt>
+                <dd>招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位要求：</dt>
+                <dd>1，热情积极，责任心强<br />2，有良好的职业道德和职业素养<br />3，认真仔细，服从管理<br />4，沟通能力强<br />5，负责区域内老客户的维护</dd>
+              </dl>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td class="first">市场推广专员</td>
+            <td class="left">市场部</td>
+            <td>欧阳姗姗</td>
+            <td>5</td>
+            <td>紧急</td>
+            <td>3~5年</td>
+            <td>2013-03-31</td>
+            <td>2013-12-31</td>
+            <td>
+              <a href="javascript:void(0)" onclick="openSuccessMsg('保存成功', '已经成功批准！', 300, 150, '')" class="demand_operate_1">批准</a>
+              <a href="javascript:void(0)" onclick="recruiterDelay()" class="demand_operate_2">搁置</a>
+              <a href="javascript:void(0)" onclick="recruiterRefuse()" class="demand_operate_3">拒绝</a>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="10" class="tr_td_detail">
+              <dl class="clearfix">
+                <dt>招聘理由：</dt>
+                <dd>招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位要求：</dt>
+                <dd>1，热情积极，责任心强<br />2，有良好的职业道德和职业素养<br />3，认真仔细，服从管理<br />4，沟通能力强<br />5，负责区域内老客户的维护</dd>
+              </dl>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td class="first">市场推广专员</td>
+            <td class="left">市场部</td>
+            <td>欧阳姗姗</td>
+            <td>5</td>
+            <td>紧急</td>
+            <td>3~5年</td>
+            <td>2013-03-31</td>
+            <td>2013-12-31</td>
+            <td>
+              <a href="javascript:void(0)" onclick="openSuccessMsg('保存成功', '已经成功批准！', 300, 150, '')" class="demand_operate_1">批准</a>
+              <a href="javascript:void(0)" onclick="recruiterDelay()" class="demand_operate_2">搁置</a>
+              <a href="javascript:void(0)" onclick="recruiterRefuse()" class="demand_operate_3">拒绝</a>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="10" class="tr_td_detail">
+              <dl class="clearfix">
+                <dt>招聘理由：</dt>
+                <dd>招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位要求：</dt>
+                <dd>1，热情积极，责任心强<br />2，有良好的职业道德和职业素养<br />3，认真仔细，服从管理<br />4，沟通能力强<br />5，负责区域内老客户的维护</dd>
+              </dl>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td class="first">市场推广专员</td>
+            <td class="left">市场部</td>
+            <td>欧阳姗姗</td>
+            <td>5</td>
+            <td>紧急</td>
+            <td>3~5年</td>
+            <td>2013-03-31</td>
+            <td>2013-12-31</td>
+            <td>
+              <a href="javascript:void(0)" onclick="openSuccessMsg('保存成功', '已经成功批准！', 300, 150, '')" class="demand_operate_1">批准</a>
+              <a href="javascript:void(0)" onclick="recruiterDelay()" class="demand_operate_2">搁置</a>
+              <a href="javascript:void(0)" onclick="recruiterRefuse()" class="demand_operate_3">拒绝</a>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="10" class="tr_td_detail">
+              <dl class="clearfix">
+                <dt>招聘理由：</dt>
+                <dd>招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位要求：</dt>
+                <dd>1，热情积极，责任心强<br />2，有良好的职业道德和职业素养<br />3，认真仔细，服从管理<br />4，沟通能力强<br />5，负责区域内老客户的维护</dd>
+              </dl>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td class="first">市场推广专员</td>
+            <td class="left">市场部</td>
+            <td>欧阳姗姗</td>
+            <td>5</td>
+            <td>紧急</td>
+            <td>3~5年</td>
+            <td>2013-03-31</td>
+            <td>2013-12-31</td>
+            <td>
+              <a href="javascript:void(0)" onclick="openSuccessMsg('保存成功', '已经成功批准！', 300, 150, '')" class="demand_operate_1">批准</a>
+              <a href="javascript:void(0)" onclick="recruiterDelay()" class="demand_operate_2">搁置</a>
+              <a href="javascript:void(0)" onclick="recruiterRefuse()" class="demand_operate_3">拒绝</a>
+            </td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td colspan="10" class="tr_td_detail">
+              <dl class="clearfix">
+                <dt>招聘理由：</dt>
+                <dd>招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由招聘理由</dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>职位要求：</dt>
+                <dd>1，热情积极，责任心强<br />2，有良好的职业道德和职业素养<br />3，认真仔细，服从管理<br />4，沟通能力强<br />5，负责区域内老客户的维护</dd>
+              </dl>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_demand">需求</span></h4>
+        <ul>
+          <li><a href="demand_1.html" class="current">新需求</a></li>
+          <li><a href="demand_2.html">批准的</a></li>
+          <li><a href="demand_3.html">搁置的</a></li>
+          <li><a href="demand_4.html">拒绝的</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+
+<!-- 搁置和拒绝弹出窗 -->
+<div id="recruiterDelay" class="dialog_box" title="搁置">
+  <p>请输入搁置理由：</p>
+  <p class="pd_t_5"><textarea style="width:415px; height:100px;"></textarea></p>
+  <p class="pd_t_10 tc"><input type="button" class="input_button_s" value="保存" /></p>
+</div>
+<div id="recruiterRefuse" class="dialog_box" title="拒绝">
+  <p>请输入拒绝理由：</p>
+  <p class="pd_t_5"><textarea style="width:415px; height:100px;"></textarea></p>
+  <p class="pd_t_10 tc"><input type="button" class="input_button_s" value="保存" /></p>
+</div>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+function recruiterDelay(){
+	$("#recruiterDelay").dialog({
+		bgiframe: true, 
+		width: 450,
+		modal:true
+   });
+}
+
+function recruiterRefuse(){
+	$("#recruiterRefuse").dialog({
+		bgiframe: true, 
+		width: 450,
+		modal:true
+   });
+}
+</script>
+</body>
+</html>

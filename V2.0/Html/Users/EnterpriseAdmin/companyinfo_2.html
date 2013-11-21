@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li class="current_2"><a href="companyinfo_1.html">公司信息</a></li>
+        <li><a href="accounts_1.html">账号管理</a></li>
+        <li><a href="setting_1.html">系统设置</a></li>
+        <li><a href="log_1.html">系统日志</a></li>
+        <li><a href="myaccount_1.html">我的帐户</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="myaccount_1.html">帐户设置</a></li>
+          <li><a href="myaccount_2.html">修改头像</a></li>
+          <li><a href="myaccount_3.html">修改密码</a></li>
+          <li><a href="myaccount_4.html">密码安全</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        公司信息<i> » </i>公司管理
+      </div>
+      <!--<input type="button" class="input_button_green" value="添加分公司" />-->
+      <div class="tbl_block">
+        <div class="toolbar">
+          <h3 class="font_black">公司管理</h3>
+        </div>
+        <div class="branch_list">
+          <div class="item">
+            <div class="edit_box">
+              <input type="button" class="input_button_sh" value="编辑" />
+              <input type="button" class="input_button_sh" value="删除" />
+            </div>
+            <dl class="clearfix">
+              <dt>公司名称：</dt>
+              <dd>富柯瑞（北京）有限公司<em class="orange">（总公司）</em></dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>地址：</dt>
+              <dd><span class="mg_r_10">四川省成都市人民南路一段86号城市之心大厦29层A室</span><span>邮编：610011</span></dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>招聘联系人：</dt>
+              <dd>张小强</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>联系人职位：</dt>
+              <dd>招聘经理</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>电话：</dt>
+              <dd>13800138000</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>邮箱：</dt>
+              <dd>13800138000@139.com</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>部门：</dt>
+              <dd>
+                <span class="branch">销售部</span> 
+                <span class="branch">市场部</span>
+                <span class="branch">高端招聘部</span>
+                <a href="javascript:AddNewDepartment()">添加部门</a>
+              </dd>
+            </dl>
+          </div>
+          <div class="item">
+            <div class="edit_box">
+              <input type="button" class="input_button_sh" value="编辑" />
+              <input type="button" class="input_button_sh" value="删除" />
+            </div>
+            <dl class="clearfix">
+              <dt>公司名称：</dt>
+              <dd>富柯瑞成都有限公司<em class="orange">（分公司）</em></dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>地址：</dt>
+              <dd><span class="mg_r_10">四川省成都市人民南路一段86号城市之心大厦29层A室</span><span>邮编：610011</span></dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>招聘联系人：</dt>
+              <dd>张小强</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>联系人职位：</dt>
+              <dd>招聘经理</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>电话：</dt>
+              <dd>13800138000</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>邮箱：</dt>
+              <dd>13800138000@139.com</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>部门：</dt>
+              <dd><a href="javascript:AddNewDepartment()">添加部门</a></dd>
+            </dl>
+          </div>
+          <div class="add_item">
+            <input type="button" class="input_button_green_l" id="add_branch_btn" value="添加分公司" />
+            <table class="table_form undis">
+              <colgroup>
+                <col width="100" />
+                <col />
+              </colgroup>
+              <tr>
+                <th>分公司名称：</th>
+                <td><input type="text" class="input_text" /></td>
+              </tr>
+              <tr>
+                <th><span class="required">*</span>地址：</th>
+                <td>
+                  <div class="select_box floatl" style="width:110px;">
+                    <select style="width:110px"><option>北京</option></select>
+                  </div>
+                  <div class="select_box floatl" style="width:110px;">
+                    <select style="width:110px"><option>朝阳区</option></select>
+                  </div>
+                  <input type="text" class="input_text" />
+                </td>
+              </tr>
+              <tr>
+                <th>邮编：</th>
+                <td><input type="text" class="input_text" /></td>
+              </tr>
+              <tr>
+                <th>招聘联系人：</th>
+                <td><input type="text" class="input_text" /></td>
+              </tr>
+              <tr>
+                <th>联系人职位：</th>
+                <td><input type="text" class="input_text" /></td>
+              </tr>
+              <tr>
+                <th>电话：</th>
+                <td><input type="text" class="input_text" /></td>
+              </tr>
+              <tr>
+                <th>邮箱：</th>
+                <td><input type="text" class="input_text" /></td>
+              </tr>
+              <tr>
+                <th></th>
+                <td><input type="button" value="保存" class="input_button_blue" /></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="admin">公司信息</span></h4>
+        <ul>
+          <li><a href="companyinfo_1.html">基本信息</a></li>
+          <li class="current"><a href="companyinfo_2.html">公司管理</a></li>
+          <li><a href="companyinfo_5.html">部门管理</a></li>
+          <li><a href="companyinfo_3.html">企业认证</a></li>
+          <li><a href="companyinfo_4.html">公司LOGO</a></li>
+          <li><a href="companyinfo_6.html">提交审核</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<!--添加部门弹出框-->
+<div id="AddNewDepartment" class="add_department" title="添加部门">
+  <div class="input_box"><input type="text" class="input_text" value="请输入部门名称" info="请输入部门名称" onfocus="delInfo(this)" onblur="addInfo(this)" /></div>
+  <div class="select_box">
+    <select class="select"><option>请选择所属公司或部门</option><option>大连万达集团股份有限公司</option></select>
+  </div>
+  <p class="mg_t_10 tc"><input type="button" class="input_button_s" value="添加" /></p>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+function AddNewDepartment(){
+   $("#AddNewDepartment").dialog({
+		bgiframe: true, 
+		width: 300,
+		modal:true
+   });
+}
+</script>

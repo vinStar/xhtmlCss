@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li class="current_2"><a href="kpi_1.html">KPI</a></li>
+        <li><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        KPI<i> » </i>KPI报表
+      </div>
+      <h2 class="title">招聘进度报表</h2>
+      <div class="tbl_block" id="tab_RecruitmentProgress" style="background:#f6f6f6">
+        <div class="toolbar">
+          <div class="title_tab" style="float:right">
+            <ul>
+              <li onmouseover="tab('RecruitmentProgress',0)" class="current"><a href="javascript:void(0)">图表模式</a></li>
+              <li onmouseover="tab('RecruitmentProgress',1)"><a href="javascript:void(0)">文本模式</a></li>
+            </ul>
+          </div>
+          <div class="fl" style="margin-top:2px">
+            <div class="select_box">
+              <select class="select floatl"><option>人事总监</option><option>人事经理</option><option>人事专员</option></select>
+            </div>
+            <div class="select_box">
+              <select class="select floatl"><option>全部</option><option>高云霄</option><option>刘同</option></select>
+            </div>
+            <input type="text" class="input_text floatl" style="width:120px" value="起始时间" info="起始时间" onfocus="delInfo(this)" onblur="addInfo(this)" />
+            <span class="floatl">-</span>
+            <input type="text" class="input_text floatl" style="width:120px" value="截止时间" info="截止时间" onfocus="delInfo(this)" onblur="addInfo(this)" />
+            <input type="button" class="input_button_search" value="" />
+            <input type="button" class="input_button_s" value="重置" />
+          </div>
+        </div>
+        <div id="RecruitmentProgress_0" class="tab_content current pd_15">
+          <div id="chart_progress" style="width:100%;height:450px;"></div>
+        </div>
+        <div id="RecruitmentProgress_1" class="tab_content">
+          <table class="common_table_tc zebra" id="table_list">
+            <colgroup>
+              <col width="75" />
+              <col width="125" />
+              <col />
+              <col width="70" />
+              <col width="85" />
+              <col width="100" />
+              <col width="100" />
+            </colgroup>
+            <tr>
+              <th>剩余天数</th>
+              <th class="left">职位编号</th>
+              <th class="left">职位名称</th>
+              <th>招聘人数</th>
+              <th>职位负责人</th>
+              <th>职位开始时间</th>
+              <th>职位截止时间</th>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000071</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000072</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">2</span></td>
+              <td class="left"><a href="position_info_1.html">1000073</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000074</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000075</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000076</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">18</span></td>
+              <td class="left"><a href="position_info_1.html">1000077</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000078</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000079</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000080</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">7</span></td>
+              <td class="left"><a href="position_info_1.html">1000081</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000082</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000083</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">13</span></td>
+              <td class="left"><a href="position_info_1.html">1000084</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000085</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000086</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">15</span></td>
+              <td class="left"><a href="position_info_1.html">1000087</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000088</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">5</span></td>
+              <td class="left"><a href="position_info_1.html">1000089</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000090</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000091</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000092</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000093</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+            <tr>
+              <td><span class="red">25</span></td>
+              <td class="left"><a href="position_info_1.html">1000094</a></td>
+              <td class="left"><a href="position_info_1.html">金融猎头顾问</a></td>
+              <td><span class="red">1</span>/2</td>
+              <td>王丽敏</td>
+              <td>2012-03-07</td>
+              <td>2012-04-07</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+
+<!--导出选择开始-->
+<div id="exportSelect" title="系统职位数据">
+  <ul class="clearfix">
+    <li><input type="checkbox" name="ListItem" class="checkbox" /><label class="label">初中</label></li>
+    <li><input type="checkbox" name="ListItem" class="checkbox" /><label class="label">高中</label></li>
+    <li><input type="checkbox" name="ListItem" class="checkbox" /><label class="label">中专</label></li>
+    <li><input type="checkbox" name="ListItem" class="checkbox" /><label class="label">大专</label></li>
+    <li><input type="checkbox" name="ListItem" class="checkbox" /><label class="label">本科</label></li>
+    <li><input type="checkbox" name="ListItem" class="checkbox" /><label class="label">硕士</label></li>
+  </ul>
+  <div class="all_check"><input type="checkbox" id="AllCheck" class="checkbox" /><label class="label">全选</label></div>
+  <div class="clearfix tc mg_t_10">
+    <a href="javascript:void(0)" class="button_kpi"><i class="export_1">导出数据值</i></a>
+    <a href="javascript:void(0)" class="button_kpi"><i class="export_2">导出数据内容</i></a>
+  </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript" src="../../../Scripts/highcharts.js"></script>
+<script type="text/javascript">
+var chart;
+$(function() {
+	//职位招聘进度
+	chart = new Highcharts.Chart({
+	chart: {
+			renderTo: 'chart_progress',
+			type: 'bar',
+			backgroundColor:'#f6f6f6'
+		},
+		title: {
+			text: ''
+		},
+		xAxis: {
+			categories: ['23','22','21','20','19','18','17','16','15','14','13','12','11','10','9','8','7','6','5','4','3','2','1'],
+			tickWidth: 0,
+			lineWidth: 0
+		},
+		yAxis: {
+			min: 0,
+			title: {
+				text: ''
+			}
+		},
+		legend: {enabled:false},
+		plotOptions: {
+			series: {
+				pointWidth: 10,    
+				borderWidth: 0,
+				shadow: false,
+				borderRadius:3
+			},
+			bar:{
+				cursor: 'pointer',
+				events: {
+					  click: function(e) {
+						  location.href = e.point.url
+					  }
+				}
+			}
+		},
+		tooltip: {
+			formatter: function() {
+				return '职位ID：'+ this.point.id +'<br/>'+'结束：'+
+					this.y +'天<br/>' + '招聘数量：' + '<span style="color:#ff0000">' +
+					this.point.recruitment +'</span>' + '/' +this.point.total;
+			}
+		},
+		series: [{
+			data: [
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000077',y:25,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000076',y:16,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000075',y:11,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000074',y:20,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000073',y:9,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000072',y:15,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000077',y:25,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000076',y:16,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000075',y:11,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000074',y:20,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000073',y:9,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000072',y:15,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000071',y:9,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000077',y:25,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000076',y:16,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000075',y:11,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000072',y:15,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000074',y:20,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000073',y:9,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000072',y:15,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000071',y:9,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(66, 189, 231)'],[1,'rgb(25, 150, 212)']]},id: '1000072',y:15,recruitment:1,total:3,url:'position_info_1.html'},
+				{color:{linearGradient: [0, 0, 0, 250],stops: [[0,'rgb(255, 128, 0)'],[1,'rgb(255, 100, 0)']]},id: '1000071',y:9,recruitment:1,total:3,url:'position_info_1.html'}
+			]
+		}]
+	});	
+	
+});	
+</script>
