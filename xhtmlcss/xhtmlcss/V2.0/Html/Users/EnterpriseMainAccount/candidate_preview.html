@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/base.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+<style>
+body {background:#f3f3f4;}
+#header {height:58px;width:100%;background:url(../../../Images/default/header_bg.png) top repeat-x;}
+#header h1 {width:950px; margin:0 auto; padding-top:8px;}
+#warpper {border-left:#dfdfdf 1px solid;border-right:#dfdfdf 1px solid;border-bottom:#dfdfdf 1px solid;padding:10px;width:928px; background:#fff;}
+#warpper h2 {font-size:26px;font-weight:normal;line-height:40px;float:left;padding-bottom:10px}
+#warpper .head {height:50px;}
+#warpper .head p {float:right;color:#8a8a8a;}
+
+.step_block {min-height:560px;}
+.step_content_box {padding:0 20px 15px;display:none;}
+.step_content_box .gray_background {padding:4px 10px;background:#f1f1f1;min-height:20px;margin-top:15px;}
+.step_content_box .description {padding:10px 10px 0;}
+.step_content_box .description dl {width:100%;clear:both;line-height:24px;}
+.step_content_box .description dl dt {width:60px;float:left;}
+.step_content_box .description dl dd {width:220px;float:left;}
+.step_content_box .add_items {padding:4px 10px;background:#FBF6D8;margin-top:15px;}
+.step_content_box .add_items a {color:#3A63A0;}
+.width_100_pixel {width:100px;}
+.width_120_pixel {width:120px;font-weight:normal;}
+.step_button_box {border-top:#ccc 1px dashed;padding-top:15px;margin-top:15px;text-align:center;}
+
+#add_candidate_basicinfo {margin-top:15px;position:relative;}
+#add_candidate_basicinfo ul {min-height:20px;}
+#add_candidate_basicinfo li {width:49.9%;float:left; padding:2px 0;}
+#add_candidate_basicinfo li.w_100 {width:100%;}
+#add_candidate_basicinfo .avatar {position:absolute;right:5px;top:0;border:#dedede 1px solid; width:80px; height:100px;}
+
+#candidate_operate_button {left:50%;top:145px;width:100px;padding-left:475px;position:fixed;}
+#candidate_operate_button .input_button {margin-top:5px;width:101px;height:27px;background:url(../../../Images/default/button_sprintes.png) 0 -225px no-repeat;}
+#candidate_operate_button .input_button:hover {background:url(../../../Images/default/button_sprintes.png) -103px -225px no-repeat;}
+
+#candidateStateChange {padding:10px 15px;display:none;}
+#candidateStateChange .btn {text-align:center;padding-top:18px;}
+
+#bottom {height:38px;background:url(../../../Images/default/header_bg.png) repeat-x; margin-top:1px;}
+#bottom div {width:950px;}
+#bottom img {float:left;margin-top:5px;}
+#bottom span {float:right;color:#99A9C3;display:inline-block;padding:6px 0 0 0;}
+</style>
+</head>
+
+<body>
+<div id="header">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+</div>
+<div id="warpper">
+  <div class="head clearfix">
+    <h2 class="font_black">李某某</h2>
+    <p>
+       <span class="mg_r_10">候选人状态：<em class="green">可用</em></span><span class="mg_r_10">简历编号：00012345</span><span>最后更新：2012-12-31 16:00:00</span> 
+    </p>
+  </div>
+  <div class="step_block">
+    <!--第一步-->
+    <h4 class="title_step">
+      <span class="font_black">基本信息</span>
+      <span class="left_corner"></span>
+      <span class="right_corner" onclick="step_content_switch('candidate_basicinfo')"></span>
+    </h4>
+    <div class="step_content_box" style="display:block" id="add_candidate_basicinfo">
+      <ul class="clearfix">
+        <li class="w_100"><span>姓名：</span>高云霄</li>
+        <li class="w_100"><span>性别：</span>男</li>
+        <li class="w_100"><span>手机号码：</span>135564200133</li>
+        <li class="w_100"><span>电子邮箱：</span>13552600455@139.com</li>
+        <li><span>出生日期：</span>1989-6-4</li>
+        <li><span>参加工作年份：</span>2011年</li>
+        <li><span>婚姻状况：</span>已婚</li>
+        <li><span>是否在职：</span>是</li>
+        <li><span>现居住地：</span>北京市朝阳区科学园南里</li>
+        <li><span>邮政编码：</span>100029</li>
+        <li><span>政治面貌：</span>民主党派</li>
+        <li class="w_100"><span>关键字：</span>关键字 关键字 关键字 关键字</li>
+        <li><span>家庭电话：</span>010-64390501</li>
+        <!--<li><span>公司电话：</span>010-64390501</li>-->
+        <li><span>即时通讯：</span>MSN：13552600455@139.com</li>
+        <li><span>信息来源：</span>广告</li>
+        <!--<li><span>个人主页：</span></li>
+        <li><span>身份证号：</span></li>-->
+      </ul>
+      <a href="?"><img src="../../temp/avatar.jpg" width="120" height="120" class="avatar" /></a>
+    </div>
+    <!--第二步-->
+    <h4 class="title_step mg_t_15">
+      <span class="font_black">工作经验</span>
+      <span class="left_corner"></span>
+      <span class="right_corner" onclick="step_content_switch('candidate_experience')"></span>
+    </h4>
+    <div class="step_content_box" id="add_candidate_experience">
+      <ul>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong class="mg_r_10">腾讯（北京）科技有限公司</strong></span>
+          </div>
+          <div class="description" style="padding-left:130px">
+            <p>公司所在行业：互联网</p>
+            <dl class="clearfix mg_t_5">
+              <dt>职位名称：</dt>
+              <dd>软件开发工程师</dd>
+              <dt>职位类型：</dt>
+              <dd>全职</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt></dt>
+              <dd></dd>
+              <dt class="tr">薪水：</dt>
+              <dd>25000元/月以上</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>所在部门：</dt>
+              <dd>汽车频道</dd>
+              <dt class="tr">工作地：</dt>
+              <dd>北京</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>任职时间：</dt>
+              <dd>2009.1~2012.12</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt class="tr">证明人：</dt>
+              <dd>刘同</dd>
+              <dt class="tr">联系电话：</dt>
+              <dd>13552677988</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>工作职责：</dt>
+              <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>离职原因：</dt>
+              <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+            </dl>
+          </div>
+        </li>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong class="mg_r_10">百度</strong></span>
+          </div>
+          <div class="description" style="padding-left:130px">
+            <p>公司所在行业：互联网</p>
+            <dl class="clearfix mg_t_5">
+              <dt>职位名称：</dt>
+              <dd>软件开发工程师</dd>
+              <dt>职位类型：</dt>
+              <dd>全职</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>职位类别：</dt>
+              <dd>软件开发工程师</dd>
+              <dt class="tr">薪水：</dt>
+              <dd>25000元/月以上</dd>
+            </dl>
+            <dl class="clearfix">
+              <!--<dt>所在部门：</dt>
+              <dd>汽车频道</dd>-->
+              <dt class="tr">工作地：</dt>
+              <dd>北京</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>任职时间：</dt>
+              <dd>2009.1~2012.12</dd>
+            </dl>
+            <dl class="clearfix">
+              <!--<dt class="tr">证明人：</dt>
+              <dd>刘同</dd>
+              <dt class="tr">联系电话：</dt>
+              <dd>13552677988</dd>-->
+            </dl>
+            <dl class="clearfix">
+              <dt>工作职责：</dt>
+              <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+            </dl>
+            <dl class="clearfix">
+              <dt>离职原因：</dt>
+              <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+            </dl>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--第三步-->
+    <h4 class="title_step mg_t_15">
+      <span class="font_black">教育经历</span>
+      <span class="left_corner"></span>
+      <span class="right_corner" onclick="step_content_switch('candidate_education')"></span>
+    </h4>
+    <div class="step_content_box" id="add_candidate_education">
+      <ul>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong>北京师范大学</strong></span>
+          </div>
+          <div class="description" style="padding-left:130px">
+            <p>专业：计算机科学与技术</p>
+            <p>学历：本科</p>
+          </div>
+        </li>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong>清华大学</strong></span>
+          </div>
+          <div class="description" style="padding-left:130px">
+            <p>专业：计算机科学与技术</p>
+            <p>学历：本科</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--第四步-->
+    <h4 class="title_step mg_t_15">
+      <span class="font_black">求职意向</span>
+      <span class="left_corner"></span>
+      <span class="right_corner" onclick="step_content_switch('candidate_intension')"></span>
+    </h4>
+    <div class="step_content_box" id="add_candidate_intension">
+      <table class="table_show">
+        <colgroup>
+          <col width="120" />
+          <col />
+        </colgroup>
+        <tr>
+          <th>期望工作性质：</th>
+          <td>全职</td>
+        </tr>
+        <tr>
+          <th>期望工作地点：</th>
+          <td>北京</td>
+        </tr>
+        <tr>
+          <th>期望行业：</th>
+          <td>互联网</td>
+        </tr>
+        <tr>
+          <th>期望职位类别：</th>
+          <td>软件开发</td>
+        </tr>
+        <tr>
+          <th>期望薪水（税前）：</th>
+          <td>1000元/月以下</td>
+        </tr>
+        <tr>
+          <th>说明：</th>
+          <td>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</td>
+        </tr>
+      </table>
+    </div>
+    <!--第五步-->
+    <h4 class="title_step mg_t_15">
+      <span class="font_black">语言信息（选填）</span>
+      <span class="left_corner"></span>
+      <span class="right_corner" onclick="step_content_switch('candidate_language')"></span>
+    </h4>
+    <div class="step_content_box" id="add_candidate_language">
+      <ul>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="indis width_100_pixel">英语</strong><em class="indis width_120_pixel">听说能力：熟练</em><em class="indis width_120_pixel">读写能力：熟练</em></span>
+          </div>
+        </li>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="indis width_100_pixel">日语</strong><em class="indis width_120_pixel">听说能力：熟练</em><em class="indis width_120_pixel">读写能力：熟练</em></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--第六步-->
+    <h4 class="title_step mg_t_15">
+      <span class="font_black">技能信息（选填）</span>
+      <span class="left_corner"></span>
+      <span class="right_corner" onclick="step_content_switch('candidate_skill')"></span>
+    </h4>
+    <div class="step_content_box" id="add_candidate_skill">
+      <ul>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="indis mg_r_30" style="width:160px">Javascript</strong><em class="mg_r_30">熟练</em><em>使用20个月</em></span>
+          </div>
+        </li>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="indis mg_r_30" style="width:160px">Html</strong><em class="mg_r_30">熟练</em><em>使用20个月</em></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--第七步-->
+    <h4 class="title_step mg_t_15">
+      <span class="font_black">证书/许可证（选填）</span>
+      <span class="left_corner"></span>
+      <span class="right_corner" onclick="step_content_switch('candidate_certificate')"></span>
+    </h4>
+    <div class="step_content_box" id="add_candidate_certificate">
+      <ul>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="mg_r_30">外语证书</strong><strong class="mg_r_30">托福</strong><i>2000-12-31</i></span>
+          </div>
+          <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+        </li>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="mg_r_30">外语证书</strong><strong class="mg_r_30">托福</strong><i>2000-12-31</i></span>
+          </div>
+          <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+        </li>
+      </ul>
+    </div>
+    <!--第八步-->
+    <h4 class="title_step mg_t_15">
+      <span class="font_black">附件管理（选填）</span>
+      <span class="left_corner"></span>
+      <span class="right_corner" onclick="step_content_switch('candidate_attachment')"></span>
+    </h4>
+    <div class="step_content_box" id="add_candidate_attachment">
+      <ul>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="mg_r_30">英语四级证书</strong><a href="?">下载</a></span>
+          </div>
+          <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+        </li>
+        <li>
+          <div class="gray_background clearfix">
+            <span class="fl"><strong class="mg_r_30">英语四级证书</strong><a href="?">下载</a></span>
+          </div>
+          <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+        </li>
+      </ul>
+    </div>
+    <!--操作按钮-->
+    <div id="candidate_operate_button">
+      <input type="button" class="input_button" onclick="openSuccessMsg('成功', '收藏成功', 300, 150,'')" value="收藏候选人" />
+      <input type="button" class="input_button" value="打印PDF" />
+      <input type="button" class="input_button" onclick="resumeDownload()" value="下载简历" />
+      <input type="button" class="input_button" onclick="candidateStateChange()" value="改变候选人状态" />
+      <input type="button" class="input_button" onclick="openWindow('candidate_boxy_recommend.html','推荐职位','800px','480px')" value="推荐职位" />
+      <input type="button" class="input_button" onclick="openWindow('candidate_boxy_records.html','高云霄的职位记录','800px','480px')" value="职位记录" />
+      <input type="button" class="input_button" onclick="openWindow('candidate_boxy_email.html','发送邮件','600px','440px')" value="发送邮件" />  
+      <input type="button" class="input_button" onclick="openWindow('candidate_boxy_communication.html','高云霄的沟通记录','800px','480px')" value="沟通记录" />  
+    </div>
+  </div>
+</div>
+<div id="bottom">
+  <div class="clearfix">
+  <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+  <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<!--简历下载弹出框内容-->
+<div id="resumeDownload_dailog" title="简历下载" class="applicant_dialog">
+  <h4>下载原始附件</h4>
+  <p><input type="radio" class="radio" name="resumeDownloadType" /><label>下载原始附件</label></p>
+  <h4 class="mg_t_5">下载系统生成的附件</h4>
+  <ul class="clearfix">
+    <li><input type="radio" class="radio" name="resumeDownloadType" /><label>Word文件</label></li>
+    <li><input type="radio" class="radio" name="resumeDownloadType" /><label>Excel文件</label></li>
+    <li><input type="radio" class="radio" name="resumeDownloadType" /><label>Html文件</label></li>
+  </ul>
+  <p class="btn"><input type="button" value="确定" class="input_button_s"  />
+                <input type="button" value="取消" class="input_button_sh button_dialog_cancel" /></p>
+</div>
+
+<!--改变候选人状态-->
+<div id="candidateStateChange" title="改变候选人状态" class="applicant_dialog">
+  <div id="candidateState">
+    <p>候选人当前状态：<em class="green">可用</em></p>
+    <ul class="clearfix mg_t_5">
+      <li><input type="radio" class="radio" /><label class="label">可用</label></li>
+      <li><input type="radio" class="radio" /><label class="label">受保护</label></li>
+      <li><input type="radio" class="radio" /><label class="label">黑名单</label></li>
+    </ul>
+    <p class="btn"><input type="button" class="input_button_s" value="保存" /> <input type="button" class="input_button_sh button_dialog_cancel" value="取消" /></p>
+  </div>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#add_candidate_basicinfo").show();
+	$("#add_candidate_experience").show();
+	$("#add_candidate_education").show();
+	$("#add_candidate_intension").show();
+});
+
+//简历下载弹出框
+function resumeDownload(){
+	$("#resumeDownload_dailog").dialog({
+        bgiframe: true,
+        width: 400,
+        height: 200,
+		modal:true
+    });
+}
+
+//改变职位状态弹出框
+function candidateStateChange(){
+	$("#candidateStateChange").dialog({
+        bgiframe: true,
+        width: 300,
+        height: 150,
+		modal:true
+    });
+}
+
+</script>

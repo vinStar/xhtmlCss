@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li class="current_2"><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        设置<i> » </i><a href="setting_3.html">题库</a> <i> » </i>添加新题目
+      </div>
+      <div class="tab_button">
+         <a href="setting_3.html" class="input_button">题库</a>
+         <a href="setting_3_add.html" class="input_button_l">添加新题目</a>
+         <a href="setting_3_category.html" class="input_button_blue_l">题库类别管理</a>
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <h3 class="font_black">题库类别管理</h3>
+          <div class="fr">
+            <input type="button" value="添加题库类别" class="input_button_green_l" onclick="add_question_categories()" />
+            <input type="button" value="添加题库子类别" class="input_button_green_l" onclick="add_question_subcategories()" />
+          </div>
+        </div>
+        <div class="categoey_item">
+          <h4>
+            <strong>销售</strong>
+            <span><a href="?">编辑</a></span>
+            <em></em>
+          </h4>
+          <ul>
+            <li>
+              <span class="fl">地产销售</span>
+              <span class="fr"><a href="?">编辑</a> <a href="?">删除</a></span>
+            </li>
+            <li>
+              <span class="fl">汽车销售</span>
+              <span class="fr"><a href="?">编辑</a> <a href="?">删除</a></span>
+            </li>
+            <li>
+              <span class="fl"><input type="text" value="电话销售" class="input_table" /></span>
+              <span class="fr"><a href="?">编辑</a> <a href="?">删除</a></span>
+            </li>
+          </ul>
+        </div>
+        <div class="categoey_item">
+          <h4>
+            <strong>销售</strong>
+            <span><a href="?">编辑</a> <a href="?">删除</a></span>
+          </h4>
+        </div>
+        <div class="categoey_item">
+          <h4>
+            <strong>销售</strong>
+            <span><a href="?">编辑</a></span>
+            <em></em>
+          </h4>
+          <ul>
+            <li>
+              <span class="fl">地产销售</span>
+              <span class="fr"><a href="?">编辑</a> <a href="?">删除</a></span>
+            </li>
+            <li>
+              <span class="fl">汽车销售</span>
+              <span class="fr"><a href="?">编辑</a> <a href="?">删除</a></span>
+            </li>
+            <li>
+              <span class="fl">电话销售</span>
+              <span class="fr"><a href="?">编辑</a> <a href="?">删除</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mg_15">
+        <input type="button" value="添加题库类别" class="input_button_green_l" onclick="add_question_categories()" />
+        <input type="button" value="添加题库子类别" class="input_button_green_l" onclick="add_question_subcategories()" />
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_setting">设置</span></h4>
+        <ul>
+          <li><a href="setting_1.html">职位模板</a></li>
+          <li><a href="setting_2.html">面试流程</a></li>
+          <li><a href="setting_3.html" class="current">题库</a></li>
+          <li><a href="setting_4.html">专业测试</a></li>
+<li><a href="setting_5.html">Offer模板</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<!--添加题库类别-->
+<div id="add_question_categories" class="applicant_dialog" title="添加题库类别">
+  <p class="tc mg_t_15"><input type="text" class="input_text" style="width:240px" value="请输入题库类别名称" info="请输入题库类别名称" onfocus="delInfo(this)" onblur="addInfo(this)" /></p>
+  <p class="tc mg_t_20"><input type="button" value="添加" class="input_button_s" /> <input type="button" value="取消" class="input_button_sh button_dialog_cancel" /></p>
+</div>
+
+<!--添加题库子类别-->
+<div id="add_question_subcategories" class="applicant_dialog" title="添加题库子类别">
+  <div class="select_box" style="width:248px;margin:10px auto; float:none;">
+    <select class="select" style="width:248px"><option>请选择题库类别</option></select>
+  </div>
+  <p class="tc mg_t_15"><input type="text" class="input_text" style="width:240px" value="请输入题库子类别名称" info="请输入题库子类别名称" onfocus="delInfo(this)" onblur="addInfo(this)" /></p>
+  <p class="tc mg_t_20"><input type="button" value="添加" class="input_button_s" /> <input type="button" value="取消" class="input_button_sh button_dialog_cancel" /></p>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+function add_question_categories(){
+	$("#add_question_categories").dialog({
+		bgiframe: true, 
+		width: 300,
+		modal:true
+   });
+}
+
+function add_question_subcategories(){
+	$("#add_question_subcategories").dialog({
+		bgiframe: true, 
+		width: 300,
+		modal:true
+   });
+}
+</script>

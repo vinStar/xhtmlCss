@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="companyinfo_1.html">公司信息</a></li>
+        <li class="current_2"><a href="accounts_1.html">账号管理</a></li>
+        <li><a href="setting_1.html">系统设置</a></li>
+        <li><a href="log_1.html">系统日志</a></li>
+        <li><a href="myaccount_1.html">我的帐户</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="myaccount_1.html">帐户设置</a></li>
+          <li><a href="myaccount_2.html">修改头像</a></li>
+          <li><a href="myaccount_3.html">修改密码</a></li>
+          <li><a href="myaccount_4.html">密码安全</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        账号管理<i> » </i>管理账号
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <h3 class="font_black">
+            管理账号
+            <span class="account_des">
+              企业主账号：<em class="mg_r_10">已开通<i class="orange">3</i>个，剩余<i class="orange">7</i>个</em>
+              企业子账号：<em class="mg_r_10">已开通<i class="orange">10</i>个，剩余<i class="orange">20</i>个</em>
+            </span>
+          </h3>
+        </div>
+        <div class="account_search">
+          <table>
+            <colgroup>
+              <col width="165" />
+              <col width="165" />
+              <col />
+            </colgroup>
+            <tr>
+              <td><input type="text" class="input_text" value="姓名" info="姓名" onfocus="delInfo(this)" onblur="addInfo(this)" /></td>
+              <td><input type="text" class="input_text" value="账号" info="账号" onfocus="delInfo(this)" onblur="addInfo(this)" /></td>
+              <td>
+                <div class="select_box">
+                  <select><option>全部</option><option>企业主账号</option><option>企业子账号</option></select>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="select_box">
+                  <select><option>所属权限组</option><option>招聘主管</option><option>招聘经理</option></select>
+                </div></td>
+              <td><div class="select_box">
+                  <select><option>所属公司和部门</option><option>市场部</option><option>人事部</option></select>
+                </div></td>
+              <td><div class="select_box floatl">
+                  <select><option>账号状态</option><option>正常</option><option>锁定</option><option>关闭</option></select>
+                </div>
+                <input type="button" class="input_button_search" value="" />
+                <input type="button" class="input_button_s" value="重置" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <table class="common_table_tc zebra" id="table_list">
+          <colgroup>
+            <col width="40" />
+            <col width="100" />
+            <col />
+            <col width="70" />
+            <col />
+            <col width="80" />
+            <col width="120" />
+            <col width="175" />
+          </colgroup>
+          <tr>
+            <th>选择</th>
+            <th class="left">姓名</th>
+            <th class="left">账号</th>
+            <th>账号状态</th>
+            <th class="left">公司/部门</th>
+            <th>创建时间</th>
+            <th>所属群组</th>
+            <th class="left">操作</th>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="ListItem" /></td>
+            <td class="left"><span class="account_lock">马化腾</span></td>
+            <td class="left">felix@future-career</td>
+            <td>正式</td>
+            <td class="left">大连万达集团股份有限公司<em class="gap">/</em>人事行政部</td>
+            <td>2012-5-18</td>
+            <td>主管组</td>
+            <td class="left">
+              <a href="?">发送邮件</a>
+              <a href="accounts_3_add.html">编辑</a> <a href="?">删除</a>
+              <a href="?">重置密码</a>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="ListItem" /></td>
+            <td class="left"><span class="account_lock">方国臣</span></td>
+            <td class="left">felix@future-career</td>
+            <td>正式</td>
+            <td class="left">大连万达集团股份有限公司<em class="gap">/</em>部门一</td>
+            <td>2012-5-18</td>
+            <td>主管组</td>
+            <td class="left">
+              <a href="?">发送邮件</a>
+              <a href="accounts_3_add.html">编辑</a> <a href="?">删除</a>
+              <a href="?">重置密码</a>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="ListItem" /></td>
+            <td class="left">马化腾</td>
+            <td class="left">felix@future-career</td>
+            <td>正式</td>
+            <td class="left">北京万达集团股份有限公司<em class="gap">/</em>市场部</td>
+            <td>2012-5-18</td>
+            <td>主管组</td>
+            <td class="left">
+              <a href="?">发送邮件</a>
+              <a href="accounts_3_add.html">编辑</a> <a href="?">删除</a>
+              <a href="?">重置密码</a>
+            </td>
+          </tr>
+        </table>
+        <div class="all_after_table">
+          <input type="checkbox" id="AllCheck" class="checkbox" /><label class="label">全选</label>
+          <input type="button" class="input_button_green" onclick="window.location.href='accounts_3_add.html'" value="添加账号" />
+          <input type="button" class="input_button" value="锁定" />
+          <input type="button" class="input_button" value="解锁" />
+          <input type="button" class="input_button" value="关闭" />
+          <input type="button" class="input_button" value="发送邮件" />
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="admin">账号管理</span></h4>
+        <ul>
+          <li><a href="accounts_1.html">购买账号</a></li>
+          <li><a href="accounts_2.html">权限设置</a></li>
+          <li class="current"><a href="accounts_3.html">管理账号</a></li>
+          <li><a href="accounts_4.html">邮件模板</a></li>
+          <li><a href="accounts_5.html">KPI权限管理</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>

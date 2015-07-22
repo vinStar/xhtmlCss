@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li class="current_2"><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        设置<i> » </i>职位模板
+      </div>
+      <div class="tab_button">
+         <a href="setting_1.html" class="input_button">职位模板</a>
+         <a href="setting_1_add.html" class="input_button_blue_l">添加职位模板</a>
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <h3 class="font_black">添加职位模板</h3>
+        </div>
+        <table class="table_form mg_b_15">
+            <colgroup>
+              <col width="100" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>职位名称：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>对外职位名称：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>职位类别：</th>
+              <td>
+                <div id="position_type" class="input_unfold_block">
+                  <span class="arrow"></span>
+                  <input type="text" id="position_type_input" class="input_text input_unfold" />
+                  <div class="input_unfold_content">职位类别</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>工作经验：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>不限</option><option>1年以下</option><option>1~3年</option></select></div></td>
+              <th>职位类型：</th>
+              <td>
+                <input type="radio" class="radio" name="PositionType" checked="checked" /><label class="label">全职</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">兼职</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">派遣</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">实习</label>
+              </td>
+            </tr>
+            <tr>
+              <th>学历要求：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>不限</option><option>本科</option><option>硕士</option></select></div></td>
+              <th>薪水范围：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>面谈</option><option>1000元/月以下</option><option>1000~2000元/月</option>
+              <option>2001~4000元/月</option><option>4001~6000元/月</option><option>6001~8000元/月</option><option>8001~10000元/月</option><option>10001~15000元/月</option><option>15001~25000元/月</option><option>25000元/月以上</option>
+              </select></div>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>开始日期：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th><span class="required">*</span>截止日期：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>招聘人数：</th>
+              <td><input type="text" class="input_text floatl" style="width:130px" /> <input type="checkbox" class="checkbox" /><label class="label">若干</label></td>
+            </tr>
+            <tr>
+              <th valign="top">专业测试：</th>
+              <td colspan="3">
+                <div class="clearfix">
+                <input type="radio" class="radio" name="TestUse" value="0" checked="checked" /><label class="label">不使用</label>
+                <input type="radio" class="radio" name="TestUse" value="1" /><label class="label">使用</label>
+                </div>
+                <div id="test_list">
+                  <ul class="clearfix">
+                    <li><input type="radio" class="radio" name="TestTitleItem" /><label class="label"><a href="questionnaire_detail.html" target="_blank">专业测试题目名称一</a></label></li>
+                    <li><input type="radio" class="radio" name="TestTitleItem" /><label class="label"><a href="questionnaire_detail.html" target="_blank">专业测试题目名称一</a></label></li>
+                    <li><input type="radio" class="radio" name="TestTitleItem" /><label class="label"><a href="questionnaire_detail.html" target="_blank">专业测试题目名称一</a></label></li>
+                    <li><input type="radio" class="radio" name="TestTitleItem" /><label class="label"><a href="questionnaire_detail.html" target="_blank">专业测试题目名称一</a></label></li>
+                    <li><input type="radio" class="radio" name="TestTitleItem" /><label class="label"><a href="questionnaire_detail.html" target="_blank">专业测试题目名称一</a></label></li>
+                    <li><input type="radio" class="radio" name="TestTitleItem" /><label class="label"><a href="questionnaire_detail.html" target="_blank">专业测试题目名称一</a></label></li>
+                    <li><input type="radio" class="radio" name="TestTitleItem" /><label class="label"><a href="questionnaire_detail.html" target="_blank">专业测试题目名称一</a></label></li>
+                    <li><input type="radio" class="radio" name="TestTitleItem" /><label class="label"><a href="questionnaire_detail.html" target="_blank">专业测试题目名称一</a></label></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>职位关键字：</th>
+              <td colspan="3"><input type="text" class="input_text" style="width:560px;" /></td>
+            </tr>
+            <tr>
+              <th valign="top"><span class="required">*</span>职位描述：</th>
+              <td colspan="3"><textarea class="input_text" style="width:560px; height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="3">
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_setting">设置</span></h4>
+        <ul>
+          <li><a href="setting_1.html" class="current">职位模板</a></li>
+          <li><a href="setting_2.html">面试流程</a></li>
+          <li><a href="setting_3.html">题库</a></li>
+          <li><a href="setting_4.html">专业测试</a></li>
+          <li><a href="setting_5.html">Offer模板</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>

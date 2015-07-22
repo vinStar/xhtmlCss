@@ -1,0 +1,1486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/base.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+<style>
+body {background:#f3f3f4;}
+#header {height:58px;width:100%;background:url(../../../Images/default/header_bg.png) top repeat-x;}
+#header h1 {width:950px; margin:0 auto; padding-top:8px;}
+#warpper {border-left:#dfdfdf 1px solid;border-right:#dfdfdf 1px solid;border-bottom:#dfdfdf 1px solid;padding:10px;width:928px; background:#fff;}
+#warpper h2 {font-size:22px;font-weight:normal;line-height:40px;float:left;padding-bottom:5px}
+#warpper .head p {float:right;color:#8a8a8a;}
+
+/*title_tab ul宽880px,10个li,平均76+12=88*/
+.title_tab {border-bottom:#dedede 1px solid;margin:0 -10px 5px;height:30px;}
+.title_tab span {width:22px;height:22px;display:inline-block;background-image:url(../../../Images/default/vertical_nav_icon.png);background-repeat:no-repeat;cursor:pointer;}
+.title_tab .prev {background-position:0 -959px;float:left;margin:3px 3px 0 8px}
+.title_tab .next {background-position:0 -981px;float:right;margin:3px 8px 0 0}
+.title_tab div {overflow:hidden;width:880px;height:30px;float:left;position:relative; top:1px;}
+.title_tab div ul {font-family:"微软雅黑","黑体","Arial";color:#2E4D7C;position:absolute;left:0;top:0;}
+.title_tab div ul li {float:left;background:#f3f3f4;border:#dedede 1px solid;width:74px;text-align:center;line-height:28px;margin:0 6px;cursor:pointer;}
+.title_tab div ul li.current {background:#fff;border-bottom:#fff 1px solid;border-left:#dedede 1px solid;border-right:#dedede 1px solid;border-top:#dedede 1px solid;}
+
+.tab_content {display:none;}
+.tab_content.current {display:block;}
+
+.step_content_box {padding:0 20px 15px;}
+.step_content_box .gray_background {padding:4px 10px;background:#f1f1f1;min-height:20px;margin-top:15px;}
+.step_content_box .description {padding:10px 10px 0;}
+.step_content_box .description dl {width:100%;clear:both;line-height:24px;}
+.step_content_box .description dl dt {width:60px;float:left;}
+.step_content_box .description dl dd {width:220px;float:left;}
+.step_content_box .add_items {padding:4px 10px;background:#FBF6D8;margin-top:15px;}
+.step_content_box .add_items a {color:#3A63A0;}
+.width_100_pixel {width:100px;}
+.width_120_pixel {width:120px;}
+.step_button_box {border-top:#ccc 1px dashed;padding-top:15px;margin-top:15px;text-align:center;}
+
+#bottom {height:38px;background:url(../../../Images/default/header_bg.png) repeat-x; margin-top:1px;}
+#bottom div {width:950px;}
+#bottom img {float:left;margin-top:5px;}
+#bottom span {float:right;color:#99A9C3;display:inline-block;padding:6px 0 0 0;}
+</style>
+</head>
+
+<body>
+<div id="header">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+</div>
+<div id="warpper">
+  <div id="tab_candidates">
+    <div class="title_tab" id="title_tab">
+      <span class="prev"></span>
+      <div>
+        <ul class="clearfix">
+          <li onclick="tab('candidates',0)">李某某</li>
+          <li onclick="tab('candidates',1)" class="current">詹珊珊</li>
+          <li onclick="tab('candidates',2)">欧阳宇</li>
+          <li onclick="tab('candidates',3)">曾放弃</li>
+          <li onclick="tab('candidates',4)">曾放弃</li>
+          <li onclick="tab('candidates',5)">曾放弃</li>
+          <li onclick="tab('candidates',6)">曾放弃</li>
+          <li onclick="tab('candidates',7)">曾放弃</li>
+          <li onclick="tab('candidates',8)">曾放弃</li>
+          <li onclick="tab('candidates',9)">曾放弃</li>
+          <li onclick="tab('candidates',10)">计划书</li>
+          <li onclick="tab('candidates',11)">二两肉</li>
+        </ul>
+      </div>
+      <span class="next"></span>
+    </div>
+    <div id="candidates_0" class="tab_content">
+      <div class="head clearfix">
+        <h2 class="font_black">李某某</h2>
+        <p>
+           <span class="mg_r_10">简历编号：00012345</span><span>最后更新：2012-12-31 16:00:00</span> 
+        </p>
+      </div>
+      <div class="step_block">
+        <!--第一步-->
+        <h4 class="title_step">
+          <span class="font_black">基本信息</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_basicinfo')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_basicinfo">
+          <table class="table_form">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>姓名：</th>
+              <td>高云霄</td>
+              <td colspan="2" rowspan="4" valign="top" style="padding-left:202px">
+                <img src="../../temp/avatar.jpg" width="75" height="90" style="border:#dfdfdf 1px solid" />
+              </td>
+            </tr>
+            <tr>
+              <th>性别：</th>
+              <td>男</td>
+            </tr>
+            <tr>
+              <th>手机号码：</th>
+              <td>13552600455</td>
+            </tr>
+            <tr>
+              <th>电子邮箱：</th>
+              <td>13552600455@139.com</td>
+            </tr>
+            <tr>
+              <th>出生日期：</th>
+              <td>1989-06-04</td>
+              <th>参加工作年份：</th>
+              <td>2011年</td>
+            </tr>
+            <tr>
+              <th>婚姻状况：</th>
+              <td>已婚</td>
+              <th>是否在职：</th>
+              <td>是</td>
+            </tr>
+            <tr>
+              <th>现居住地：</th>
+              <td>北京市朝阳区科学园南里</td>
+              <th>邮政编码：</th>
+              <td>100029</td>
+            </tr>
+            <tr>
+              <th>政治面貌：</th>
+              <td colspan="3">民主党派</td>
+            </tr>
+            <tr>
+              <th>关键字：</th>
+              <td colspan="3">关键字 关键字</td>
+            </tr>
+          </table>
+          <table class="table_form" style="margin-top:0">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>家庭电话：</th>
+              <td>010-64390501</td>
+              <th>公司电话：</th>
+              <td>010-64390501</td>
+            </tr>
+            <tr>
+              <th>即时通讯：</th>
+              <td>MSN：13552600455@139.com</td>
+              <th>信息来源：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>个人主页：</th>
+              <td></td>
+              <th>身份证号：</th>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <!--第二步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">工作经验</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_experience')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_experience">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong class="mg_r_10">腾讯（北京）科技有限公司</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>公司所在行业：互联网</p>
+                <dl class="clearfix mg_t_5">
+                  <dt>职位名称：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt>职位类型：</dt>
+                  <dd>全职</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>职位类别：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt class="tr">薪水：</dt>
+                  <dd>25000元/月以上</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>所在部门：</dt>
+                  <dd>汽车频道</dd>
+                  <dt class="tr">工作地：</dt>
+                  <dd>北京</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>任职时间：</dt>
+                  <dd>2009.1~2012.12</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt class="tr">证明人：</dt>
+                  <dd>刘同</dd>
+                  <dt class="tr">联系电话：</dt>
+                  <dd>13552677988</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>工作职责：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>离职原因：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong class="mg_r_10">百度</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>公司所在行业：互联网</p>
+                <dl class="clearfix mg_t_5">
+                  <dt>职位名称：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt>职位类型：</dt>
+                  <dd>全职</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>职位类别：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt class="tr">薪水：</dt>
+                  <dd>25000元/月以上</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>所在部门：</dt>
+                  <dd>汽车频道</dd>
+                  <dt class="tr">工作地：</dt>
+                  <dd>北京</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>任职时间：</dt>
+                  <dd>2009.1~2012.12</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt class="tr">证明人：</dt>
+                  <dd>刘同</dd>
+                  <dt class="tr">联系电话：</dt>
+                  <dd>13552677988</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>工作职责：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>离职原因：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第三步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">教育经历</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_education')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_education">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong>北京师范大学</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>专业：计算机科学与技术</p>
+                <p>学历：本科</p>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong>清华大学</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>专业：计算机科学与技术</p>
+                <p>学历：本科</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第四步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">求职意向</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_intension')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_intension">
+          <table class="table_form">
+            <colgroup>
+              <col width="120" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>期望工作性质：</th>
+              <td>全职</td>
+            </tr>
+            <tr>
+              <th>期望工作地点：</th>
+              <td>北京</td>
+            </tr>
+            <tr>
+              <th>期望行业：</th>
+              <td>互联网</td>
+            </tr>
+            <tr>
+              <th>期望职位类别：</th>
+              <td>软件开发</td>
+            </tr>
+            <tr>
+              <th>期望薪水（税前）：</th>
+              <td>1000元/月以下</td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</td>
+            </tr>
+          </table>
+        </div>
+        <!--第五步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">语言信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_language')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_language">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_100_pixel">英语</strong><em class="indis width_120_pixel">听说能力：熟练</em><em class="indis width_120_pixel">读写能力：熟练</em></span>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_100_pixel">日语</strong><em class="indis width_120_pixel">听说能力：熟练</em><em class="indis width_120_pixel">读写能力：熟练</em></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第六步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">技能信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_skill')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_skill">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis mg_r_30" style="width:160px">Javascript</strong><em class="mg_r_30">熟练</em><em>使用20个月</em></span>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis mg_r_30" style="width:160px">Html</strong><em class="mg_r_30">熟练</em><em>使用20个月</em></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第七步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">证书/许可证（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_certificate')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_certificate">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">外语证书</strong><strong class="mg_r_30">托福</strong><i>2000-12-31</i></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">外语证书</strong><strong class="mg_r_30">托福</strong><i>2000-12-31</i></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+          </ul>
+        </div>
+        <!--第八步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">附件管理（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_attachment')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_attachment">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">英语四级证书</strong><a href="?">下载</a></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">英语四级证书</strong><a href="?">下载</a></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="candidates_1" class="tab_content current">
+      <div class="head clearfix">
+        <h2 class="font_black">詹珊珊</h2>
+        <p>
+           <span class="mg_r_10">简历编号：00012345</span><span>最后更新：2012-12-31 16:00:00</span> 
+        </p>
+      </div>
+      <div class="step_block">
+        <!--第一步-->
+        <h4 class="title_step">
+          <span class="font_black">基本信息</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_basicinfo')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_basicinfo">
+          <table class="table_form">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>姓名：</th>
+              <td>高云霄</td>
+              <td colspan="2" rowspan="4" valign="top" style="padding-left:202px">
+                <img src="../../temp/avatar.jpg" width="75" height="90" style="border:#dfdfdf 1px solid" />
+              </td>
+            </tr>
+            <tr>
+              <th>性别：</th>
+              <td>男</td>
+            </tr>
+            <tr>
+              <th>手机号码：</th>
+              <td>13552600455</td>
+            </tr>
+            <tr>
+              <th>电子邮箱：</th>
+              <td>13552600455@139.com</td>
+            </tr>
+            <tr>
+              <th>出生日期：</th>
+              <td>1989-06-04</td>
+              <th>参加工作年份：</th>
+              <td>2011年</td>
+            </tr>
+            <tr>
+              <th>婚姻状况：</th>
+              <td>已婚</td>
+              <th>是否在职：</th>
+              <td>是</td>
+            </tr>
+            <tr>
+              <th>现居住地：</th>
+              <td>北京市朝阳区科学园南里</td>
+              <th>邮政编码：</th>
+              <td>100029</td>
+            </tr>
+            <tr>
+              <th>政治面貌：</th>
+              <td colspan="3">民主党派</td>
+            </tr>
+            <tr>
+              <th>关键字：</th>
+              <td colspan="3">关键字 关键字</td>
+            </tr>
+          </table>
+          <table class="table_form" style="margin-top:0">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>家庭电话：</th>
+              <td>010-64390501</td>
+              <th>公司电话：</th>
+              <td>010-64390501</td>
+            </tr>
+            <tr>
+              <th>即时通讯：</th>
+              <td>MSN：13552600455@139.com</td>
+              <th>信息来源：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>个人主页：</th>
+              <td></td>
+              <th>身份证号：</th>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <!--第二步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">工作经验</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_experience')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_experience">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong class="mg_r_10">腾讯（北京）科技有限公司</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>公司所在行业：互联网</p>
+                <dl class="clearfix mg_t_5">
+                  <dt>职位名称：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt>职位类型：</dt>
+                  <dd>全职</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>职位类别：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt class="tr">薪水：</dt>
+                  <dd>25000元/月以上</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>所在部门：</dt>
+                  <dd>汽车频道</dd>
+                  <dt class="tr">工作地：</dt>
+                  <dd>北京</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>任职时间：</dt>
+                  <dd>2009.1~2012.12</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt class="tr">证明人：</dt>
+                  <dd>刘同</dd>
+                  <dt class="tr">联系电话：</dt>
+                  <dd>13552677988</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>工作职责：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>离职原因：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong class="mg_r_10">百度</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>公司所在行业：互联网</p>
+                <dl class="clearfix mg_t_5">
+                  <dt>职位名称：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt>职位类型：</dt>
+                  <dd>全职</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>职位类别：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt class="tr">薪水：</dt>
+                  <dd>25000元/月以上</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>所在部门：</dt>
+                  <dd>汽车频道</dd>
+                  <dt class="tr">工作地：</dt>
+                  <dd>北京</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>任职时间：</dt>
+                  <dd>2009.1~2012.12</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt class="tr">证明人：</dt>
+                  <dd>刘同</dd>
+                  <dt class="tr">联系电话：</dt>
+                  <dd>13552677988</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>工作职责：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>离职原因：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第三步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">教育经历</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_education')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_education">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong>北京师范大学</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>专业：计算机科学与技术</p>
+                <p>学历：本科</p>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong>清华大学</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>专业：计算机科学与技术</p>
+                <p>学历：本科</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第四步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">求职意向</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_intension')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_intension">
+          <table class="table_form">
+            <colgroup>
+              <col width="120" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>期望工作性质：</th>
+              <td>全职</td>
+            </tr>
+            <tr>
+              <th>期望工作地点：</th>
+              <td>北京</td>
+            </tr>
+            <tr>
+              <th>期望行业：</th>
+              <td>互联网</td>
+            </tr>
+            <tr>
+              <th>期望职位类别：</th>
+              <td>软件开发</td>
+            </tr>
+            <tr>
+              <th>期望薪水（税前）：</th>
+              <td>1000元/月以下</td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</td>
+            </tr>
+          </table>
+        </div>
+        <!--第五步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">语言信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_language')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_language">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_100_pixel">英语</strong><em class="indis width_120_pixel">听说能力：熟练</em><em class="indis width_120_pixel">读写能力：熟练</em></span>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_100_pixel">日语</strong><em class="indis width_120_pixel">听说能力：熟练</em><em class="indis width_120_pixel">读写能力：熟练</em></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第六步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">技能信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_skill')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_skill">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis mg_r_30" style="width:160px">Javascript</strong><em class="mg_r_30">熟练</em><em>使用20个月</em></span>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis mg_r_30" style="width:160px">Html</strong><em class="mg_r_30">熟练</em><em>使用20个月</em></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第七步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">证书/许可证（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_certificate')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_certificate">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">外语证书</strong><strong class="mg_r_30">托福</strong><i>2000-12-31</i></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">外语证书</strong><strong class="mg_r_30">托福</strong><i>2000-12-31</i></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+          </ul>
+        </div>
+        <!--第八步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">附件管理（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_attachment')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_attachment">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">英语四级证书</strong><a href="?">下载</a></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">英语四级证书</strong><a href="?">下载</a></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="candidates_2" class="tab_content">
+      <div class="head clearfix">
+        <h2 class="font_black">欧阳宇</h2>
+        <p>
+           <span class="mg_r_10">简历编号：00012345</span><span>最后更新：2012-12-31 16:00:00</span> 
+        </p>
+      </div>
+      <div class="step_block">
+        <!--第一步-->
+        <h4 class="title_step">
+          <span class="font_black">基本信息</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_basicinfo')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_basicinfo">
+          <table class="table_form">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>姓名：</th>
+              <td>高云霄</td>
+              <td colspan="2" rowspan="4" valign="top" style="padding-left:202px">
+                <img src="../../temp/avatar.jpg" width="75" height="90" style="border:#dfdfdf 1px solid" />
+              </td>
+            </tr>
+            <tr>
+              <th>性别：</th>
+              <td>男</td>
+            </tr>
+            <tr>
+              <th>手机号码：</th>
+              <td>13552600455</td>
+            </tr>
+            <tr>
+              <th>电子邮箱：</th>
+              <td>13552600455@139.com</td>
+            </tr>
+            <tr>
+              <th>出生日期：</th>
+              <td>1989-06-04</td>
+              <th>参加工作年份：</th>
+              <td>2011年</td>
+            </tr>
+            <tr>
+              <th>婚姻状况：</th>
+              <td>已婚</td>
+              <th>是否在职：</th>
+              <td>是</td>
+            </tr>
+            <tr>
+              <th>现居住地：</th>
+              <td>北京市朝阳区科学园南里</td>
+              <th>邮政编码：</th>
+              <td>100029</td>
+            </tr>
+            <tr>
+              <th>政治面貌：</th>
+              <td colspan="3">民主党派</td>
+            </tr>
+            <tr>
+              <th>关键字：</th>
+              <td colspan="3">关键字 关键字</td>
+            </tr>
+          </table>
+          <table class="table_form" style="margin-top:0">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>家庭电话：</th>
+              <td>010-64390501</td>
+              <th>公司电话：</th>
+              <td>010-64390501</td>
+            </tr>
+            <tr>
+              <th>即时通讯：</th>
+              <td>MSN：13552600455@139.com</td>
+              <th>信息来源：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>个人主页：</th>
+              <td></td>
+              <th>身份证号：</th>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <!--第二步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">工作经验</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_experience')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_experience">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong class="mg_r_10">腾讯（北京）科技有限公司</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>公司所在行业：互联网</p>
+                <dl class="clearfix mg_t_5">
+                  <dt>职位名称：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt>职位类型：</dt>
+                  <dd>全职</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>职位类别：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt class="tr">薪水：</dt>
+                  <dd>25000元/月以上</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>所在部门：</dt>
+                  <dd>汽车频道</dd>
+                  <dt class="tr">工作地：</dt>
+                  <dd>北京</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>任职时间：</dt>
+                  <dd>2009.1~2012.12</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt class="tr">证明人：</dt>
+                  <dd>刘同</dd>
+                  <dt class="tr">联系电话：</dt>
+                  <dd>13552677988</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>工作职责：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>离职原因：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong class="mg_r_10">百度</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>公司所在行业：互联网</p>
+                <dl class="clearfix mg_t_5">
+                  <dt>职位名称：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt>职位类型：</dt>
+                  <dd>全职</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>职位类别：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt class="tr">薪水：</dt>
+                  <dd>25000元/月以上</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>所在部门：</dt>
+                  <dd>汽车频道</dd>
+                  <dt class="tr">工作地：</dt>
+                  <dd>北京</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>任职时间：</dt>
+                  <dd>2009.1~2012.12</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt class="tr">证明人：</dt>
+                  <dd>刘同</dd>
+                  <dt class="tr">联系电话：</dt>
+                  <dd>13552677988</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>工作职责：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>离职原因：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第三步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">教育经历</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_education')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_education">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong>北京师范大学</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>专业：计算机科学与技术</p>
+                <p>学历：本科</p>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong>清华大学</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>专业：计算机科学与技术</p>
+                <p>学历：本科</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第四步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">求职意向</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_intension')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_intension">
+          <table class="table_form">
+            <colgroup>
+              <col width="120" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>期望工作性质：</th>
+              <td>全职</td>
+            </tr>
+            <tr>
+              <th>期望工作地点：</th>
+              <td>北京</td>
+            </tr>
+            <tr>
+              <th>期望行业：</th>
+              <td>互联网</td>
+            </tr>
+            <tr>
+              <th>期望职位类别：</th>
+              <td>软件开发</td>
+            </tr>
+            <tr>
+              <th>期望薪水（税前）：</th>
+              <td>1000元/月以下</td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</td>
+            </tr>
+          </table>
+        </div>
+        <!--第五步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">语言信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_language')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_language">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_100_pixel">英语</strong><em class="indis width_120_pixel">听说能力：熟练</em><em class="indis width_120_pixel">读写能力：熟练</em></span>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_100_pixel">日语</strong><em class="indis width_120_pixel">听说能力：熟练</em><em class="indis width_120_pixel">读写能力：熟练</em></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第六步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">技能信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_skill')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_skill">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis mg_r_30" style="width:160px">Javascript</strong><em class="mg_r_30">熟练</em><em>使用20个月</em></span>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis mg_r_30" style="width:160px">Html</strong><em class="mg_r_30">熟练</em><em>使用20个月</em></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第七步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">证书/许可证（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_certificate')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_certificate">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">外语证书</strong><strong class="mg_r_30">托福</strong><i>2000-12-31</i></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">外语证书</strong><strong class="mg_r_30">托福</strong><i>2000-12-31</i></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+          </ul>
+        </div>
+        <!--第八步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">附件管理（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_attachment')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_attachment">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">英语四级证书</strong><a href="?">下载</a></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">英语四级证书</strong><a href="?">下载</a></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="candidates_3" class="tab_content">
+      <div class="head clearfix">
+        <h2 class="font_black">曾放弃</h2>
+        <p>
+           <span class="mg_r_10">简历编号：00012345</span><span>最后更新：2012-12-31 16:00:00</span> 
+        </p>
+      </div>
+      <div class="step_block">
+        <!--第一步-->
+        <h4 class="title_step">
+          <span class="font_black">基本信息</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_basicinfo')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_basicinfo">
+          <table class="table_form">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>姓名：</th>
+              <td>高云霄</td>
+              <td colspan="2" rowspan="4" valign="top" style="padding-left:202px">
+                <img src="../../temp/avatar.jpg" width="75" height="90" style="border:#dfdfdf 1px solid" />
+              </td>
+            </tr>
+            <tr>
+              <th>性别：</th>
+              <td>男</td>
+            </tr>
+            <tr>
+              <th>手机号码：</th>
+              <td>13552600455</td>
+            </tr>
+            <tr>
+              <th>电子邮箱：</th>
+              <td>13552600455@139.com</td>
+            </tr>
+            <tr>
+              <th>出生日期：</th>
+              <td>1989-06-04</td>
+              <th>参加工作年份：</th>
+              <td>2011年</td>
+            </tr>
+            <tr>
+              <th>婚姻状况：</th>
+              <td>已婚</td>
+              <th>是否在职：</th>
+              <td>是</td>
+            </tr>
+            <tr>
+              <th>现居住地：</th>
+              <td>北京市朝阳区科学园南里</td>
+              <th>邮政编码：</th>
+              <td>100029</td>
+            </tr>
+            <tr>
+              <th>政治面貌：</th>
+              <td colspan="3">民主党派</td>
+            </tr>
+            <tr>
+              <th>关键字：</th>
+              <td colspan="3">关键字 关键字</td>
+            </tr>
+          </table>
+          <table class="table_form" style="margin-top:0">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>家庭电话：</th>
+              <td>010-64390501</td>
+              <th>公司电话：</th>
+              <td>010-64390501</td>
+            </tr>
+            <tr>
+              <th>即时通讯：</th>
+              <td>MSN：13552600455@139.com</td>
+              <th>信息来源：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>个人主页：</th>
+              <td></td>
+              <th>身份证号：</th>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <!--第二步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">工作经验</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_experience')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_experience">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong class="mg_r_10">腾讯（北京）科技有限公司</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>公司所在行业：互联网</p>
+                <dl class="clearfix mg_t_5">
+                  <dt>职位名称：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt>职位类型：</dt>
+                  <dd>全职</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>职位类别：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt class="tr">薪水：</dt>
+                  <dd>25000元/月以上</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>所在部门：</dt>
+                  <dd>汽车频道</dd>
+                  <dt class="tr">工作地：</dt>
+                  <dd>北京</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>任职时间：</dt>
+                  <dd>2009.1~2012.12</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt class="tr">证明人：</dt>
+                  <dd>刘同</dd>
+                  <dt class="tr">联系电话：</dt>
+                  <dd>13552677988</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>工作职责：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>离职原因：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong class="mg_r_10">百度</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>公司所在行业：互联网</p>
+                <dl class="clearfix mg_t_5">
+                  <dt>职位名称：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt>职位类型：</dt>
+                  <dd>全职</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>职位类别：</dt>
+                  <dd>软件开发工程师</dd>
+                  <dt class="tr">薪水：</dt>
+                  <dd>25000元/月以上</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>所在部门：</dt>
+                  <dd>汽车频道</dd>
+                  <dt class="tr">工作地：</dt>
+                  <dd>北京</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>任职时间：</dt>
+                  <dd>2009.1~2012.12</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt class="tr">证明人：</dt>
+                  <dd>刘同</dd>
+                  <dt class="tr">联系电话：</dt>
+                  <dd>13552677988</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>工作职责：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+                <dl class="clearfix">
+                  <dt>离职原因：</dt>
+                  <dd style="width:600px;">工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责工作职责</dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第三步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">教育经历</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_education')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_education">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong>北京师范大学</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>专业：计算机科学与技术</p>
+                <p>学历：本科</p>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_120_pixel">2004.9~2008.6</strong><strong>清华大学</strong></span>
+              </div>
+              <div class="description" style="padding-left:130px">
+                <p>专业：计算机科学与技术</p>
+                <p>学历：本科</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第四步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">求职意向</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_intension')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_intension">
+          <table class="table_form">
+            <colgroup>
+              <col width="120" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>期望工作性质：</th>
+              <td>全职</td>
+            </tr>
+            <tr>
+              <th>期望工作地点：</th>
+              <td>北京</td>
+            </tr>
+            <tr>
+              <th>期望行业：</th>
+              <td>互联网</td>
+            </tr>
+            <tr>
+              <th>期望职位类别：</th>
+              <td>软件开发</td>
+            </tr>
+            <tr>
+              <th>期望薪水（税前）：</th>
+              <td>1000元/月以下</td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td>说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明</td>
+            </tr>
+          </table>
+        </div>
+        <!--第五步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">语言信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_language')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_language">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_100_pixel">英语</strong><em class="indis width_120_pixel">听说能力：熟练</em><em class="indis width_120_pixel">读写能力：熟练</em></span>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis width_100_pixel">日语</strong><em class="indis width_120_pixel">听说能力：熟练</em><em class="indis width_120_pixel">读写能力：熟练</em></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第六步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">技能信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_skill')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_skill">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis mg_r_30" style="width:160px">Javascript</strong><em class="mg_r_30">熟练</em><em>使用20个月</em></span>
+              </div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="indis mg_r_30" style="width:160px">Html</strong><em class="mg_r_30">熟练</em><em>使用20个月</em></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--第七步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">证书/许可证（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_certificate')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_certificate">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">外语证书</strong><strong class="mg_r_30">托福</strong><i>2000-12-31</i></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">外语证书</strong><strong class="mg_r_30">托福</strong><i>2000-12-31</i></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+          </ul>
+        </div>
+        <!--第八步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">附件管理（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_attachment')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_attachment">
+          <ul>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">英语四级证书</strong><a href="?">下载</a></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+            <li>
+              <div class="gray_background clearfix">
+                <span class="fl"><strong class="mg_r_30">英语四级证书</strong><a href="?">下载</a></span>
+              </div>
+              <div class="description">明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="bottom">
+  <div class="clearfix">
+  <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+  <span>才智创鑫版权所有</span>
+  </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+$(function(){
+	var i=$("#title_tab li").length;
+	$("#title_tab .prev").click(function(){
+		var l=parseInt($("#title_tab ul").css("left")); 
+		if(l<0){ 
+			$("#title_tab ul").animate({left:l+88+"px"},500);
+		}
+	});
+	$("#title_tab .next").click(function(){
+		var l=parseInt($("#title_tab ul").css("left"));
+		if(l>-(i*88-880)){
+			$("#title_tab ul").animate({left:l-88+"px"},500);
+		}
+	});
+});
+
+</script>

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="companyinfo_1.html">公司信息</a></li>
+        <li><a href="accounts_1.html">账号管理</a></li>
+        <li class="current_2"><a href="setting_1.html">系统设置</a></li>
+        <li><a href="log_1.html">系统日志</a></li>
+        <li><a href="myaccount_1.html">我的帐户</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="myaccount_1.html">帐户设置</a></li>
+          <li><a href="myaccount_2.html">修改头像</a></li>
+          <li><a href="myaccount_3.html">修改密码</a></li>
+          <li><a href="myaccount_4.html">密码安全</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        系统设置<i> » </i>存储空间
+      </div>
+      <div class="remind_block">
+        <p>备注：群组是指可以对成员进行自由分组，无论是同一业务单元或不同业务单元下的成员都可以编为一组，便于快速选择所指定的人群。</p>
+        <span class="remind_close"></span>
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <input type="button" value="添加群组" class="input_button_green" onclick="AddNewEmailGroup()" />
+        </div>
+        <table class="common_table_tc zebra" id="table_list">
+          <colgroup>
+            <col />
+            <col width="240" />
+          </colgroup>
+          <tr>
+            <th class="first">群组名称</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td class="first"><span class="group">经理组</span></td>
+            <td><a href="javascript:void(0)" onclick="EditMembers('经理组')">【成员】</a><a href="javascript:void(0)" onclick="AddNewEmailGroup()">【重命名】</a><a href="?">【删除】</a></td>
+          </tr>
+          <tr>
+            <td class="first"><span class="group">上海全体</span></td>
+            <td><a href="javascript:void(0)" onclick="EditMembers('上海全体')">【成员】</a><a href="javascript:void(0)" onclick="AddNewEmailGroup()">【重命名】</a><a href="?">【删除】</a></td>
+          </tr>
+          <tr>
+            <td class="first"><span class="group">北京全体</span></td>
+            <td><a href="javascript:void(0)" onclick="EditMembers('北京全体')">【成员】</a><a href="javascript:void(0)" onclick="AddNewEmailGroup()">【重命名】</a><a href="?">【删除】</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="admin">系统设置</span></h4>
+        <ul>
+          <li><a href="setting_1.html">存储空间</a></li>
+          <li class="current"><a href="setting_2.html">邮件群发设置</a></li>
+          <li><a href="setting_3.html">渠道设置</a></li>
+          <li><a href="setting_4.html">简历抓取设置</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<!--弹出框内容-->
+<div id="ViewRightsWin" title="添加新权限组" class="applicant_dialog">
+  <p class="tc mg_t_30">
+    <input type="text" class="input_text" value="请输入群组名称" info="请输入群组名称" onfocus="delInfo(this)" onblur="addInfo(this)" /> 
+    <input type="button" class="input_button_s" value="添加" />
+  </p>
+</div>
+<div id="EditMembers" style="display:none;">
+  <table cellpadding="0" cellspacing="0" class="marginTop15" width="100%">
+    <tr>
+      <td>
+      <div class="border treeMenu" id="treeMenu">
+        <ul>
+          <li><a href="javascript:void(0)">部门一</a></li>
+            <ul>
+              <li><a href="javascript:void(0)" id="000001">张某某1</a></li>
+              <li><a href="javascript:void(0)" id="000002">张某某2</a></li>
+            </ul>
+          <li><a href="javascript:void(0)">部门二</a></li>
+            <ul>
+              <li><a href="javascript:void(0)">部门二二</a></li>
+              <ul>
+                <li><a href="javascript:void(0)" id="000003">李某某3</a></li>
+                <li><a href="javascript:void(0)" id="000004">李某某4</a></li>
+              </ul>
+              <li><a href="javascript:void(0)" id="000005">张某某5</a></li>
+            </ul>
+          <li><a href="javascript:void(0)">部门三</a></li>
+          <ul>
+              <li><a href="javascript:void(0)">部门三_一</a></li>
+              <ul>
+                <li><a href="javascript:void(0)" id="000006">张某某6</a></li>
+                <li><a href="javascript:void(0)" id="000007">张某某7</a></li>
+              </ul>
+          </ul>
+        </ul>
+      </div>
+      </td>
+      <td><img src="../../../Images/Icon/arrow.gif" width="15" height="16" /></td>
+      <td>
+        <div class="border" id="selectedNameList">
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+//添加权限组
+function AddNewEmailGroup(){
+	$("#ViewRightsWin").dialog({
+		bgiframe: true, 
+		width: 300,
+		modal:true
+    });
+}
+
+//编辑成员
+function EditMembers(title){
+	$("#EditMembers").dialog({
+		bgiframe: true, 
+		title: title,
+		width: 560,
+		modal:true
+    });
+}
+</script>

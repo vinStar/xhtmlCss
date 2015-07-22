@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_list.html">需求</a></li>
+        <li><a href="position_1.html">招聘跟踪</a></li>
+        <li class="current_2"><a href="candidate_1.html">候选人</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        候选人<i> » </i>添加候选人
+      </div>
+      <h2 class="title">添加候选人</h2>
+      <div class="step_block">
+        <!--第一步-->
+        <h4 class="title_step">
+          <span class="font_black">基本信息</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_basicinfo')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_basicinfo">
+          <table class="table_form">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>姓名：</th>
+              <td><input type="text" class="input_text" /></td>
+              <td colspan="2" rowspan="4" valign="top" style="padding-left:202px">
+                <img src="../../temp/avatar.jpg" width="75" height="90" style="border:#dfdfdf 1px solid" />
+                <p style="padding:4px 0 0 3px"><input type="button" value="上传照片" class="input_button" /></p>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>性别：</th>
+              <td><input type="radio" class="radio" name="GenderType" checked="checked" /><label class="label">男</label>
+                <input type="radio" class="radio" name="GenderType" /><label class="label">女</label>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>手机号码：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>电子邮箱：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>出生日期：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>参加工作年份：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>2000</option><option>1999</option><option>1998</option></select></div></td>
+            </tr>
+            <tr>
+              <th>婚姻状况：</th>
+              <td><input type="radio" class="radio" name="MaritalStatus" checked="checked" /><label class="label">未婚</label>
+                  <input type="radio" class="radio" name="MaritalStatus" /><label class="label">已婚</label>
+                  <input type="radio" class="radio" name="MaritalStatus" /><label class="label">保密</label>
+                </td>
+              <th>是否在职：</th>
+              <td><input type="radio" class="radio" name="PositionWhether" checked="checked" /><label class="label">是</label>
+                <input type="radio" class="radio" name="PositionWhether" /><label class="label">否</label>
+              </td>
+            </tr>
+            <tr>
+              <th>现居住地：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>邮政编码：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>政治面貌：</th>
+              <td colspan="3"><input type="radio" class="radio" name="PoliticsStatus" checked="checked" /><label class="label">中共党员</label>
+                  <input type="radio" class="radio" name="PoliticsStatus" /><label class="label">团员</label>
+                  <input type="radio" class="radio" name="PoliticsStatus" /><label class="label">群众</label>
+                  <input type="radio" class="radio" name="PoliticsStatus" /><label class="label">民主党派</label>
+                  <input type="radio" class="radio" name="PoliticsStatus" /><label class="label">无党派人士</label>
+              </td>
+            </tr>
+            <tr>
+              <th>关键字：</th>
+              <td colspan="3"><input type="text" class="input_text" style="width:590px;" /></td>
+            </tr>
+          </table>
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>家庭电话：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>公司电话：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>即时通讯：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>信息来源：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>个人主页：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>身份证号：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="3">
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第二步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">工作经验</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_experience')"></span>
+        </h4>
+        <div class="step_content_box" style="display:block" id="add_candidate_experience">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>公司名称：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>职位类型：</th>
+              <td>
+                <input type="radio" class="radio" name="PositionType" checked="checked" /><label class="label">全职</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">兼职</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">派遣</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">实习</label>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>行业类别：</th>
+              <td colspan="3">
+                <div class="input_unfold_block flb" id="industry_categories_block" style="width:595px;">
+                  <span class="arrow"></span>
+                  <ul class="input_text" id="industry_categories_selected" style="width:588px;height:16px;"></ul>
+                  <div class="input_unfold_content indandpro-search clearfix" id="industry_categories_content">
+                    <ul class="first-menu">
+                      <li id="0000000001" class="tabFocus" onclick="GetIndustryPositionCategory(this,'0000000001')">IT/通信/电子</li>
+                      <li id="0000000002" onclick="GetIndustryPositionCategory(this,'0000000002')">销售/客服</li>
+                      <li id="0000000003" onclick="GetIndustryPositionCategory(this,'0000000003')">财会/金融</li>
+                      <li id="0000000004" onclick="GetIndustryPositionCategory(this,'0000000004')">医药/化工/能源/环保</li>
+                    </ul>
+                    <ul id="Industry_0000000001" class="second-menu" style="display:block">
+                      <li><input id="Position_0000000001" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机硬件类')" /><label>计算机硬件类</label></li>
+                      <li><input id="Position_0000000002" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机软件类')" /><label>计算机软件类</label></li>
+                      <li><input id="Position_0000000003" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机硬件类')" /><label>互联网开发及应用类</label></li>
+                      <li><input id="Position_0000000004" type="checkbox" onchange="GetPositionCategoryInfo(this,'IT-管理类')" /><label>IT-管理类</label></li>
+                    </ul>
+                    <ul id="Industry_0000000002" class="second-menu">
+                      <li><input id="Position_0000000001" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机硬件类')" /><label>计算机硬件类222</label></li>
+                      <li><input id="Position_0000000002" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机软件类')" /><label>计算机软件类</label></li>
+                      <li><input id="Position_0000000003" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机硬件类')" /><label>互联网开发及应用类</label></li>
+                      <li><input id="Position_0000000004" type="checkbox" onchange="GetPositionCategoryInfo(this,'IT-管理类')" /><label>IT-管理类</label></li>
+                    </ul>
+                    <ul id="Industry_0000000003" class="second-menu">
+                      <li><input id="Position_0000000001" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机硬件类')" /><label>计算机硬件类333</label></li>
+                      <li><input id="Position_0000000002" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机软件类')" /><label>计算机软件类</label></li>
+                      <li><input id="Position_0000000003" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机硬件类')" /><label>互联网开发及应用类</label></li>
+                      <li><input id="Position_0000000004" type="checkbox" onchange="GetPositionCategoryInfo(this,'IT-管理类')" /><label>IT-管理类</label></li>
+                    </ul>
+                    <ul id="Industry_0000000004" class="second-menu">
+                      <li><input id="Position_0000000001" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机硬件类')" /><label>计算机硬件类444</label></li>
+                      <li><input id="Position_0000000002" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机软件类')" /><label>计算机软件类</label></li>
+                      <li><input id="Position_0000000003" type="checkbox" onchange="GetPositionCategoryInfo(this,'计算机硬件类')" /><label>互联网开发及应用类</label></li>
+                      <li><input id="Position_0000000004" type="checkbox" onchange="GetPositionCategoryInfo(this,'IT-管理类')" /><label>IT-管理类</label></li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>职位列别：</th>
+              <td colspan="3"><input type="text" value="鼠标放上去展开选择" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>职位名称：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>薪水（税前）：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>面谈</option><option>1000元/月以下</option><option>1000~2000元/月</option>
+              <option>2001~4000元/月</option><option>4001~6000元/月</option><option>6001~8000元/月</option><option>8001~10000元/月</option><option>10001~15000元/月</option><option>15001~25000元/月</option><option>25000元/月以上</option>
+              </select></div></td>
+            </tr>
+            <tr>
+              <th>所在部门：</th>
+              <td><input type="text" value="鼠标放上去展开选择" class="input_text" /></td>
+              <th>工作地：</th>
+              <td>
+                <div class="input_unfold_block flb" id="city_search_block">
+                  <span class="arrow"></span>
+                  <div class="input_text" id="city_search_selected" style="height:16px; width:175px;"></div>
+                  <div class="input_unfold_content" id="city_search_content" style="left:-312px;">
+                    <div class="items">
+                      <h4><strong>主要城市</strong></h4>
+                      <ul class="clearfix" style="display:block;">
+                        <li id="main-city-1" onclick="citySelect(this)">北京</li>
+                        <li id="main-city-2" onclick="citySelect(this)">上海</li>
+                        <li id="main-city-3" onclick="citySelect(this)">广州</li>
+                        <li id="main-city-4" onclick="citySelect(this)">深圳</li>
+                        <li id="main-city-5" onclick="citySelect(this)">天津</li>
+                        <li id="main-city-6" onclick="citySelect(this)">武汉</li>
+                        <li id="main-city-7" onclick="citySelect(this)">北京</li>
+                        <li id="main-city-8" onclick="citySelect(this)">上海</li>
+                        <li id="main-city-9" onclick="citySelect(this)">广州</li>
+                        <li id="main-city-10" onclick="citySelect(this)">深圳</li>
+                        <li id="main-city-11" onclick="citySelect(this)">天津</li>
+                        <li id="main-city-12" onclick="citySelect(this)">武汉</li>
+                        <li id="main-city-13" onclick="citySelect(this)">北京</li>
+                      </ul>
+                    </div>
+                    <div class="items" id="province">
+                      <h4><strong>其他省市</strong></h4>
+                      <ul class="clearfix" style="display:block;">
+                        <li id="provice_1" onclick="provinceCityShow(this)">广东</li>
+                        <li id="provice_2" onclick="provinceCityShow(this)">湖北</li>
+                        <li id="provice_3" onclick="provinceCityShow(this)">山西</li>
+                        <li id="provice_4" onclick="provinceCityShow(this)">四川</li>
+                        <li id="provice_5" onclick="provinceCityShow(this)">浙江</li>
+                        <li id="provice_6" onclick="provinceCityShow(this)">江苏</li>
+                        <li id="provice_7" onclick="provinceCityShow(this)">安徽</li>
+                        <li id="provice_8" onclick="provinceCityShow(this)">海南</li>
+                        <li id="provice_9" onclick="provinceCityShow(this)">福建</li>
+                        <li id="provice_10" onclick="provinceCityShow(this)">广西</li>
+                      </ul>
+                    </div>
+                    <div id="province-items">
+                      <div class="items" id="city_provice_1">
+                        <h4><strong>广东</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="citySelect(this)">广州</li>
+                          <li onclick="citySelect(this)">韶关</li>
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                          <li onclick="citySelect(this)">广州</li>
+                          <li onclick="citySelect(this)">韶关</li>
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                          <li onclick="citySelect(this)">广州</li>
+                          <li onclick="citySelect(this)">韶关</li>
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_2">
+                        <h4><strong>湖北</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                          <li onclick="citySelect(this)">广州</li>
+                          <li onclick="citySelect(this)">韶关</li>
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_3">
+                        <h4><strong>山西</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                          <li onclick="citySelect(this)">广州</li>
+                          <li onclick="citySelect(this)">韶关</li>
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_4">
+                        <h4><strong>四川</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                          <li onclick="citySelect(this)">广州</li>
+                          <li onclick="citySelect(this)">韶关</li>
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_5">
+                        <h4><strong>浙江</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                          <li onclick="citySelect(this)">广州</li>
+                          <li onclick="citySelect(this)">韶关</li>
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_6">
+                        <h4><strong>江苏</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                          <li onclick="citySelect(this)">广州</li>
+                          <li onclick="citySelect(this)">韶关</li>
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_10">
+                        <h4><strong>广东</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                          <li onclick="citySelect(this)">广州</li>
+                          <li onclick="citySelect(this)">韶关</li>
+                          <li onclick="citySelect(this)">深圳</li>
+                          <li onclick="citySelect(this)">珠海</li>
+                          <li onclick="citySelect(this)">汕头</li>
+                          <li onclick="citySelect(this)">佛山</li>
+                          <li onclick="citySelect(this)">惠州</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>任职时间：</th>
+              <td colspan="3"><input type="text" class="input_text floatl" style="width:150px" /> <span class="floatl">-</span> <input type="text" class="input_text floatl" style="width:150px" /> <input type="checkbox" class="checkbox" /><label class="label">至今</label></td>
+            </tr>
+            <tr>
+              <th>证明人：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>联系电话：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>工作职责：</th>
+              <td colspan="3"><textarea class="input_text" style="width:590px;height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th>离职原因：</th>
+              <td colspan="3"><textarea class="input_text" style="width:590px;height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="3">
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第三步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">教育经历</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_education')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_education">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>学校名称：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>所学专业：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>就读时间：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>学历：</th>
+              <td><div class="select_box"><select><option>专科</option><option>本科</option><option>硕士</option><option>博士</option></select></div></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="3">
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第四步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">求职意向</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_intension')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_intension">
+          <table class="table_form">
+            <colgroup>
+              <col width="120" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>期望工作性质：</th>
+              <td>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">不限</label>
+                <input type="radio" class="radio" name="PositionType" checked="checked" /><label class="label">全职</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">兼职</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">派遣</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">实习</label>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>期望工作地点：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>期望行业：</th>
+              <td><input type="text" value="鼠标放上去展开选择" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>期望职位类别：</th>
+              <td><input type="text" value="鼠标放上去展开选择" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>期望薪水（税前）：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>面谈</option><option>1000元/月以下</option><option>1000~2000元/月</option>
+              <option>2001~4000元/月</option><option>4001~6000元/月</option><option>6001~8000元/月</option><option>8001~10000元/月</option><option>10001~15000元/月</option><option>15001~25000元/月</option><option>25000元/月以上</option>
+              </select></div></td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td><textarea class="input_text" style="width:590px;height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第五步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">语言信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_language')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_language">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col width="220" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>语言：</th>
+              <td colspan="3"><div class="select_box"><select><option>英语</option><option>日语</option><option>法语</option><option>德语</option></select></div></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>听说能力：</th>
+              <td><div class="select_box"><select><option>一般</option><option>良好</option><option>熟练</option><option>精通</option></select></div></td>
+              <th><span class="required">*</span>读写能力：</th>
+              <td><div class="select_box"><select><option>一般</option><option>良好</option><option>熟练</option><option>精通</option></select></div></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="3">
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第六步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">技能信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_skill')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_skill">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>技能：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>使用时间：</th>
+              <td><input type="text" class="input_text" /><span class="mg_l_5">个月</span></td>
+            </tr>
+            <tr>
+              <th>水平：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>一般</option><option>良好</option><option>熟练</option><option>精通</option></select></div></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第七步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">证书/许可证（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_certificate')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_certificate">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>证书名称：</th>
+              <td>
+                <div class="select_box floatl" style="width:180px;"><select style="width:180px;"><option>外语证书</option><option>技能证书</option></select></div>
+                <div class="select_box floatl" style="width:180px;"><select style="width:180px;"><option>托福</option><option>雅思</option></select></div>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>获得时间：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td><textarea class="input_text" style="width:590px;height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第八步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">附件管理（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_attachment')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_attachment">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>名称：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>上传文件：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td><textarea class="input_text" style="width:590px;height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="step_button_box">
+          <input type="button" value="添加候选人" class="input_button_green_l" />
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_applicant">候选人</span></h4>
+        <ul>
+          <li><a href="candidate_1.html">候选人搜索</a></li>
+          <li><a href="candidate_2.html">我上传的候选人</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav" class="mg_t_30">
+            <li class="add_job"><a href="demand_add.html">提交新需求</a></li>
+            <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+            <li class="add_candidate"><a href="candidate_add.html" class="current">添加候选人</a></li>
+            <li class="candidate_entry"><a href="candidate_entry.html">上岗人员</a></li>
+            <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+          </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+$(function(){
+	//行业的点击展开事件
+	$("#industry_categories_block .arrow").click(function(){
+		var oh = document.body.scrollHeight;
+		var dialogMask = '<div id="dialogMask" style="width:100%;height:'+ oh +'px"></div>';
+		$("body").append(dialogMask);
+		$(this).parent().find(".input_unfold_content").show();
+		var inputVisable = '<div id="industry_categories_Visable" class="inputVisable"><input type="button" class="input_unfold_button btn_1" value="确定" onclick="confirmMembersList(this)" /><input type="button" class="input_unfold_button btn_2" value="取消" onclick="closeUnfold(this)" /></div>';
+		$("#industry_categories_block").append(inputVisable);
+	});
+	
+	
+	$("#city_search_block .arrow").click(function(){
+		var oh = document.body.scrollHeight;
+		var dialogMask = '<div id="dialogMask" style="width:100%;height:'+ oh +'px"></div>';
+		$("body").append(dialogMask);
+		$(this).parent().find(".input_unfold_content").show();
+		var inputVisable = '<div id="cityVisable" class="inputVisable"><span></span><input type="button" class="input_unfold_button btn_2" value="取消" onclick="closeUnfold(this)" /></div>';
+		$("#city_search_block").append(inputVisable);
+	});
+	
+});
+
+
+function GetIndustryPositionCategory(obj,id){
+	
+}
+
+
+<!--城市的脚本-->
+
+//点击城市之后Mask和城市区域的内容消失，选中的城市在city_search_selected里显示
+function citySelect(obj){
+	var oCityLis = document.getElementById("city_search_content").getElementsByTagName("li");
+	for(var i=0; i<oCityLis.length; i++){
+		oCityLis[i].className = "";
+	}
+	obj.className = "orange";
+	$("#dialogMask").remove();
+	$(".input_unfold_content").hide();	
+	document.getElementById("city_search_selected").innerHTML = obj.innerHTML;
+	$("#cityVisable").remove();
+}
+
+//点击省份显示城市函数
+function provinceCityShow(obj){
+	var provinceId = "city_" + obj.id;
+	//alert(provinceId)
+	document.getElementById("province").style.display = "none";
+	document.getElementById("province-items").style.display = "block";
+	var provinceList = document.getElementById("province-items").getElementsByTagName("div");
+	for(var i=0; i<provinceList.length; i++){
+		provinceList[i].style.display = "none";
+	}
+	document.getElementById(provinceId).style.display = "block";
+}
+//从某个省份城市返回省份列表
+function backToProvice(obj){
+	obj.parentNode.parentNode.style.display = "none";
+	document.getElementById("province-items").style.display = "none";
+	document.getElementById("province").style.display = "block";
+}
+</script>
+</body>
+</html>

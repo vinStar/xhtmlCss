@@ -1,0 +1,1327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li class="current_2"><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        职位<i> » </i>添加候选人
+      </div>
+      <h2 class="title">添加候选人</h2>
+      <div class="step_block">
+        <!--第一步-->
+        <h4 class="title_step">
+          <span class="font_black">基本信息</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_basicinfo')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_basicinfo">
+          <table class="table_form">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>姓名：</th>
+              <td><input type="text" class="input_text" /></td>
+              <td colspan="2" rowspan="4" valign="top" style="padding-left:202px">
+                <img src="../../temp/avatar.jpg" width="75" height="90" style="border:#dfdfdf 1px solid" />
+                <p style="padding:4px 0 0 3px"><input type="button" value="上传照片" class="input_button" /></p>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>性别：</th>
+              <td><input type="radio" class="radio" name="GenderType" checked="checked" /><label class="label">男</label>
+                <input type="radio" class="radio" name="GenderType" /><label class="label">女</label>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>手机号码：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>电子邮箱：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>出生日期：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>参加工作年份：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>2000</option><option>1999</option><option>1998</option></select></div></td>
+            </tr>
+            <tr>
+              <th>婚姻状况：</th>
+              <td><input type="radio" class="radio" name="MaritalStatus" checked="checked" /><label class="label">未婚</label>
+                  <input type="radio" class="radio" name="MaritalStatus" /><label class="label">已婚</label>
+                  <input type="radio" class="radio" name="MaritalStatus" /><label class="label">保密</label>
+                </td>
+              <th>是否在职：</th>
+              <td><input type="radio" class="radio" name="PositionWhether" checked="checked" /><label class="label">是</label>
+                <input type="radio" class="radio" name="PositionWhether" /><label class="label">否</label>
+              </td>
+            </tr>
+            <tr>
+              <th>现居住地：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>邮政编码：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>政治面貌：</th>
+              <td colspan="3"><input type="radio" class="radio" name="PoliticsStatus" checked="checked" /><label class="label">中共党员</label>
+                  <input type="radio" class="radio" name="PoliticsStatus" /><label class="label">团员</label>
+                  <input type="radio" class="radio" name="PoliticsStatus" /><label class="label">群众</label>
+                  <input type="radio" class="radio" name="PoliticsStatus" /><label class="label">民主党派</label>
+                  <input type="radio" class="radio" name="PoliticsStatus" /><label class="label">无党派人士</label>
+              </td>
+            </tr>
+            <tr>
+              <th>关键字：</th>
+              <td colspan="3"><input type="text" class="input_text" style="width:590px;" /></td>
+            </tr>
+          </table>
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>家庭电话：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>公司电话：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>即时通讯：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>信息来源：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>个人主页：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>身份证号：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="3">
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第二步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">工作经验</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_experience')"></span>
+        </h4>
+        <div class="step_content_box" style="display:block" id="add_candidate_experience">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="80" />
+              <col width="320" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>公司名称：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>职位类型：</th>
+              <td>
+                <input type="radio" class="radio" name="PositionType" checked="checked" /><label class="label">全职</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">兼职</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">派遣</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">实习</label>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>行业类别：</th>
+              <td colspan="3">
+                <div class="input_unfold_block" id="industry_categories_block" style="width:345px;">
+                  <ul class="input_text" id="industry_categories_selected" style="width:335px;"></ul>
+                  <span class="arrow">选择</span>
+                  <div class="input_unfold_content" id="industry_categories_content">
+                    <table id="table_list" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th>IT/通信/电子/互联网</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000001" type="checkbox" name="IndustryCategoryListItem" onclick="industryCategoriesNameClick(this)" /><label>互联网/电子商务</label></li>
+                            <li><input id="Industry_0000000002" type="checkbox" name="IndustryCategoryListItem" onclick="industryCategoriesNameClick(this)" /><label>计算机软件</label></li>
+                            <li><input id="Industry_0000000003" type="checkbox" name="IndustryCategoryListItem" onclick="industryCategoriesNameClick(this)" /><label>IT服务（系统/数据/维护）/多领域经营</label></li>
+                            <li><input id="Industry_0000000004" type="checkbox" name="IndustryCategoryListItem" onclick="industryCategoriesNameClick(this)" /><label>电子技术/半导体/集成电路</label></li>
+                            <li><input id="Industry_0000000005" type="checkbox" name="IndustryCategoryListItem" onclick="industryCategoriesNameClick(this)" /><label>计算机硬件及网络设备</label></li>
+                            <li><input id="Industry_0000000006" type="checkbox" name="IndustryCategoryListItem" onclick="industryCategoriesNameClick(this)" /><label>通信/电信/网络设备</label></li>
+                            <li><input id="Industry_0000000007" type="checkbox" name="IndustryCategoryListItem" onclick="industryCategoriesNameClick(this)" /><label>通信/电信运营、增值服务</label></li>
+                            <li><input id="Industry_0000000008" type="checkbox" name="IndustryCategoryListItem" onclick="industryCategoriesNameClick(this)" /><label>网络游戏</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>金融业</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000009" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>金融/银行/投资/基金/证券/期货</label></li>
+                            <li><input id="Industry_0000000010" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>保险</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>房地产/建筑业</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000011" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>房地产/建筑/建材/工程</label></li>
+                            <li><input id="Industry_0000000012" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>家居/室内设计/装饰装潢</label></li>
+                            <li><input id="Industry_0000000013" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>物业管理/商业中心</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>商业服务</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000014" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>专业服务(咨询/财会/法律等)</label></li>
+                            <li><input id="Industry_0000000015" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>广告/会展/公关/市场推广</label></li>
+                            <li><input id="Industry_0000000016" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>中介服务</label></li>
+                            <li><input id="Industry_0000000017" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>检验/检测/认证</label></li>
+                            <li><input id="Industry_0000000018" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>会计/审计</label></li>
+                            <li><input id="Industry_0000000019" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>外包服务</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>造纸及纸制品/印刷业</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000020" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>印刷/包装/造纸</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>贸易/批发/零售业</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000021" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>快速消费品（食品/饮料/烟酒/日化）</label></li>
+                            <li><input id="Industry_0000000022" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>耐用消费品（服装服饰/纺织/皮革/家具/家电）</label></li>
+                            <li><input id="Industry_0000000023" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>贸易/进出口</label></li>
+                            <li><input id="Industry_0000000024" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>零售/批发</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>文教体育/工艺美术</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000025" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>礼品/玩具/工艺美术/收藏品/奢侈品</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>加工制造/仪表设备</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000026" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>汽车/摩托车（制造/维护/配件/销售/服务/租赁）</label></li>
+                            <li><input id="Industry_0000000027" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>大型设备/机电设备/重工业</label></li>
+                            <li><input id="Industry_0000000028" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>加工制造（原料加工/模具）</label></li>
+                            <li><input id="Industry_0000000029" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>仪器仪表及工业自动化</label></li>
+                            <li><input id="Industry_0000000030" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>环保</label></li>
+                            <li><input id="Industry_0000000031" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>办公用品及设备</label></li>
+                            <li><input id="Industry_0000000032" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>航空/航天研究与制造</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>交通运输仓储</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000033" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>交通/运输/物流</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>制药医疗/生物/卫生保健</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000034" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>医药/生物工程</label></li>
+                            <li><input id="Industry_0000000035" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>医疗/护理/美容/保健/卫生服务</label></li>
+                            <li><input id="Industry_0000000036" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>医疗设备/器械</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>教育</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000037" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>教育/培训/院校</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>酒店/餐饮/旅游</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000038" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>酒店/餐饮</label></li>
+                            <li><input id="Industry_0000000039" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>旅游/度假</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>文化/体育/娱乐业</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000040" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>媒体/出版/影视/文化传播</label></li>
+                            <li><input id="Industry_0000000041" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>娱乐/体育/休闲</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>能源/电气/采掘/地质/石油加工</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000042" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>石油/石化/化工</label></li>
+                            <li><input id="Industry_0000000043" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>能源/矿产/采掘/冶炼</label></li>
+                            <li><input id="Industry_0000000044" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>电气/电力/水利</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>政府/非盈利机构</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000045" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>学术/科研</label></li>
+                            <li><input id="Industry_0000000046" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>政府/公共事业/非盈利机构</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>农林牧渔/其他</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li><input id="Industry_0000000047" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>农/林/牧/渔</label></li>
+                            <li><input id="Industry_0000000048" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>跨领域经营</label></li>
+                            <li><input id="Industry_0000000049" type="checkbox" name="IndustryCategoryListItem" onchange="industryCategoriesNameClick(this)" /><label>其它</label></li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>职位类别：</th>
+              <td colspan="3">
+                <div class="input_unfold_block" id="position_categories_block" style="width:345px;">
+                  <ul class="input_text" id="position_categories_selected" style="width:335px;"></ul>
+                  <span class="arrow">选择</span>
+                  <div class="input_unfold_content" id="position_categories_content">
+                    <table id="table_list" border="0" cellspacing="0" cellpadding="0" width="100%">
+                      <tr>
+                        <th>IT/通信/电子/互联网</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000001" onclick="GetPositionType(this,'0000000001')">计算机硬件</h4>
+                              <div id="PositionType_0000000001" class="clearfix">
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000002" onclick="GetPositionType(this,'0000000002')">计算机软件</h4>
+                              <div id="PositionType_0000000002" class="clearfix">
+                                <p><input id="Position_0000000004" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级软件工程师</label></p>
+                                <p><input id="Position_0000000005" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>软件工程师</label></p>
+                                <p><input id="Position_0000000006" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>软件UI设计师/工程师</label></p>
+                                <p><input id="Position_0000000007" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>仿真应用工程师</label></p>
+                                <p><input id="Position_0000000008" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>ERP实施顾问</label></p>
+                                <p><input id="Position_0000000009" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>ERP技术开发</label></p>
+                                <p><input id="Position_0000000010" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>需求工程师</label></p>
+                                <p><input id="Position_0000000011" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>系统集成工程师</label></p>
+                                <p><input id="Position_0000000012" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>系统分析员</label></p>
+                                <p><input id="Position_0000000013" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>系统工程师</label></p>
+                                <p><input id="Position_0000000014" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>系统架构设计师</label></p>
+                                <p><input id="Position_0000000015" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>数据库工程师/管理员</label></p>
+                                <p><input id="Position_0000000016" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>计算机辅助设计工程师</label></p>
+                                <p><input id="Position_0000000017" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机软件类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000003" onclick="GetPositionType(this,'0000000003')">互联网开发及应用类</h4>
+                              <div id="PositionType_0000000003" class="clearfix">
+                                <p><input id="Position_0000000018" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>互联网软件开发工程师</label></p>
+                                <p><input id="Position_0000000019" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>语音/视频开发工程师</label></p>
+                                <p><input id="Position_0000000020" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>多媒体/游戏开发工程师</label></p>
+                                <p><input id="Position_0000000021" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>网站运营经理/主管</label></p>
+                                <p><input id="Position_0000000022" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>网站运营专员</label></p>
+                                <p><input id="Position_0000000023" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>网络工程师</label></p>
+                                <p><input id="Position_0000000024" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>UI设计师/顾问</label></p>
+                                <p><input id="Position_0000000025" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>网站架构设计师</label></p>
+                                <p><input id="Position_0000000026" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>网站维护工程师</label></p>
+                                <p><input id="Position_0000000027" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>系统管理员/网络管理员</label></p>
+                                <p><input id="Position_0000000028" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>网站策划</label></p>
+                                <p><input id="Position_0000000029" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>网站编辑</label></p>
+                                <p><input id="Position_0000000030" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>网页设计/制作/美工</label></p>
+                                <p><input id="Position_0000000031" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>网络信息安全工程师</label></p>
+                                <p><input id="Position_0000000032" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>智能大厦/综合布线</label></p>
+                                <p><input id="Position_0000000033" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(互联网开发及应用类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000004" onclick="GetPositionType(this,'0000000004')">IT-管理类</h4>
+                              <div id="PositionType_0000000004" class="clearfix">
+                                <p><input id="Position_0000000034" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>首席技术执行官CTO/首席信息官</label></p>
+                                <p><input id="Position_0000000035" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术总监/经理</label></p>
+                                <p><input id="Position_0000000036" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术经理/主管</label></p>
+                                <p><input id="Position_0000000037" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术专员</label></p>
+                                <p><input id="Position_0000000038" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目总监</label></p>
+                                <p><input id="Position_0000000039" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目经理</label></p>
+                                <p><input id="Position_0000000040" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目主管</label></p>
+                                <p><input id="Position_0000000041" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目执行/协调人员</label></p>
+                                <p><input id="Position_0000000042" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(IT-管理类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000005" onclick="GetPositionType(this,'0000000005')">IT-品管、技术支持及其他类</h4>
+                              <div id="PositionType_0000000005" class="clearfix">
+                                <p><input id="Position_0000000043" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术支持/维护经理</label></p>
+                                <p><input id="Position_0000000044" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术支持/维护工程师</label></p>
+                                <p><input id="Position_0000000045" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>Helpdesk技术支持</label></p>
+                                <p><input id="Position_0000000046" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>计量工程师</label></p>
+                                <p><input id="Position_0000000047" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>标准化工程师</label></p>
+                                <p><input id="Position_0000000048" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>品质经理</label></p>
+                                <p><input id="Position_0000000049" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>系统测试</label></p>
+                                <p><input id="Position_0000000050" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>软件测试</label></p>
+                                <p><input id="Position_0000000051" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件测试</label></p>
+                                <p><input id="Position_0000000052" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>测试员</label></p>
+                                <p><input id="Position_0000000053" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>文档工程师</label></p>
+                                <p><input id="Position_0000000054" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术文员/助理</label></p>
+                                <p><input id="Position_0000000055" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(IT-品管、技术支持及其他)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000006" onclick="GetPositionType(this,'0000000006')">通信技术类</h4>
+                              <div id="PositionType_0000000006" class="clearfix">
+                                <p><input id="Position_0000000056" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>通信技术工程师</label></p>
+                                <p><input id="Position_0000000057" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>有线传输工程师</label></p>
+                                <p><input id="Position_0000000058" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>无线通信工程师</label></p>
+                                <p><input id="Position_0000000059" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>电信交换工程师</label></p>
+                                <p><input id="Position_0000000060" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>数据通信工程师</label></p>
+                                <p><input id="Position_0000000061" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>移动通信工程师</label></p>
+                                <p><input id="Position_0000000062" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>电信网络工程师</label></p>
+                                <p><input id="Position_0000000063" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>通信电源工程师</label></p>
+                                <p><input id="Position_0000000064" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>增值产品开发工程师</label></p>
+                                <p><input id="Position_0000000065" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(通信技术类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000007" onclick="GetPositionType(this,'0000000007')">电子/电器/半导体/仪器仪表类</h4>
+                              <div id="PositionType_0000000007" class="clearfix">
+                                <p><input id="Position_0000000066" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>集成电路IC设计/应用工程师</label></p>
+                                <p><input id="Position_0000000067" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>IC验证工程师</label></p>
+                                <p><input id="Position_0000000068" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>电子工程师/技术员</label></p>
+                                <p><input id="Position_0000000069" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>电子技术研发工程师</label></p>
+                                <p><input id="Position_0000000070" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>射频工程师</label></p>
+                                <p><input id="Position_0000000071" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>电子/电器维修工程师/技师</label></p>
+                                <p><input id="Position_0000000072" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>变压器与磁电工程师</label></p>
+                                <p><input id="Position_0000000073" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>版图设计工程师</label></p>
+                                <p><input id="Position_0000000074" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>电气工程师/技术员</label></p>
+                                <p><input id="Position_0000000075" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>电路工程师/技术员</label></p>
+                                <p><input id="Position_0000000076" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>电声/音响工程师/技术员</label></p>
+                                <p><input id="Position_0000000077" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>激光/光电子技术</label></p>
+                                <p><input id="Position_0000000078" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>半导体技术</label></p>
+                                <p><input id="Position_0000000079" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>自动控制工程师/技术员</label></p>
+                                <p><input id="Position_0000000080" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>电子软件开发</label></p>
+                                <p><input id="Position_0000000081" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>嵌入式软件开发</label></p>
+                                <p><input id="Position_0000000082" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>嵌入式硬件开发</label></p>
+                                <p><input id="Position_0000000083" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>电池/电源开发</label></p>
+                                <p><input id="Position_0000000084" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>FAE现场应用工程师</label></p>
+                                <p><input id="Position_0000000085" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>工艺工程师</label></p>
+                                <p><input id="Position_0000000085" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>家用电器/数码产品研发</label></p>
+                                <p><input id="Position_0000000087" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>仪器/仪表/计量</label></p>
+                                <p><input id="Position_0000000088" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>测试工程师</label></p>
+                                <p><input id="Position_0000000089" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(电子电器类)</label></p>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>销售/客服</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000008" onclick="GetPositionType(this,'0000000008')">销售管理类</h4>
+                              <div id="PositionType_0000000008" class="clearfix">
+                                <p><input id="Position_0000000034" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>首席技术执行官CTO/首席信息官</label></p>
+                                <p><input id="Position_0000000035" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术总监/经理</label></p>
+                                <p><input id="Position_0000000036" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术经理/主管</label></p>
+                                <p><input id="Position_0000000037" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术专员</label></p>
+                                <p><input id="Position_0000000038" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目总监</label></p>
+                                <p><input id="Position_0000000039" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目经理</label></p>
+                                <p><input id="Position_0000000040" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目主管</label></p>
+                                <p><input id="Position_0000000041" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目执行/协调人员</label></p>
+                                <p><input id="Position_0000000042" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(IT-管理类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000009" onclick="GetPositionType(this,'0000000009')">销售人员类</h4>
+                              <div id="PositionType_0000000009" class="clearfix">
+                                <p><input id="Position_0000000034" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>首席技术执行官CTO/首席信息官</label></p>
+                                <p><input id="Position_0000000035" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术总监/经理</label></p>
+                                <p><input id="Position_0000000036" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术经理/主管</label></p>
+                                <p><input id="Position_0000000037" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术专员</label></p>
+                                <p><input id="Position_0000000038" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目总监</label></p>
+                                <p><input id="Position_0000000039" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目经理</label></p>
+                                <p><input id="Position_0000000040" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目主管</label></p>
+                                <p><input id="Position_0000000041" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目执行/协调人员</label></p>
+                                <p><input id="Position_0000000042" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(IT-管理类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000010" onclick="GetPositionType(this,'0000000010')">销售行政及商务类</h4>
+                              <div id="PositionType_0000000010" class="clearfix">
+                                <p><input id="Position_0000000034" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>首席技术执行官CTO/首席信息官</label></p>
+                                <p><input id="Position_0000000035" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术总监/经理</label></p>
+                                <p><input id="Position_0000000036" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术经理/主管</label></p>
+                                <p><input id="Position_0000000037" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术专员</label></p>
+                                <p><input id="Position_0000000038" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目总监</label></p>
+                                <p><input id="Position_0000000039" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目经理</label></p>
+                                <p><input id="Position_0000000040" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目主管</label></p>
+                                <p><input id="Position_0000000041" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目执行/协调人员</label></p>
+                                <p><input id="Position_0000000042" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(IT-管理类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000011" onclick="GetPositionType(this,'0000000011')">客服及技术支持类</h4>
+                              <div id="PositionType_0000000011" class="clearfix">
+                                <p><input id="Position_0000000034" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>首席技术执行官CTO/首席信息官</label></p>
+                                <p><input id="Position_0000000035" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术总监/经理</label></p>
+                                <p><input id="Position_0000000036" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术经理/主管</label></p>
+                                <p><input id="Position_0000000037" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术专员</label></p>
+                                <p><input id="Position_0000000038" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目总监</label></p>
+                                <p><input id="Position_0000000039" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目经理</label></p>
+                                <p><input id="Position_0000000040" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目主管</label></p>
+                                <p><input id="Position_0000000041" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目执行/协调人员</label></p>
+                                <p><input id="Position_0000000042" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(IT-管理类)</label></p>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>财会/金融</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000012" onclick="GetPositionType(this,'0000000012')">财务/审计/税务类</h4>
+                              <div id="PositionType_0000000012" class="clearfix">
+                                <p><input id="Position_0000000034" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>首席技术执行官CTO/首席信息官</label></p>
+                                <p><input id="Position_0000000035" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术总监/经理</label></p>
+                                <p><input id="Position_0000000036" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术经理/主管</label></p>
+                                <p><input id="Position_0000000037" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术专员</label></p>
+                                <p><input id="Position_0000000038" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目总监</label></p>
+                                <p><input id="Position_0000000039" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目经理</label></p>
+                                <p><input id="Position_0000000040" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目主管</label></p>
+                                <p><input id="Position_0000000041" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目执行/协调人员</label></p>
+                                <p><input id="Position_0000000042" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(IT-管理类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000013" onclick="GetPositionType(this,'0000000013')">证券/金融/投资类</h4>
+                              <div id="PositionType_0000000013" class="clearfix">
+                                <p><input id="Position_0000000034" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>首席技术执行官CTO/首席信息官</label></p>
+                                <p><input id="Position_0000000035" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术总监/经理</label></p>
+                                <p><input id="Position_0000000036" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术经理/主管</label></p>
+                                <p><input id="Position_0000000037" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术专员</label></p>
+                                <p><input id="Position_0000000038" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目总监</label></p>
+                                <p><input id="Position_0000000039" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目经理</label></p>
+                                <p><input id="Position_0000000040" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目主管</label></p>
+                                <p><input id="Position_0000000041" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目执行/协调人员</label></p>
+                                <p><input id="Position_0000000042" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(IT-管理类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000014" onclick="GetPositionType(this,'0000000014')">银行类</h4>
+                              <div id="PositionType_0000000014" class="clearfix">
+                                <p><input id="Position_0000000034" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>首席技术执行官CTO/首席信息官</label></p>
+                                <p><input id="Position_0000000035" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术总监/经理</label></p>
+                                <p><input id="Position_0000000036" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术经理/主管</label></p>
+                                <p><input id="Position_0000000037" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术专员</label></p>
+                                <p><input id="Position_0000000038" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目总监</label></p>
+                                <p><input id="Position_0000000039" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目经理</label></p>
+                                <p><input id="Position_0000000040" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目主管</label></p>
+                                <p><input id="Position_0000000041" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目执行/协调人员</label></p>
+                                <p><input id="Position_0000000042" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(IT-管理类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000015" onclick="GetPositionType(this,'0000000015')">保险类</h4>
+                              <div id="PositionType_0000000015" class="clearfix">
+                                <p><input id="Position_0000000034" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>首席技术执行官CTO/首席信息官</label></p>
+                                <p><input id="Position_0000000035" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>技术总监/经理</label></p>
+                                <p><input id="Position_0000000036" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术经理/主管</label></p>
+                                <p><input id="Position_0000000037" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>信息技术专员</label></p>
+                                <p><input id="Position_0000000038" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目总监</label></p>
+                                <p><input id="Position_0000000039" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目经理</label></p>
+                                <p><input id="Position_0000000040" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目主管</label></p>
+                                <p><input id="Position_0000000041" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>项目执行/协调人员</label></p>
+                                <p><input id="Position_0000000042" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(IT-管理类)</label></p>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>生产/汽车/工程机械/贸易/物流</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4>生产/运营类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>质量/安全管理类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>工程/机械</h4>
+                            </li>
+                            <li class="down">
+                              <h4>汽车类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>技工类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>服装/纺织/皮革类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>采购类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>贸易类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>物流/仓储类</h4>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>医药/化工/能源/环保</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4>生物/制药/医疗器械类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>化工类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>医院/医疗/护理类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>环保类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>能源类</h4>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>市场/广告/媒体/艺术</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4>广告类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>公关/媒介类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>市场/营销类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>影视/媒体类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>写作/出版/印刷类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>艺术/设计类</h4>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>房产/建筑建设/物业</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4>建筑工程类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>房地产类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>物业管理</h4>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>人力资源/行政/高级管理</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4>人力资源类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>高级管理类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>行政/后勤类</h4>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>咨询/法律/培训/教育/科研/翻译</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4>咨询/顾问类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>律师/法务/合规类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>教师类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>培训类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>科研人员</h4>
+                            </li>
+                            <li class="down">
+                              <h4>储备干部/培训生/实习生类</h4>
+                            </li>
+                            <li class="down">
+                              <h4>翻译类</h4>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>消费品/服务业</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000094" onclick="GetPositionType(this,'0000000094')">餐饮/娱乐类</h4>
+                              <div id="PositionType_0000000094" class="clearfix">
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000095" onclick="GetPositionType(this,'0000000095')">酒店/旅游类</h4>
+                              <div id="PositionType_0000000095" class="clearfix">
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000096" onclick="GetPositionType(this,'0000000096')">美容/健身/体育类</h4>
+                              <div id="PositionType_0000000096" class="clearfix">
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000097" onclick="GetPositionType(this,'0000000097')">百货/连锁/零售服务类</h4>
+                              <div id="PositionType_0000000097" class="clearfix">
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000098" onclick="GetPositionType(this,'0000000098')">交通运输服务类</h4>
+                              <div id="PositionType_0000000098" class="clearfix">
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                              </div>
+                            </li>
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000099" onclick="GetPositionType(this,'0000000099')">保安/家政/其他服务类</h4>
+                              <div id="PositionType_0000000099" class="clearfix">
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>农林牧渔业</th>
+                        <td>
+                          <ul class="clearfix">
+                            <li class="down">
+                              <h4 id="PositionTypeTitle_0000000100" onclick="GetPositionType(this,'0000000100')">农/林/牧/渔类</h4>
+                              <div id="PositionType_0000000100" class="clearfix">
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                                <p><input id="Position_0000000001" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>高级硬件工程师</label></p>
+                                <p><input id="Position_0000000002" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>硬件工程师</label></p>
+                                <p><input id="Position_0000000003" type="checkbox" name="PositionListItem" onchange="positionListNameClick(this)" /><label>其他(计算机硬件类)</label></p>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>职位名称：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>薪水（税前）：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>面谈</option><option>1000元/月以下</option><option>1000~2000元/月</option>
+              <option>2001~4000元/月</option><option>4001~6000元/月</option><option>6001~8000元/月</option><option>8001~10000元/月</option><option>10001~15000元/月</option><option>15001~25000元/月</option><option>25000元/月以上</option>
+              </select></div></td>
+            </tr>
+            <tr>
+              <th>所在部门：</th>
+              <td><input type="text" value="鼠标放上去展开选择" class="input_text" /></td>
+              <th>工作地：</th>
+              <td>
+                <div class="input_unfold_block" id="city_search_block">
+                  <input type="text" id="city_search_selected" value="请选择城市" info="请选择城市" onfocus="delInfo(this)" onblur="addInfo(this)" class="input_unfold" />
+                  <span class="arrow">选择</span>
+                  <div class="input_unfold_content" id="city_search_content" style="left:-313px;">
+                    <div class="items" id="main_cities_box">
+                      <h4><strong>主要城市</strong></h4>
+                      <ul class="clearfix" style="display:block;">
+                        <li id="main-city-1" onclick="CityNameClick(this)">北京</li>
+                        <li id="main-city-2" onclick="CityNameClick(this)">上海</li>
+                        <li id="main-city-3" onclick="CityNameClick(this)">广州</li>
+                        <li id="main-city-4" onclick="CityNameClick(this)">深圳</li>
+                        <li id="main-city-5" onclick="CityNameClick(this)">天津</li>
+                        <li id="main-city-6" onclick="CityNameClick(this)">武汉</li>
+                        <li id="main-city-7" onclick="CityNameClick(this)">北京</li>
+                        <li id="main-city-8" onclick="CityNameClick(this)">上海</li>
+                        <li id="main-city-9" onclick="CityNameClick(this)">广州</li>
+                        <li id="main-city-10" onclick="CityNameClick(this)">深圳</li>
+                        <li id="main-city-11" onclick="CityNameClick(this)">天津</li>
+                        <li id="main-city-12" onclick="CityNameClick(this)">武汉</li>
+                        <li id="main-city-13" onclick="CityNameClick(this)">北京</li>
+                      </ul>
+                    </div>
+                    <div class="items" id="province">
+                      <h4><strong>其他省市</strong></h4>
+                      <ul class="clearfix" style="display:block;">
+                        <li id="provice_1" onclick="provinceCityShow(this)">广东</li>
+                        <li id="provice_2" onclick="provinceCityShow(this)">湖北</li>
+                        <li id="provice_3" onclick="provinceCityShow(this)">山西</li>
+                        <li id="provice_4" onclick="provinceCityShow(this)">四川</li>
+                        <li id="provice_5" onclick="provinceCityShow(this)">浙江</li>
+                        <li id="provice_6" onclick="provinceCityShow(this)">江苏</li>
+                        <li id="provice_7" onclick="provinceCityShow(this)">安徽</li>
+                        <li id="provice_8" onclick="provinceCityShow(this)">海南</li>
+                        <li id="provice_9" onclick="provinceCityShow(this)">福建</li>
+                        <li id="provice_10" onclick="provinceCityShow(this)">广西</li>
+                      </ul>
+                    </div>
+                    <div id="province-items">
+                      <div class="items" id="city_provice_1">
+                        <h4><strong>广东</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="CityNameClick(this)">广州</li>
+                          <li onclick="CityNameClick(this)">韶关</li>
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                          <li onclick="CityNameClick(this)">广州</li>
+                          <li onclick="CityNameClick(this)">韶关</li>
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                          <li onclick="CityNameClick(this)">广州</li>
+                          <li onclick="CityNameClick(this)">韶关</li>
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_2">
+                        <h4><strong>湖北</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                          <li onclick="CityNameClick(this)">广州</li>
+                          <li onclick="CityNameClick(this)">韶关</li>
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_3">
+                        <h4><strong>山西</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                          <li onclick="CityNameClick(this)">广州</li>
+                          <li onclick="CityNameClick(this)">韶关</li>
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_4">
+                        <h4><strong>四川</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                          <li onclick="CityNameClick(this)">广州</li>
+                          <li onclick="CityNameClick(this)">韶关</li>
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_5">
+                        <h4><strong>浙江</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                          <li onclick="CityNameClick(this)">广州</li>
+                          <li onclick="CityNameClick(this)">韶关</li>
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_6">
+                        <h4><strong>江苏</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                          <li onclick="CityNameClick(this)">广州</li>
+                          <li onclick="CityNameClick(this)">韶关</li>
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                        </ul>
+                      </div>
+                      <div class="items" id="city_provice_10">
+                        <h4><strong>广东</strong><span class="back" onclick="backToProvice(this)">返回上一级</span></h4>
+                        <ul class="clearfix">
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                          <li onclick="CityNameClick(this)">广州</li>
+                          <li onclick="CityNameClick(this)">韶关</li>
+                          <li onclick="CityNameClick(this)">深圳</li>
+                          <li onclick="CityNameClick(this)">珠海</li>
+                          <li onclick="CityNameClick(this)">汕头</li>
+                          <li onclick="CityNameClick(this)">佛山</li>
+                          <li onclick="CityNameClick(this)">惠州</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>任职时间：</th>
+              <td colspan="3"><input type="text" class="input_text floatl" style="width:150px" /> <span class="floatl">-</span> <input type="text" class="input_text floatl" style="width:150px" /> <input type="checkbox" class="checkbox" /><label class="label">至今</label></td>
+            </tr>
+            <tr>
+              <th>证明人：</th>
+              <td><input type="text" class="input_text" /></td>
+              <th>联系电话：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>工作职责：</th>
+              <td colspan="3"><textarea class="input_text" style="width:590px;height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th>离职原因：</th>
+              <td colspan="3"><textarea class="input_text" style="width:590px;height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="3">
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第三步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">教育经历</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_education')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_education">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>学校名称：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>所学专业：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>就读时间：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>学历：</th>
+              <td><div class="select_box"><select><option>专科</option><option>本科</option><option>硕士</option><option>博士</option></select></div></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="3">
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第四步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">求职意向</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_intension')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_intension">
+          <table class="table_form">
+            <colgroup>
+              <col width="120" />
+              <col />
+            </colgroup>
+            <tr>
+              <th>期望工作性质：</th>
+              <td>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">不限</label>
+                <input type="radio" class="radio" name="PositionType" checked="checked" /><label class="label">全职</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">兼职</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">派遣</label>
+                <input type="radio" class="radio" name="PositionType" /><label class="label">实习</label>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>期望工作地点：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>期望行业：</th>
+              <td><input type="text" value="鼠标放上去展开选择" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>期望职位类别：</th>
+              <td><input type="text" value="鼠标放上去展开选择" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>期望薪水（税前）：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>面谈</option><option>1000元/月以下</option><option>1000~2000元/月</option>
+              <option>2001~4000元/月</option><option>4001~6000元/月</option><option>6001~8000元/月</option><option>8001~10000元/月</option><option>10001~15000元/月</option><option>15001~25000元/月</option><option>25000元/月以上</option>
+              </select></div></td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td><textarea class="input_text" style="width:590px;height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第五步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">语言信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_language')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_language">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col width="220" />
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>语言：</th>
+              <td colspan="3"><div class="select_box"><select><option>英语</option><option>日语</option><option>法语</option><option>德语</option></select></div></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>听说能力：</th>
+              <td><div class="select_box"><select><option>一般</option><option>良好</option><option>熟练</option><option>精通</option></select></div></td>
+              <th><span class="required">*</span>读写能力：</th>
+              <td><div class="select_box"><select><option>一般</option><option>良好</option><option>熟练</option><option>精通</option></select></div></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="3">
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第六步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">技能信息（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_skill')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_skill">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>技能：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>使用时间：</th>
+              <td><input type="text" class="input_text" /><span class="mg_l_5">个月</span></td>
+            </tr>
+            <tr>
+              <th>水平：</th>
+              <td><div class="select_box" style="width:180px;"><select style="width:180px;"><option>一般</option><option>良好</option><option>熟练</option><option>精通</option></select></div></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第七步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">证书/许可证（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_certificate')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_certificate">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>证书名称：</th>
+              <td>
+                <div class="select_box floatl" style="width:180px;"><select style="width:180px;"><option>外语证书</option><option>技能证书</option></select></div>
+                <div class="select_box floatl" style="width:180px;"><select style="width:180px;"><option>托福</option><option>雅思</option></select></div>
+              </td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>获得时间：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td><textarea class="input_text" style="width:590px;height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!--第八步-->
+        <h4 class="title_step mg_t_15">
+          <span class="font_black">附件管理（选填）</span>
+          <span class="left_corner"></span>
+          <span class="right_corner" onclick="step_content_switch('candidate_attachment')"></span>
+        </h4>
+        <div class="step_content_box" id="add_candidate_attachment">
+          <table class="table_form mg_t_15">
+            <colgroup>
+              <col width="90" />
+              <col />
+            </colgroup>
+            <tr>
+              <th><span class="required">*</span>名称：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th><span class="required">*</span>上传文件：</th>
+              <td><input type="text" class="input_text" /></td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td><textarea class="input_text" style="width:590px;height:100px;"></textarea></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <input type="button" value="提交" class="input_button_s" />
+                <input type="button" value="取消" class="input_button_sh" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="step_button_box">
+          <input type="button" value="添加候选人" class="input_button_green_l" />
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_applicant">候选人</span></h4>
+        <ul>
+          <li><a href="candidate_1.html">候选人搜索</a></li>
+          <li><a href="candidate_2.html">我上传的候选人</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html" class="current">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript" src="../../../Scripts/industry_position_plcae.js"></script>
+</body>
+</html>

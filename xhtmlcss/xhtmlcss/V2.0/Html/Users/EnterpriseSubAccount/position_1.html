@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_list.html">需求</a></li>
+        <li class="current_2"><a href="position_1.html">招聘跟踪</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        招聘跟踪<i> » </i>进行中的职位
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <div class="fl">
+            <div class="keywords_input_box flb">
+              <input type="text" value="请输入关键字" info="请输入关键字" onfocus="delInfo(this)" onblur="addInfo(this)" />
+              <span cid="000001">职位名称</span>
+              <ul style="height:40px;">
+                <li cid="000001">职位名称</li>
+                <li cid="000002" class="last">职位编号</li>
+              </ul>
+            </div>
+            <div class="select_box">
+              <select class="select floatl"><option>请选择发布时间</option><option>一周内</option><option>半个月内</option><option>一个月内</option><option>三个月内</option></select>
+            </div>
+            <input type="button" class="input_button_search" value="" />
+            <input type="button" class="input_button_s" value="重置" />
+          </div>
+        </div>
+        <table class="common_table_tc zebra" id="table_list">
+          <colgroup>
+            <col width="75" />
+            <col width="110" />
+            <col />
+            <col width="80" />
+            <col width="65" />
+            <col width="60" />
+            <col width="60" />
+            <col width="75" />
+            <col width="95" />
+            <col width="95" />
+            <col width="70" />
+          </colgroup>
+          <tr>
+            <th>职位状态</th>
+            <th class="left">职位编号</th>
+            <th class="left">职位名称</th>
+            <th>工作地点</th>
+            <th>招聘人数</th>
+            <th>候选人</th>
+            <th>入职</th>
+            <th>项目经理</th> 
+            <th>发布日期</th>
+            <th>截止日期</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>已发布</td>
+            <td class="left">00000036889</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">10</a></td>
+            <td><span class="red">3</span></td>
+            <td>李丽丽</td>
+            <td>2013-05-01</td>
+            <td>2014-05-01</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_print.html" class="position_pdf" title="打印职位" target="_blank"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>已发布</td>
+            <td class="left">00000036889</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">10</a></td>
+            <td><span class="red">3</span></td>
+            <td>李丽丽</td>
+            <td>2013-05-01</td>
+            <td>2014-05-01</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_print.html" class="position_pdf" title="打印职位" target="_blank"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>已发布</td>
+            <td class="left">00000036889</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">10</a></td>
+            <td><span class="red">3</span></td>
+            <td>李丽丽</td>
+            <td>2013-05-01</td>
+            <td>2014-05-01</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_print.html" class="position_pdf" title="打印职位" target="_blank"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>已发布</td>
+            <td class="left">00000036889</td>
+            <td class="left"><a href="position_info_1.html">诚聘时尚杂志编辑</a></td>
+            <td>北京</td>
+            <td>5</td>
+            <td><a href="position_app_1.html">10</a></td>
+            <td><span class="red">3</span></td>
+            <td>李丽丽</td>
+            <td>2013-05-01</td>
+            <td>2014-05-01</td>
+            <td>
+              <div class="position_operate">
+                <a href="position_print.html" class="position_pdf" title="打印职位" target="_blank"></a>
+                <a href="position_info_5.html" class="position_email" title="发送邮件"></a>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_position">招聘跟踪</span></h4>
+        <ul>
+          <li><a href="position_1.html" class="current">进行中的职位</a></li>
+          <li><a href="position_2.html">结束的职位</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav" class="mg_t_30">
+        <li class="add_job"><a href="demand_add.html">提交新需求</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="candidate_entry"><a href="candidate_entry.html">上岗人员</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript" src="../../../Scripts/highcharts.js"></script>
+</body>
+</html>

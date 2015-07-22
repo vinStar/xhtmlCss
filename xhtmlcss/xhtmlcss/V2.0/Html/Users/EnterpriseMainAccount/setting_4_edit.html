@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li class="current_2"><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        设置<i> » </i>专业测试
+      </div>
+      <div class="tab_button">
+         <a href="setting_4.html" class="input_button_blue">专业测试</a>
+         <a href="setting_4_add.html" class="input_button_l">添加专业测试</a>
+      </div>
+      <div class="add_testing">
+        <input type="text" class="input_text" value="测试题一" info="请输入测试名称" onfocus="delInfo(this)" onblur="addInfo(this)" style="width:360px" />
+        <a href="javascript:add_question_bank()" id="add_testing_btn">修改测试题目</a>
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <h3 class="font_black">所选测试题目：共10题 总分：100分</h3>
+        </div>
+        <table class="common_table_tc zebra" id="table_list">
+          <colgroup>
+            <col width="40" />
+            <col />
+            <col width="80" />
+            <col width="50" />
+            <col width="90" />
+          </colgroup>
+          <tr>
+            <th>编号</th>
+            <th class="left">题目名称</th>
+            <th>题目类型</th>
+            <th>题目分值</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="left">
+              <div class="subject_item">
+                <span><a href="javascript:void(0)">题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题题目题目题目题目题目题目题目</a></span>
+                <ul>
+                  <li class="correct"><em>A.</em><p>1布尔型</p></li>
+                  <li class="correct"><em>B.</em><p>布尔型</p></li>
+                  <li><em>C.</em><p>布尔型</p></li>
+                  <li><em>D.</em><p>布尔型</p></li>
+                </ul>
+              </div>
+            </td>
+            <td>多选题</td>
+            <td>10</td>
+            <td><a href="javascript:void(0)" class="gray">取消此题</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="left">
+              <div class="subject_item">
+                <span><a href="javascript:void(0)">题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题</a></span>
+                <ul>
+                  <li class="correct"><em>A.</em><p>2布尔布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型型</p></li>
+                  <li><em>B.</em><p>布布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型尔型</p></li>
+                  <li><em>C.</em><p>布布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型尔型</p></li>
+                  <li><em>D.</em><p>布布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型布尔型尔型</p></li>
+                </ul>
+              </div>
+            </td>
+            <td>单选题</td>
+            <td>10</td>
+            <td><a href="javascript:void(0)" class="gray">取消此题</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="left">
+              <div class="subject_item">
+                <span><a href="javascript:void(0)">题目题目题目题目题目题目题目题目题目题目题目题题目题目题目题目题目题目题目</a></span>
+                <ul>
+                  <li class="correct"><em>A.</em><p>3布尔型</p></li>
+                  <li><em>B.</em><p>布尔型</p></li>
+                  <li><em>C.</em><p>布尔型</p></li>
+                  <li><em>D.</em><p>布尔型</p></li>
+                </ul>
+              </div>
+            </td>
+            <td>单选题</td>
+            <td>10</td>
+            <td><a href="javascript:void(0)" class="gray">取消此题</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td class="left">
+              <div class="subject_item">
+                <span><a href="javascript:void(0)">题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目</a></span>
+                <ul>
+                  <li class="correct"><em>A.</em><p>4布尔型</p></li>
+                  <li><em>B.</em><p>布尔型</p></li>
+                  <li><em>C.</em><p>布尔型</p></li>
+                  <li><em>D.</em><p>布尔型</p></li>
+                </ul>
+              </div>
+            </td>
+            <td>单选题</td>
+            <td>10</td>
+            <td><a href="javascript:void(0)" class="gray">取消此题</a></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td class="left">
+              <div class="subject_item">
+                <span><a href="javascript:void(0)">题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题题目题目题目题目题目</a></span>
+                <ul>
+                  <li class="correct"><em>A.</em><p>5布尔型</p></li>
+                  <li><em>B.</em><p>布尔型</p></li>
+                  <li><em>C.</em><p>布尔型</p></li>
+                  <li><em>D.</em><p>布尔型</p></li>
+                </ul>
+              </div>
+            </td>
+            <td>单选题</td>
+            <td>10</td>
+            <td><a href="javascript:void(0)" class="gray">取消此题</a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="btn_out_table"><input type="button" class="input_button_blue" value="保存" /></div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_setting">设置</span></h4>
+        <ul>
+          <li><a href="setting_1.html">职位模板</a></li>
+          <li><a href="setting_2.html">面试流程</a></li>
+          <li><a href="setting_3.html">题库</a></li>
+          <li><a href="setting_4.html" class="current">专业测试</a></li>
+          <li><a href="setting_5.html">Offer模板</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+
+<!--添加试题弹出框-->
+<div id="add_question_bank" class="undis" title="添加题库">
+  <div class="tbl_block">
+    <div class="toolbar">
+      <div class="fl">
+        <div class="select_box">
+          <select class="select floatl"><option>请选择题库类别</option><option>技术</option><option>销售</option></select>
+        </div>
+        <div class="select_box">
+          <select class="select floatl"><option>请选择题库子类别</option><option>Javascript</option><option>Html</option></select>
+        </div>
+        <input type="button" class="input_button_search" value="" />
+      </div>
+    </div>
+    <table class="common_table_tc zebra" id="table_list">
+      <colgroup>
+        <col width="40" />
+        <col />
+        <col width="80" />
+        <col width="50" />
+        <col width="90" />
+      </colgroup>
+      <tr>
+        <th>编号</th>
+        <th class="left">题目名称</th>
+        <th>题目类型</th>
+        <th>题目分值</th>
+        <th>操作</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td class="left">
+          <span class="dis">题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题题目题目题目题目题目题目题目</span>
+          <span class="answer"><em class="correct">A.布尔型</em><em class="correct">B.布尔型</em><em>C.布尔型</em><em>D.布尔型</em></span>
+        </td>
+        <td>多选题</td>
+        <td>10</td>
+        <td><a href="javascript:void(0)">添加到问卷</a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td class="left">
+          <span class="dis">题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题题目题目题目题目题目题目题目题目</span>
+          <span class="answer"><em>A.布尔型</em><em class="correct">B.布尔型</em><em>C.布尔型</em><em>D.布尔型</em></span>
+        </td>
+        <td>单选题</td>
+        <td>10</td>
+        <td><a href="javascript:void(0)">添加到问卷</a></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td class="left">
+          <span class="dis">题目题目题目题目题目题目题目题目题目题目题目题目题目题目目题目题目题目题目题目题目题目题目题目题目</span>
+          <span class="answer"><em>A.布尔型</em><em class="correct">B.布尔型</em><em>C.布尔型</em><em>D.布尔型</em></span>
+        </td>
+        <td>单选题</td>
+        <td>10</td>
+        <td><a href="javascript:void(0)" class="gray">取消此题</a></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td class="left">
+          <span class="dis">题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目题目</span>
+          <span class="answer"><em>A.布尔型</em><em class="correct">B.布尔型</em><em>C.布尔型</em><em>D.布尔型</em></span>
+        </td>
+        <td>单选题</td>
+        <td>10</td>
+        <td><a href="javascript:void(0)">添加到问卷</a></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td class="left">
+          <span class="dis">题目题目题目题目题目题目题目题目题目题目目题目题目题目题目题目题目题目题目题目题目题目题目题目</span>
+          <span class="answer"><em>A.布尔型</em><em class="correct">B.布尔型</em><em>C.布尔型</em><em>D.布尔型</em></span>
+        </td>
+        <td>单选题</td>
+        <td>10</td>
+        <td><a href="javascript:void(0)">添加到问卷</a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="btn_out_table"><input type="button" class="input_button_blue" value="确定" /></div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+function add_question_bank(){
+	$("#add_question_bank").dialog({
+		bgiframe: true, 
+		width: 900,
+		modal:true
+   });
+}
+
+
+$(function(){
+
+//	$(".subject_item").mouseover(function(e){
+//		$(this).find("ul").show();
+//		$(this).find("ul").css({"top":(e.pageY-45) + "px","left":e.pageX + "px"});
+//	});
+//		
+//	$(".subject_item").mouseout(function(){
+//		$(this).find("ul").hide();
+//	});
+//	
+//	$(".subject_item").mousemove(function(e){
+//		$(this).find("ul").css({"top":(e.pageY-40) + "px","left":(e.pageX+2) + "px"});
+//	});
+
+	$(".subject_item").hover(function(){
+		$(this).find("ul").show();
+	},function(){
+		$(this).find("ul").hide();
+	});
+	
+    $(".subject_item:eq(0)").css("z-index","18");
+	$(".subject_item:eq(1)").css("z-index","17");
+	$(".subject_item:eq(2)").css("z-index","16");
+	$(".subject_item:eq(3)").css("z-index","15");
+	$(".subject_item:eq(4)").css("z-index","14");
+//		  for(var i=0;i<10;i++){
+//			  $(".subject_item:eq(i)").css("z-index","18-i");
+//		  }
+	
+});
+</script>

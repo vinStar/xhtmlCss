@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li class="current_2"><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        设置<i> » </i>添加新题目
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <h3 class="font_black">添加新题目</h3>
+        </div>
+        <table class="table_form mg_b_15" width="700">
+          <colgroup>
+            <col width="120" />
+            <col />
+          </colgroup>
+          <tr>
+            <th>选择题目类别：</th>
+            <td><div class="select_box flb">
+              <select class="select floatl"><option>心理测试</option><option>请选择题目类别</option><option>技术测试</option></select>
+            </div></td>
+          </tr>
+          <tr>
+            <th>选择题目子类别：</th>
+            <td><div class="select_box flb">
+              <select class="select floatl"><option>Javascript</option><option>请选择子类别</option><option>Html</option></select>
+            </div></td>
+          </tr>
+          <tr>
+            <th>创建问题类型：</th>
+            <td>
+              <input type="radio" class="radio" /><label class="label">单选题</label>
+              <input type="radio" class="radio" /><label class="label">多选题</label>
+            </td>
+          </tr>
+          <tr>
+            <th>题目内容：</th>
+            <td><textarea class="mg_t_5 input_text" style="width:568px;height:80px;">题目内容题目内容题目内容题目内容题目内容题目内容题目内容题目内容题目内容</textarea></td>
+          </tr>
+          <tr>
+            <th>答案选项：</th>
+            <td>
+              <div class="answer_tab"><span class="fl">A</span><a href="?" class="fr">删除</a></div><textarea class="input_text" style="width:568px;height:50px;">布尔型</textarea>
+              <div class="answer_tab"><span class="fl">B</span><a href="?" class="fr">删除</a></div><textarea class="input_text" style="width:568px;height:50px;">布尔型</textarea>
+              <div class="answer_tab"><span class="fl">C</span><a href="?" class="fr">删除</a></div><textarea class="input_text" style="width:568px;height:50px;">布尔型</textarea>
+              <div class="answer_tab"><span class="fl">D</span><a href="?" class="fr">删除</a></div><textarea class="input_text" style="width:568px;height:50px;">布尔型</textarea>
+              <div class="mg_t_5"><a href="?">添加选项</a></div>
+            </td>
+          </tr>
+          <tr>
+            <th>参考答案：</th>
+            <td>
+              <input type="checkbox" class="checkbox" /><label class="label">A</label>
+              <input type="checkbox" class="checkbox" /><label class="label">B</label>
+              <input type="checkbox" class="checkbox" /><label class="label">C</label>
+              <input type="checkbox" class="checkbox" /><label class="label">D</label>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="button" class="input_button_blue" value="保存" /> <input type="button" class="input_button" value="取消" /></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_setting">设置</span></h4>
+        <ul>
+          <li><a href="setting_1.html">职位模板</a></li>
+          <li><a href="setting_2.html">面试流程</a></li>
+          <li><a href="setting_3.html" class="current">题库</a></li>
+          <li><a href="setting_4.html">专业测试</a></li>
+<li><a href="setting_5.html">Offer模板</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>

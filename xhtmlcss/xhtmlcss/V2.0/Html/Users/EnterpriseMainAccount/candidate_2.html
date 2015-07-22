@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="demand_1.html">需求</a></li>
+        <li><a href="position_1.html">职位</a></li>
+        <li class="current_2"><a href="candidate_1.html">候选人</a></li>
+        <li><a href="kpi_1.html">KPI</a></li>
+        <li><a href="setting_1.html">设置</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="account_1.html">帐户设置</a></li>
+          <li><a href="account_2.html">修改头像</a></li>
+          <li><a href="account_3.html">修改密码</a></li>
+          <li><a href="account_4.html">密码安全</a></li>
+          <li><a href="account_5.html">我的权限</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        职位<i> » </i>我上传的候选人
+      </div>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <div class="fl">
+            <div class="keywords_input_box floatl">
+              <input type="text" value="请输入关键字" info="请输入关键字" onfocus="delInfo(this)" onblur="addInfo(this)" />
+            </div>
+            <div class="floatl">
+              <input type="text" class="input_text" value="请选择期望工作地" info="请选择期望工作地" onfocus="delInfo(this)" onblur="addInfo(this)" />
+            </div>
+            <div class="floatl">
+              <input type="text" class="input_text" value="请选择期望行业" info="请选择期望行业" onfocus="delInfo(this)" onblur="addInfo(this)" />
+            </div>
+            <div class="floatl">
+              <input type="text" class="input_text" value="请选择期望职位类别" info="请选择期望职位类别" onfocus="delInfo(this)" onblur="addInfo(this)" />
+            </div>
+            <input type="button" class="input_button_search floatl" value="" />
+            <input type="button" class="input_button_s" value="重置" />
+          </div>
+          <div id="view_as">
+            <span id="view_as_list" class="on" title="列表"></span>
+            <span id="view_as_detail" title="详情"></span>
+          </div>
+        </div>
+        <table class="common_table_tc zebra">
+          <colgroup>
+            <col width="40" />
+            <col width="70" />
+            <col width="70" />
+            <col width="70" />
+            <col width="70" />
+            <col width="60" />
+            <col width="65" />
+            <col />
+            <col />
+            <col width="70" />
+            <col width="75" />
+            <col width="90" />
+            <col width="30" />
+          </colgroup>
+          <tr>
+            <th>选择</th>
+            <th class="left">姓名</th>
+            <th><select class="select_th"><option>性别</option><option>男</option><option>女</option></select></th>
+            <th><select class="select_th"><option>状态</option><option>可用</option><option>受保护</option><option>黑名单</option></select></th>
+            <th><select class="select_th"><option>学历</option><option>大专</option><option>本科</option></select></th>
+            <th>年龄</th>
+            <th class="left">工作年限</th>
+            <th class="left">目前所在公司</th>
+            <th class="left">职位</th> 
+            <th>简历完整度</th> 
+            <th>创建人</th>
+            <th><select class="select_th"><option>更新日期</option><option>升序</option><option>降序</option></select></th>
+            <th></th>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" name="ListItem" /></td>
+            <td class="left"><a href="candidate_preview.html" target="_blank">高云霄</a></td>
+            <td>男</td>
+            <td><span class="green">可用</span></td>
+            <td>本科</td>
+            <td>23</td>
+            <td class="left">2年</td>
+            <td class="left">腾讯（北京）科技有限公司</td>
+            <td class="left">系统架构师</td>
+            <td><span class="candidate_complete" title="完整"></span></td>
+            <td>杨丽坤</td>
+            <td>2013-01-01</td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td></td>
+            <td class="avatar" valign="top"><img src="../../temp/avatar.jpg" width="64" height="90" style="border:#dfdfdf 1px solid" /></td>
+            <td colspan="11" class="tr_td_detail description_2">
+              <dl class="clearfix">
+                <dt>最近工作：</dt>
+                <dd>
+                  <p class="gray_1"><span class="mg_r_30">2009.5--至今</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                  <p>
+                    主要职责简介主要职责简介主职责简介主要职责简介主要职责简介主要职责简介主要职责简介主要职责简介<br />
+                    主要职责简介主要职责简介主职责简介主要职责简介主要职责简介主要职责简介主要职责简介主要职责简介
+                  </p>
+                </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>历史工作：</dt>
+                <dd>
+                  <p><span class="mg_r_30">2007.5--2009.4</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                  <p><span class="mg_r_30">2003.5--2007.5</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>毕业院校：</dt>
+                <dd><p><span class="mg_r_30">2005.9--2009.6</span><span class="mg_r_30">北京师范大学</span><span>计算机科学与技术</span></p></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_communication.html','高云霄的沟通记录','600px','480px')" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_recommend.html','推荐职位','850px','480px')" value="推荐职位" />
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_records.html','高云霄的职位记录','850px','480px')" value="职位记录" /> 
+                <input type="button" class="input_button" onclick="openSuccessMsg('成功', '收藏成功', 300, 150,'')" value="收藏候选人" />
+                <input type="button" class="input_button" onclick="window.open('candidate_preview.html')" value="预览简历" />
+              </div>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" name="ListItem" /></td>
+            <td class="left"><a href="candidate_preview.html" target="_blank">高云霄</a></td>
+            <td>男</td>
+            <td><span class="green">可用</span></td>
+            <td>本科</td>
+            <td>23</td>
+            <td class="left">2年</td>
+            <td class="left">腾讯（北京）科技有限公司</td>
+            <td class="left">系统架构师</td>
+            <td><span class="candidate_uncomplete" title="不完整"></span></td>
+            <td>杨丽坤</td>
+            <td>2013-01-01</td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td></td>
+            <td class="avatar" valign="top"><img src="../../temp/avatar.jpg" width="64" height="90" style="border:#dfdfdf 1px solid" /></td>
+            <td colspan="11" class="tr_td_detail description_2">
+              <dl class="clearfix">
+                <dt>最近工作：</dt>
+                <dd>
+                  <p class="gray_1"><span class="mg_r_30">2009.5--至今</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                  <p>
+                    主要职责简介主要职责简介主职责简介主要职责简介主要职责简介主要职责简介主要职责简介主要职责简介<br />
+                    主要职责简介主要职责简介主职责简介主要职责简介主要职责简介主要职责简介主要职责简介主要职责简介
+                  </p>
+                </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>历史工作：</dt>
+                <dd>
+                  <p><span class="mg_r_30">2007.5--2009.4</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                  <p><span class="mg_r_30">2003.5--2007.5</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>毕业院校：</dt>
+                <dd><p><span class="mg_r_30">2005.9--2009.6</span><span class="mg_r_30">北京师范大学</span><span>计算机科学与技术</span></p></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_communication.html','高云霄的沟通记录','600px','480px')" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_recommend.html','推荐职位','850px','480px')" value="推荐职位" />
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_records.html','高云霄的职位记录','850px','480px')" value="职位记录" /> 
+                <input type="button" class="input_button" onclick="openSuccessMsg('成功', '收藏成功', 300, 150,'')" value="收藏候选人" />
+                <input type="button" class="input_button" onclick="window.open('candidate_preview.html')" value="预览简历" />
+              </div>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" name="ListItem" /></td>
+            <td class="left"><a href="candidate_preview.html" target="_blank">高云霄</a></td>
+            <td>男</td>
+            <td><span class="orange">受保护</span></td>
+            <td>本科</td>
+            <td>23</td>
+            <td class="left">2年</td>
+            <td class="left">腾讯（北京）科技有限公司</td>
+            <td class="left">系统架构师</td>
+            <td><span class="candidate_uncomplete" title="不完整"></span></td>
+            <td>杨丽坤</td>
+            <td>2013-01-01</td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td></td>
+            <td class="avatar" valign="top"><img src="../../temp/avatar.jpg" width="64" height="90" style="border:#dfdfdf 1px solid" /></td>
+            <td colspan="11" class="tr_td_detail description_2">
+              <dl class="clearfix">
+                <dt>最近工作：</dt>
+                <dd>
+                  <p class="gray_1"><span class="mg_r_30">2009.5--至今</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                  <p>
+                    主要职责简介主要职责简介主职责简介主要职责简介主要职责简介主要职责简介主要职责简介主要职责简介<br />
+                    主要职责简介主要职责简介主职责简介主要职责简介主要职责简介主要职责简介主要职责简介主要职责简介
+                  </p>
+                </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>历史工作：</dt>
+                <dd>
+                  <p><span class="mg_r_30">2007.5--2009.4</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                  <p><span class="mg_r_30">2003.5--2007.5</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>毕业院校：</dt>
+                <dd><p><span class="mg_r_30">2005.9--2009.6</span><span class="mg_r_30">北京师范大学</span><span>计算机科学与技术</span></p></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_communication.html','高云霄的沟通记录','600px','480px')" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_recommend.html','推荐职位','850px','480px')" value="推荐职位" />
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_records.html','高云霄的职位记录','850px','480px')" value="职位记录" /> 
+                <input type="button" class="input_button" onclick="openSuccessMsg('成功', '收藏成功', 300, 150,'')" value="收藏候选人" />
+                <input type="button" class="input_button" onclick="window.open('candidate_preview.html')" value="预览简历" />
+              </div>
+            </td>
+          </tr>
+          <tr class="tr_list">
+            <td><input type="checkbox" name="ListItem" /></td>
+            <td class="left"><a href="candidate_preview.html" target="_blank">高云霄</a></td>
+            <td>男</td>
+            <td><span class="red">黑名单</span></td>
+            <td>本科</td>
+            <td>23</td>
+            <td class="left">2年</td>
+            <td class="left">腾讯（北京）科技有限公司</td>
+            <td class="left">系统架构师</td>
+            <td><span class="candidate_complete" title="不完整"></span></td>
+            <td>杨丽坤</td>
+            <td>2013-01-01</td>
+            <td><img src="../../../Images/Icon/unfold.png" class="unfold" /></td>
+          </tr>
+          <tr class="tr_detail">
+            <td></td>
+            <td class="avatar" valign="top"><img src="../../temp/avatar.jpg" width="64" height="90" style="border:#dfdfdf 1px solid" /></td>
+            <td colspan="11" class="tr_td_detail description_2">
+              <dl class="clearfix">
+                <dt>最近工作：</dt>
+                <dd>
+                  <p class="gray_1"><span class="mg_r_30">2009.5--至今</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                  <p>
+                    主要职责简介主要职责简介主职责简介主要职责简介主要职责简介主要职责简介主要职责简介主要职责简介<br />
+                    主要职责简介主要职责简介主职责简介主要职责简介主要职责简介主要职责简介主要职责简介主要职责简介
+                  </p>
+                </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>历史工作：</dt>
+                <dd>
+                  <p><span class="mg_r_30">2007.5--2009.4</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                  <p><span class="mg_r_30">2003.5--2007.5</span><span class="mg_r_30">北京璜冠圣达装饰工程有限责任公司</span><span>系统架构师</span></p>
+                </dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>毕业院校：</dt>
+                <dd><p><span class="mg_r_30">2005.9--2009.6</span><span class="mg_r_30">北京师范大学</span><span>计算机科学与技术</span></p></dd>
+              </dl>
+              <dl class="clearfix">
+                <dt>　关键字：</dt>
+                <dd>关键字  关键字  关键字  关键字  关键字</dd>
+              </dl>
+              <div class="btn_div">
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_communication.html','高云霄的沟通记录','600px','480px')" value="沟通记录" /> 
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_recommend.html','推荐职位','850px','480px')" value="推荐职位" />
+                <input type="button" class="input_button" onclick="openWindow('candidate_boxy_records.html','高云霄的职位记录','850px','480px')" value="职位记录" /> 
+                <input type="button" class="input_button" onclick="openSuccessMsg('成功', '收藏成功', 300, 150,'')" value="收藏候选人" />
+                <input type="button" class="input_button" onclick="window.open('candidate_preview.html')" value="预览简历" />
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="all_after_table clearfix">
+          <div class="fl">
+            <input type="checkbox" class="checkbox" id="AllCheck" /><label class="label">全选</label>
+            <input type="button" class="input_button_green_l" onclick="openSuccessMsg('成功', '收藏成功', 300, 150,'')" value="收藏所选候选人" />
+          </div>
+          <div class="fr page">翻页处</div>
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="left_nav_applicant">候选人</span></h4>
+        <ul>
+          <li><a href="candidate_1.html">候选人搜索</a></li>
+          <li><a href="candidate_2.html" class="current">我上传的候选人</a></li>
+        </ul>
+      </div>
+      <ul id="operation_nav">
+        <li class="add_job"><a href="position_add.html">发布新职位</a></li>
+        <li class="resume_parse"><a href="candidate_parse.html">简历解析</a></li>
+        <li class="add_candidate"><a href="candidate_add.html">添加候选人</a></li>
+        <li class="send_mail"><a href="javascript:openWindow('boxy_email.html','发送邮件','600px','400px')">发送邮件</a></li>
+        <li class="candidate_favorites"><a href="candidate_favorites.html">候选人收藏夹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+</body>
+</html>

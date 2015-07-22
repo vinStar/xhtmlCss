@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ATS</title>
+<link href="../../../Style/Enterprise/style.css" rel="stylesheet" type="text/css" />
+<link href="../../../Style/JQuery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="warpper">
+  <div id="header" class="clearfix">
+    <h1><a href="../index.html"><img src="../../../Images/logo.png" width="160" height="40" /></a></h1>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="companyinfo_1.html">公司信息</a></li>
+        <li><a href="accounts_1.html">账号管理</a></li>
+        <li class="current_2"><a href="setting_1.html">系统设置</a></li>
+        <li><a href="log_1.html">系统日志</a></li>
+        <li><a href="myaccount_1.html">我的帐户</a></li>
+      </ul>
+    </div>
+    <div id="account_nav">
+      <div id="account_info_nav">
+        <a id="account_info_nav_name" href="javascript:void(0)">Winnie</a>
+        <ul id="account_info_list">
+          <li><a href="myaccount_1.html">帐户设置</a></li>
+          <li><a href="myaccount_2.html">修改头像</a></li>
+          <li><a href="myaccount_3.html">修改密码</a></li>
+          <li><a href="myaccount_4.html">密码安全</a></li>
+        </ul>
+      </div>
+      <div class="account_icon_nav">
+        <span class="message" title="消息"><a href="account_6.html"></a></span>
+        <span class="remind" title="提醒"><a href="account_7.html"></a></span>
+        <span class="exit" title="退出"><a href="?"></a></span>
+      </div>
+    </div>
+  </div>
+  <div id="main_container" class="clearfix">
+    <div id="container">
+      <div id="local" class="font_black">
+        <span class="local">当前位置</span>
+        系统设置<i> » </i>存储空间
+      </div>
+      <div class="remind_block">
+        <p>附件存储空间用于存储简历附件文件，及客户合同附件文件等</p>
+        <p>您的附件空间：200M <a href="javascript:void(0)" onclick="SpaceUpdate()">我要升级</a></p>
+        <p>空间使用率：</p>
+        <span class="remind_close"></span>
+      </div>
+      <h3 class="title">简历附件</h3>
+      <div class="tbl_block">
+        <div class="toolbar">
+          <div class="fl">
+            <input type="text" class="input_text" value="开始时间" info="开始时间" onfocus="delInfo(this)" onblur="addInfo(this)" />
+            <span>-</span>
+            <input type="text" class="input_text" value="截止时间" info="截止时间" onfocus="delInfo(this)" onblur="addInfo(this)" />
+            <input type="button" class="input_button_search" value="" />
+          </div>
+        </div>
+        <table class="common_table_tc zebra" id="table_list">
+          <tr>
+            <th class="first">简历名称</th>
+            <th>大小</th>
+            <th>类型</th>
+            <th>上传时间</th>
+          </tr>
+          <tr>
+            <td class="first">张朝阳的简历</td>
+            <td>107K</td>
+            <td>docx</td>
+            <td>2012-06-11</td>
+          </tr>
+          <tr>
+            <td class="first">张朝阳的简历</td>
+            <td>107K</td>
+            <td>docx</td>
+            <td>2012-06-11</td>
+          </tr>
+          <tr>
+            <td class="first">张朝阳的简历</td>
+            <td>107K</td>
+            <td>docx</td>
+            <td>2012-06-11</td>
+          </tr>
+          <tr>
+            <td class="first">张朝阳的简历</td>
+            <td>107K</td>
+            <td>docx</td>
+            <td>2012-06-11</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="sidebar">
+      <div class="left_nav">
+        <h4><span class="admin">系统设置</span></h4>
+        <ul>
+          <li class="current"><a href="setting_1.html">存储空间</a></li>
+          <li><a href="setting_2.html">邮件群发设置</a></li>
+          <li><a href="setting_3.html">渠道设置</a></li>
+          <li><a href="setting_4.html">简历抓取设置</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="bottom">
+    <a href="?"><img src="../../../Images/default/edgehire.png" /></a>
+    <span>才智创鑫版权所有</span>
+  </div>
+</div>
+
+<!--我要升级弹出内容开始-->
+<div id="SpaceUpdate" class="applicant_dialog" title="升级空间">
+  <p class="tc mg_t_20">
+    如果您需要升级空间，请与我们的客服联系。
+  </p>
+  <p class="orange tc mg_t_10"><strong>客服热线：010-64390501</strong></p>
+</div>
+<!--我要升级弹出内容结束-->
+</body>
+</html>
+
+<script type="text/javascript" src="../../../Scripts/jquery-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/jquery-ui-min.js"></script>
+<script type="text/javascript" src="../../../Scripts/common.js"></script>
+<script type="text/javascript" src="../../../Scripts/base.js"></script>
+<script type="text/javascript">
+function SpaceUpdate(){
+   $("#SpaceUpdate").dialog({
+		bgiframe: true, 
+		width: 300,
+		height: 150,
+		modal:true
+   });
+}
+</script>
