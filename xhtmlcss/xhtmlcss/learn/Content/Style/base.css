@@ -1,0 +1,141 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body, ul, ol, li, dl, dd, h1, h2, h3, h4, h5, h6, p, form, input[type='text'] {
+    margin: 0;
+}
+
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+.clear {
+    /*IE专用清除浮动、清除margin的重叠*/
+    zoom: 1;
+}
+
+
+/* 设置浮动，减少浮动带来的 bug */
+.fl, .fr {
+    display: inline;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+table {
+    border-collapse: collapse; /*相邻边被合并*/
+    border-spacing: 0; /*水平垂直距离都为0*/
+}
+
+/*A标签样式*/
+a {
+    text-decoration: none; /*color:#000;*/
+}
+
+    a:focus {
+        outline: none;
+    }
+
+body {
+    font-family: '微软雅黑';
+    font-size: 12px;
+    color: #393939;
+    line-height: 1.5;
+}
+
+
+/*tab按钮 begin*/
+.tabCur {
+    height: 26px;
+    background: url(../Images/tab.png) right top no-repeat;
+    float: left;
+    padding-right: 10px;
+    text-decoration: none;
+    margin: 0 3px;
+    margin-top: 1px\9;
+}
+
+    .tabCur span {
+        line-height: 24px;
+        height: 26px;
+        background: url(../Images/tab.png) left top no-repeat;
+        float: left;
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+        padding-left: 10px;
+        margin-left: -2px;
+    }
+
+#tabnavbox {
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.secondnav {
+    padding-right: 25px;
+    margin-top: 5px;
+}
+
+    .secondnav a {
+        float: left;
+        color: #199776;
+        height: 26px;
+        line-height: 26px;
+        margin-left: 20px;
+        display: inline;
+    }
+/*tab按钮 end*/
+
+
+/*遮罩层*/
+.mask_layer {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    z-index: 5;
+    filter: alpha(opacity=50);
+    display: none;
+}
+
+
+/*进度条*/
+.scroll_bar {
+    display: inline-block;
+    width: 100%;
+    height: 18px;
+    background: #cdcdcd;
+    border-radius: 13px;
+    position: relative;
+}
+
+.scroll_bar_content {
+    display: inline-block;
+    height: 18px;
+    float: left;
+    background: #05D19B;
+    border-radius: 13px;
+}
+
+.scroll_num {
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    margin-left: -17px;
+    font-size: 10px;
+    width: 34px;
+}

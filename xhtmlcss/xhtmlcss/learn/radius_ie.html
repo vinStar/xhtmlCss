@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        a, img {
+            border: 0;
+        }
+
+        body {
+            font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+        }
+
+        .demo {
+            width: 760px;
+            margin: 0 auto;
+        }
+        /*简洁型css圆角矩形*/
+        .b1, .b2, .b3, .b4, .b1b, .b2b, .b3b, .b4b, .b {
+            display: block;
+            overflow: hidden;
+        }
+
+        .b1, .b2, .b3, .b1b, .b2b, .b3b {
+            height: 1px;
+        }
+
+        .b2, .b3, .b4, .b2b, .b3b, .b4b, .b {
+            border-left: 1px solid #999;
+            border-right: 1px solid #999;
+        }
+
+        .b1, .b1b {
+            margin: 0 5px;
+            background: #999;
+        }
+
+        .b2, .b2b {
+            margin: 0 3px;
+            border-width: 2px;
+        }
+
+        .b3, .b3b {
+            margin: 0 2px;
+        }
+
+        .b4, .b4b {
+            height: 2px;
+            margin: 0 1px;
+        }
+
+        .d1 {
+            background: #F7F8F9;
+        }
+
+        .k {
+            height: 300px;
+        }
+        /*3D圆角矩形*/
+        .raised {
+            background: transparent;
+            width: 40%;
+        }
+
+            .raised h1, .raised p {
+                margin: 0 10px;
+            }
+
+            .raised h1 {
+                font-size: 2em;
+                color: #fff;
+            }
+
+            .raised p {
+                padding-bottom: 0.5em;
+            }
+
+            .raised .b1, .raised .b2, .raised .b3, .raised .b4, .raised .b1b, .raised .b2b, .raised .b3b, .raised .b4b {
+                display: block;
+                overflow: hidden;
+                font-size: 1px;
+            }
+
+            .raised .b1, .raised .b2, .raised .b3, .raised .b1b, .raised .b2b, .raised .b3b {
+                height: 1px;
+            }
+
+            .raised .b2 {
+                background: #ccc;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #eee;
+            }
+
+            .raised .b3 {
+                background: #ccc;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #ddd;
+            }
+
+            .raised .b4 {
+                background: #ccc;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #aaa;
+            }
+
+            .raised .b4b {
+                background: #ccc;
+                border-left: 1px solid #eee;
+                border-right: 1px solid #999;
+            }
+
+            .raised .b3b {
+                background: #ccc;
+                border-left: 1px solid #ddd;
+                border-right: 1px solid #999;
+            }
+
+            .raised .b2b {
+                background: #ccc;
+                border-left: 1px solid #aaa;
+                border-right: 1px solid #999;
+            }
+
+            .raised .b1 {
+                margin: 0 5px;
+                background: #fff;
+            }
+
+            .raised .b2, .raised .b2b {
+                margin: 0 3px;
+                border-width: 0 2px;
+            }
+
+            .raised .b3, .raised .b3b {
+                margin: 0 2px;
+            }
+
+            .raised .b4, .raised .b4b {
+                height: 2px;
+                margin: 0 1px;
+            }
+
+            .raised .b1b {
+                margin: 0 5px;
+                background: #999;
+            }
+
+            .raised .boxcontent {
+                display: block;
+                background: #ccc;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #999;
+            }
+        /*反向css圆角矩形*/
+        .serif {
+            background: transparent;
+            width: 40%;
+        }
+
+            .serif h1, .serif p {
+                margin: 0 10px;
+            }
+
+            .serif h1 {
+                font-size: 2em;
+                color: #fff;
+            }
+
+            .serif p {
+                padding-bottom: 0.5em;
+            }
+
+            .serif .b1, .serif .b2, .serif .b3, .serif .b4 {
+                display: block;
+                overflow: hidden;
+                font-size: 1px;
+            }
+
+            .serif .b1, .serif .b2, .serif .b3 {
+                height: 1px;
+            }
+
+            .serif .b2, .serif .b3 {
+                background: #fc0;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+            }
+
+            .serif .b4 {
+                background: #fc0;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+            }
+
+            .serif .b1 {
+                margin: 0;
+                background: #fff;
+            }
+
+            .serif .b2 {
+                margin: 0 1px;
+                border-width: 0 2px;
+            }
+
+            .serif .b3 {
+                margin: 0 3px;
+            }
+
+            .serif .b4 {
+                height: 2px;
+                margin: 0 4px;
+            }
+
+            .serif .boxcontent {
+                display: block;
+                background: #fc0;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+                margin: 0 5px;
+            }
+        /*略带菱形的css圆角矩形*/
+        .curved {
+            background: transparent;
+            width: 40%;
+        }
+
+            .curved h1, .curved p {
+                margin: 0 10px;
+            }
+
+            .curved h1 {
+                font-size: 2em;
+                color: #fff;
+            }
+
+            .curved p {
+                padding-bottom: 0.5em;
+            }
+
+            .curved .b1, .curved .b2, .curved .b3, .curved .b4 {
+                display: block;
+                overflow: hidden;
+                height: 1px;
+                font-size: 1px;
+            }
+
+            .curved .b2, .curved .b3, .curved .b4 {
+                background: #e0cea3;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+            }
+
+            .curved .b1 {
+                margin: 0 4px;
+                background: #fff;
+            }
+
+            .curved .b2 {
+                margin: 0 4px;
+                height: 2px;
+            }
+
+            .curved .b3 {
+                margin: 0 3px;
+            }
+
+            .curved .b4 {
+                margin: 0;
+                height: 1px;
+                border-width: 0 3px 0 3px;
+            }
+
+            .curved .boxcontent {
+                display: block;
+                background: #e0cea3;
+                border: 0 solid #fff;
+                border-width: 0 1px;
+            }
+        /*特殊css圆角矩形*/
+        .pillar {
+            background: transparent;
+            width: 40%;
+        }
+
+            .pillar h1, .pillar p {
+                margin: 0 10px;
+            }
+
+            .pillar h1 {
+                font-size: 2em;
+                color: #fff;
+            }
+
+            .pillar p {
+                padding-bottom: 0.5em;
+            }
+
+            .pillar .b1, .pillar .b2, .pillar .b3, .pillar .b4 {
+                display: block;
+                overflow: hidden;
+                font-size: 1px;
+            }
+
+            .pillar .b1, .pillar .b2, .pillar .b4 {
+                height: 1px;
+            }
+
+            .pillar .b2, .pillar .b3 {
+                background: #d66;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+            }
+
+            .pillar .b4 {
+                background: #d66;
+                border-left: 4px solid #fff;
+                border-right: 4px solid #fff;
+            }
+
+            .pillar .b1 {
+                margin: 0 2px;
+                background: #fff;
+            }
+
+            .pillar .b2 {
+                margin: 0 1px;
+                border-width: 0 1px;
+            }
+
+            .pillar .b3 {
+                height: 2px;
+                margin: 0;
+            }
+
+            .pillar .b4 {
+                margin: 0 2px;
+            }
+
+            .pillar .boxcontent {
+                display: block;
+                background: #d66;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+                margin: 0 5px;
+            }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        //简洁型css圆角矩形/
+        <b class="b1"></b><b class="b2 d1"></b><b class="b3 d1"></b><b class="b4 d1"></b>
+        <div class="b d1 k">
+            <font style="font-size:26px;color:red; margin:0px 10px;">简洁型css圆角矩形</font>
+        </div>
+        <b class="b4b d1"></b><b class="b3b d1"></b><b class="b2b d1"></b><b class="b1b"></b>
+        //////////////////////简洁型css圆角矩形/<br /><br /><br /><br />
+
+        //3D圆角矩形/
+        <div class="raised">
+            <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+            <div class="boxcontent">
+                <h1>3D圆角矩形</h1>
+            </div>
+            <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
+        </div>
+        //////////////////////3D圆角矩形/<br><br /><br /><br />
+
+        //反向css圆角矩/
+        <div class="serif">
+            <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+            <div class="boxcontent">
+                <h1>反向css圆角矩形</h1>
+            </div>
+            <b class="b4"></b><b class="b3"></b><b class="b2"></b><b class="b1"></b>
+        </div>
+        //////////////////////反向css圆角矩形/<br><br /><br /><br />
+
+
+
+        //略带菱形的css圆角矩形/
+        <div class="curved">
+            <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+            <div class="boxcontent">
+                <h1>略带菱形的css圆角矩形</h1>
+            </div>
+            <b class="b4"></b><b class="b3"></b><b class="b2"></b><b class="b1"></b>
+        </div>
+        //////////////////////略带菱形的css圆角矩形/<br><br /><br /><br />
+
+
+        //特殊css圆角矩形/
+        <div class="pillar">
+            <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b2"></b><b class="b4"></b>
+            <div class="boxcontent">
+                <h1>特殊css圆角矩形</h1>
+            </div>
+            <b class="b4"></b><b class="b2"></b><b class="b3"></b><b class="b2"></b><b class="b1"></b>
+        </div>
+        //////////////////////特殊css圆角矩形/<br><br /><br /><br />
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>客源统计-地区分析</title>
+		<link href="../css/base.css" type="text/css" rel="stylesheet">
+		<link href="../css/sub.css" type="text/css" rel="stylesheet">
+		<link href="../css/layout.css" type="text/css" rel="stylesheet">
+		<link href="../css/alert.css" type="text/css" rel="stylesheet">
+		<link href="../css/listcase.css" type="text/css" rel="stylesheet">
+		<link href="../css/color.css" type="text/css" rel="stylesheet">
+	</head>
+
+	<body style="overflow-x:auto;">
+		<div class="mask_layer" id="mask2">
+    	</div>
+		<div class="tb_main" id="tb_main">
+			<div class="breadcrumbs" id="breadcrumbs">
+				<div class="breadcrumbs_mm">
+					<span class="home fl">首页</span><span class="color_1 fl arrow_sm"> &gt; </span><span class="fl cur_page">运营支出</span>
+				</div>
+			</div>
+			<div class="tb_main" id="tb_main2">
+				<div class="tb_container" style="height: 350px; overflow: hidden;" id="tb_container1">
+				<div class="ui_toptable j_outerheight">
+					<table class="headtable wb100" id="headtable">
+						<thead>
+							<tr>
+								<th width="12%" colspan="10" style="text-align: left;border-right: 0;" class="pl20">运营支出科目</th>
+								</tr>
+						</thead>
+					</table>
+				</div>
+					<!-- -->
+				<div class="tableshow" style="overflow:auto;">
+						<table class="wb100 txtCenter ui_bottomtab" id="minshowtable">
+							<tbody>
+								<tr class="tx_left">
+									<td colspan="19" class="pl20">
+										<input type="button" class="collaspe_2 collaspe" data-title='glf'><strong class="color_9">管理费</strong>
+									</td>
+								</tr>
+								<tr class="tr_glf">
+									<td colspan="19">
+										<table class="wb100">
+											<tbody>
+												<tr class="target_tr">
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">办公费</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">法务费用</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">办公房租</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">差旅费</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">宿舍 房租</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">业务招待费</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">水电费</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">车辆使用费</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">网费</a></td>
+													<td class="last"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">招聘费</a></td>
+												</tr>
+												<tr class="target_tr">
+													<td><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">电话费</a></td>
+													<td><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">绿化费</a></td>
+													<td><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">员工社保</a></td>
+													<td><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">物业费</a></td>
+													<td><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">员工公积金</a></td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="tx_left">
+									<td colspan="19" class="pl20">
+										<input type="button" class="collaspe_2 collaspe" data-title='yysj'><strong class="color_9">运营税金</strong>
+									</td>
+								</tr>
+								<tr class="tr_yysj">
+									<td colspan="19">
+										<table class="wb100">
+											<tbody>
+												<tr class="target_tr">
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">成本税金</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">所得税</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">残保金</a></td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+												<tr class="target_tr">
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="tx_left">
+									<td colspan="19" class="pl20">
+										<input type="button" class="collaspe_2 collaspe" data-title='tgf'><strong class="color_9">推广费</strong>
+									</td>
+								</tr>
+								<tr class="tr_tgf">
+									<td colspan="19">
+										<table class="wb100">
+											<tbody>
+												<tr class="target_tr">
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">电商</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">宣传费用</a></td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+												<tr class="target_tr">
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="tx_left">
+									<td colspan="19" class="pl20">
+										<input type="button" class="collaspe_2 collaspe" data-title='gdzc'><strong class="color_9">固定资产</strong>
+									</td>
+								</tr>
+								<tr class="tr_gdzc">
+									<td colspan="19">
+										<table class="wb100">
+											<tbody>
+												<tr>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">固定资产</a></td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+												<tr class="target_tr">
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="tx_left">
+									<td colspan="19" class="pl20">
+										<input type="button" class="collaspe_2 collaspe" data-title='cj'><strong class="color_9">拆借</strong>
+									</td>
+								</tr>
+								<tr class="tr_cj">
+									<td colspan="19">
+										<table class="wb100">
+											<tbody>
+												<tr class="target_tr">
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">投标保证金</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">公司往来</a></td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+												<tr class="target_tr">
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="tx_left">
+									<td colspan="19" class="pl20">
+										<input type="button" class="collaspe_2 collaspe" data-title='qt'><strong class="color_9">其他</strong>
+									</td>
+								</tr>
+								<tr class="tr_qt">
+									<td colspan="19">
+										<table class="wb100">
+											<tbody>
+												<tr class="target_tr">
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">活动经费</a></td>
+													<td width="10%"><a href="../pz/jzpz.html" target="mainframe2" class="pay_items">装修</a></td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td width="10%">&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+												<tr class="target_tr">
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td>&nbsp;</td>
+													<td class="last">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+
+
+							</tbody>
+						</table>
+					</div>
+					<!--<div class="big_paging clear">
+						<div class="big_paging_left">
+							<label>共有</label><span class="txt_danger">1</span>
+							<label>条数据 共</label><span class="txt_danger">1</span>
+							<label>页</label>
+						</div>
+						<div class="big_paging_right clear">
+							<div class="big_paging_content_l fl">
+								<div class="big_page_left fl"></div>
+								<div class="big_page_mid fl ">
+									<a href="#" class="pre">上一页</a>
+									<a href="#" class="page_num active">1</a>
+									<a href="#" class="page_num">2</a>
+									<a href="#" class="page_num">...</a>
+									<a href="#" class="page_num">4</a>
+									<a href="#" class="next">下一页</a>
+								</div>
+								<div class="big_page_right fl"></div>
+							</div>
+							<div class="big_paging_content_r fl ">
+								<span class="fl">跳转至</span>
+								<input type="text" class="big_paging_txt fl">
+								<span class="fl">页</span>
+								<input type="button" value="确认" class="big_paging_btn fl">
+							</div>
+						</div>
+					</div>-->
+					
+				
+			</div>	
+				<div class="divline" style="padding:20px 0 10px 0;">
+					<p style="height: 1px;overflow: hidden; border-top: 1px dashed #ccc;"></p>
+				</div>
+				<div class="tb_container" id="tb_container2">
+					<div class="ui_toptable j_outerheight">
+						<table class="headtable wb100" id="headtable2">
+							<thead>
+								<tr>
+									<th width="10%">费用排名</th>
+									<th width="25%">科目</th>
+									<th width="25%">金额</th>
+									<th class="last">占比</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="tableshow" style="overflow:auto;">
+						<table class="wb100 txtCenter ui_bottomtab" id="minshowtable2">
+							<tr class="target_tr">
+								<td width="10%">1</td>
+								<td width="25%">管理费</td>
+								<td width="25%">25,000.00</td>
+								<td class="last">43.6%</td>
+							</tr>
+							<tr class="target_tr">
+								<td>2</td>
+								<td>固定资产</td>
+								<td>100,000.00</td>
+								<td>17.5.6%</td>
+							</tr>
+							<tr class="target_tr">
+								<td>3</td>
+								<td>固定资产</td>
+								<td>100,000.00</td>
+								<td>17.5.6%</td>
+							</tr>
+							<tr class="target_tr">
+								<td>4</td>
+								<td>固定资产</td>
+								<td>100,000.00</td>
+								<td>17.5.6%</td>
+							</tr>
+							<tr class="target_tr">
+								<td>5</td>
+								<td>固定资产</td>
+								<td>100,000.00</td>
+								<td>17.5.6%</td>
+							</tr>
+							<tr class="target_tr">
+								<td>6</td>
+								<td>固定资产</td>
+								<td>100,000.00</td>
+								<td>17.5.6%</td>
+							</tr>
+							<tr class="target_tr">
+								<td>7</td>
+								<td>固定资产</td>
+								<td>100,000.00</td>
+								<td>17.5.6%</td>
+							</tr>
+							<tr class="target_tr">
+								<td>7</td>
+								<td>固定资产</td>
+								<td>100,000.00</td>
+								<td>17.5.6%</td>
+							</tr>
+							<tr class="target_tr">
+								<td>7</td>
+								<td>固定资产</td>
+								<td>100,000.00</td>
+								<td>17.5.6%</td>
+							</tr>
+							<tr class="target_tr">
+								<td>7</td>
+								<td>固定资产</td>
+								<td>100,000.00</td>
+								<td>17.5.6%</td>
+							</tr>
+						</table>
+					</div>
+					<div class="tbDiv3 j_outerheight">
+                    <table class="tb_all" id="tb_3">
+                        <tbody>
+                            <tr>
+                                <td width="10%">&nbsp;</td>
+                                <td width="25%">合计</td>
+                                <td width="25%">469,000.00</td>
+                                <td class="last">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+					
+				
+				</div>
+			</div>
+			
+		</div>
+		<div id="j_alertbox1" class="w884box alertbox" style="top:40px;display:none;">
+			<div class="alerttopimg j_alertHeight">
+	            <span class="leftbian"></span>
+	            <h3>填写记账凭证</h3>
+	            <a href="javascript:" class="del"></a>
+        	</div>
+        	<div class="alertminbox">
+        		<iframe id="j_autoheightiframe2" style="width: 100%;" name="mainframe2" frameborder="no" scrolling="no" src="../pz/jzpz.html"></iframe>
+        	</div>
+			<div class="alertbottomimg">
+            	<span class="leftbian"></span>
+        	</div>
+		</div>
+		<div class="fixRight" id="fixRight">
+			<iframe id="ifmRight" src="yyzc_wcl.html" name="mainframe2" frameborder="no" scrolling="yes" style="width:100%;height:100%;"></iframe>
+		</div>
+		<span class="btnR" id="btnR"></span>
+	</body>
+<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../js/rxued.js"></script>
+
+	<script>
+		$(function() {
+			//弹出层
+			rxued.alertbox.showBox1($(".pay_items"),$(".alertbox"));
+			rxued.alertbox.showBox1($(".pay_items"),$("#j_alertbox2"),function(){ 
+				$("#j_autoheightiframe2").attr('src','../pz/jzpz.html');
+				rxued.layer.tolayerWidth($("#mask2"),$("#tb_main"));
+				rxued.layer.maskShow2($("#mask", parent.document),$("#mask2"));
+			});
+			rxued.alertbox.hideBox1($("#j_alertbox1 .del"),$("#j_alertbox1"),function(){
+				rxued.layer.maskHide3($("#mask", parent.document),$("#mask2"));
+			});
+			$(".collaspe").toggle(function() {
+				$(".tr_" + $(this).attr('data-title')).hide();
+				$(this).removeClass('collaspe_2').addClass('collaspe_1');
+			}, function() {
+				$(".tr_" + $(this).attr('data-title')).show();
+				$(this).removeClass('collaspe_1').addClass('collaspe_2');
+			});
+			////
+			function init2(){
+			rxued.table.countTB($("#tb_container1"),$('#headtable'),$('#minshowtable'),$("#tb_container1 .tableshow"));
+		};
+			
+		function init3(){
+			var otb_container2H=$("body").height()-$(".breadcrumbs").outerHeight()-$("#tb_container1").outerHeight()-$(".divline").outerHeight()-20;
+			$("#tb_container2").css("height",otb_container2H);
+			rxued.table.countTB($("#tb_container2"),$('#headtable2'),$('#minshowtable2'),$("#tb_container2 .tableshow"));
+		};
+			///////
+			parent.$(window).load(function(){ 
+				init2();
+				init3();
+			});
+		    parent.parent.$(window).load(function(){  
+				init2();
+				init3();
+		    });
+		    parent.parent.$(window).resize(function(){  
+				init2();
+				init3();
+		    });
+		    parent.$(window).resize(function(){ 
+				init2();
+				init3();
+		    });
+		    //计算iframe
+		$("#btnR").mouseover(function(){
+			$("#fixRight").show();
+			$("#ifmRight").attr('src','yyzc_wcl.html');
+			$("#fixRight").mouseleave(function(){
+				$("#fixRight").hide();
+			})
+		})
+			
+
+
+		});
+		
+			
+	</script>
+
+</html>

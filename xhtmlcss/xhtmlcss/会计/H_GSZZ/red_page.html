@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="../css/base.css" type="text/css" rel="stylesheet">
+		<link href="../css/layout.css" type="text/css" rel="stylesheet" />
+		<link href="../css/sub.css" type="text/css" rel="stylesheet">
+		<link href="../css/alert.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	</head>
+	<body style="overflow-x: auto;">
+		<div class="tb_main" id="tb_main">
+			<ul class="clear tab_child_ul">
+				<li class="current_child_li">
+					<a href="y_sgd.html" target="tab_child_frame">
+						<p class="tab_child_p1">施工单</p>
+						<p class="tab_child_p2">3,430.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="y_sjd.html" target="tab_child_frame">
+						<p class="tab_child_p1">设计单</p>
+						<p class="tab_child_p2">3,430.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="y_jjd.html" target="tab_child_frame">
+						<p class="tab_child_p1">家具单</p>
+						<p class="tab_child_p2">3,430.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="y_rdd.html" target="tab_child_frame">
+						<p class="tab_child_p1">弱电单</p>
+						<p class="tab_child_p2">3,430.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="y_qtyw.html" target="tab_child_frame">
+						<p class="tab_child_p1">其他业务</p>
+						<p class="tab_child_p2">3,430.00</p>
+					</a>
+				</li>
+				<li>
+					<a href="y_yywsr.html" target="tab_child_frame">
+						<p class="tab_child_p1">营业外收入</p>
+						<p class="tab_child_p2">3,430.00</p>
+					</a>
+				</li>
+			</ul>
+			<div class="content">
+				<iframe src="y_sgd.html" frameborder="0" scrolling="no" id="ifr_child_tab" name="tab_child_frame" width="100%" height="100%"></iframe>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+//计算中间内容以及iframe高度
+var obodyH=$("body").height();
+var otab_ulH=$(".tab_child_ul").outerHeight();
+$(".content,#ifr_child_tab").height(obodyH-otab_ulH+"px");
+window.onresize=function(){
+	var obodyH=$("body").height();
+	var otab_ulH=$(".tab_child_ul").outerHeight();
+	$(".content,#ifr_child_tab").height(obodyH-otab_ulH+"px");	
+}
+//选项卡切换
+$(".tab_child_ul li").each(function(){
+	$(this).click(function(){
+		$(".current_child_li").removeClass("current_child_li");
+		$(this).addClass("current_child_li");
+	});
+	
+	
+})
+</script>

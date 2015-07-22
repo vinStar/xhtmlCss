@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>设计单毛利</title>
+		<link href="../css/base.css" type="text/css" rel="stylesheet">
+		<link href="../css/layout.css" type="text/css" rel="stylesheet">
+		<link href="../css/alert.css" type="text/css" rel="stylesheet">
+		<link href="../css/listcase.css" type="text/css" rel="stylesheet">
+		<link href="../css/color.css" type="text/css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="tb_main" id="tb_main">
+			<div class="tb_container" id="tb_container1" style="padding:0;">
+				<div class="ui_toptable j_outerheight">
+						<table class="headtable wb100 hasAdorn_table3" id="headtable">
+							<thead>
+								<tr>
+									<th width="5%">序号</th>
+									<th width="7%">
+										<div class="posRe">
+											<a class="title_o">最近应收</a>
+											<div class="order order_fl"> 
+                                            <a><input type="submit" value="" ></a>
+                                            <a><input type="submit" value="" ></a>
+                                            <a><input type="submit" value="" ></a>
+                                        </div>
+										</div>
+									</th>
+									<th width="7%">
+										<div class="posRe">
+											<a class="title_o">剩余天数</a>
+											<div class="order order_fl"> 
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+                                        	</div>
+										</div>
+									</th>
+									<th width="7%">
+										<div class="posRe">
+											<a class="title_o">本次应收</a>
+											<div class="order order_fl"> 
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+                                        	</div>
+										</div>
+									</th>
+									<th width="7%">
+										<div class="posRe">
+											<a class="title_o">本次已收</a>
+											<div class="order order_fl"> 
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+                                        	</div>
+										</div>
+									</th>
+									<th width="7%">
+										<div class="posRe">
+											<a class="title_o">总应收</a>
+											<div class="order order_fl"> 
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+                                        	</div>
+										</div>
+									</th>
+									<th width="12%">
+										<div class="posRe">
+											<a class="title_o title_o_other">回款</a>
+											<div class="order order_fl"> 
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+                                        	</div>
+										</div>
+									</th>
+									<th width="14%">项目名称</th>
+									<th width="7%">合同编号</th>
+									<th width="7%">合同日期</th>
+									<th width="7%">
+										<div class="posRe">
+											<a class="title_o">交图日期</a>
+											<div class="order order_fl"> 
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+                                        	</div>
+										</div>
+									</th>
+									<th width="7%">
+										<div class="posRe">
+											<a class="title_o">剩余工期</a>
+											<div class="order order_fl"> 
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+                                        	</div>
+										</div>
+									</th>
+									<th class="last">
+										<div class="posRe">
+											<a class="title_o">设计师</a>
+											<div class="order order_fl"> 
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+	                                            <a><input type="submit" value="" ></a>
+                                        	</div>
+										</div>
+									</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<!-- -->
+					<div class="tableshow" style="overflow:auto;">
+						<table class="wb100 txtCenter ui_bottomtab" id="minshowtable">
+							<tbody>
+								<tr class="target_tr redtdcolor">
+									<td width="5%">01</td>
+									<td width="7%">2014-11-12</td>
+									<td width="7%">-13</td>
+									<td width="7%">50,000.00</td>
+									<td width="7%">50,000.00</td>
+									<td width="7%">100,000.00</td>
+									<td width="12%">
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td width="14%">深圳腾讯科技</td>
+									<td width="7%">BJ58823</td>
+									<td width="7%">201-11-45</td>
+									<td width="7%">201-11-45</td>
+									<td width="7%">-15</td>
+									<td>马化腾</td>
+									
+								</tr>
+								<tr class="target_tr yellowtdcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+								<tr class="target_tr yellowcolor">
+									<td>02</td>
+									<td>2014-12-14</td>
+									<td>3</td>
+									<td>40,000.00</td>
+									<td>0.00</td>
+									<td>469,000.00</td>
+									<td>
+										<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+									</td>
+									<td>深圳腾讯科技</td>
+									<td>BJ58823</td>
+									<td>20154-12-12</td>
+									<td>20154-12-12</td>
+									<td>100</td>
+									<td>马云</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tbDiv3 j_outerheight">
+                    <table class="tb_all" id="tb_3">
+                        <tbody>
+                            <tr>
+                                <td width="5%">合计</td>
+                                <td width="7%">&nbsp;</td>
+                                <td width="7%">&nbsp;</td>
+                                <td width="7%">100,000.00</td>
+                                <td width="7%">100,000.00</td>
+                                <td width="7%">469,000.00</td>
+                                <td width="12%">31%</td>
+                                <td width="14%">&nbsp;</td>
+                                <td width="7%">&nbsp;</td>
+                                <td width="7%">&nbsp;</td>
+                                <td width="7%">&nbsp;</td>
+                                <td width="7%">&nbsp;</td>
+                                <td class="last">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+					<!--<div class="big_paging clear">
+						<div class="big_paging_left">
+							<label>共有</label><span class="txt_danger">1</span>
+							<label>条数据 共</label><span class="txt_danger">1</span>
+							<label>页</label>
+						</div>
+						<div class="big_paging_right clear">
+							<div class="big_paging_content_l fl">
+								<div class="big_page_left fl"></div>
+								<div class="big_page_mid fl ">
+									<a href="#" class="pre">上一页</a>
+									<a href="#" class="page_num active">1</a>
+									<a href="#" class="page_num">2</a>
+									<a href="#" class="page_num">...</a>
+									<a href="#" class="page_num">4</a>
+									<a href="#" class="next">下一页</a>
+								</div>
+								<div class="big_page_right fl"></div>
+							</div>
+							<div class="big_paging_content_r fl ">
+								<span class="fl">跳转至</span>
+								<input type="text" class="big_paging_txt fl">
+								<span class="fl">页</span>
+								<input type="button" value="确认" class="big_paging_btn fl">
+							</div>
+						</div>
+					</div>
+				</div>-->
+			
+			</div>
+		</div>
+	</body>
+
+</html>
+
+<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../js/rxued.js"></script>
+<script type="text/javascript" src="../js/listbase.js"></script>
+

@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>多点投资</title>
+		<link href="../css/base.css" type="text/css" rel="stylesheet">
+		<link href="../css/sub.css" type="text/css" rel="stylesheet">
+		<link href="../css/layout.css" type="text/css" rel="stylesheet">
+		<link href="../css/alert.css" type="text/css" rel="stylesheet">
+		<link href="../css/listcase.css" type="text/css" rel="stylesheet">
+		<link href="../css/color.css" type="text/css" rel="stylesheet">
+
+	</head>
+
+	<body style="overflow-x:auto;">
+		<div class="tb_main" id="tb_main">
+			<div class="breadcrumbs  j_outerheight" id="breadcrumbs">
+				<div class="breadcrumbs_mm">
+					<span class="home fl">首页</span><span class="color_1 fl arrow_sm"> > </span><span class="fl cur_page">多点投资</span>
+				</div>
+			</div>
+			<div class="tb_container" style="padding-top:0;">
+				<div class="clear tb_sub_top j_outerheight" style="padding-top: 4px;">
+						<div class="leftblock tb_block">
+							<h3>投资计划</h3>
+							<div class="line">
+								<table cellpadding="0" cellspacing="0" class="wb100 txtCenter ui_bottomtab">
+									<tr>
+										<td width="25%">&nbsp;</td>
+										<td width="25%">预投金额</td>
+										<td width="25%">签单任务</td>
+										<td>产值比例</td>
+									</tr>
+									<tr>
+										<td>36组</td>
+										<td>
+											<input type="text" class="ip_txt amount">
+										</td>
+										<td>
+											<input type="text" class="amount">
+										</td>
+										<td>自动生成</td>
+									</tr>
+									<tr>
+										<td>37组</td>
+										<td>
+											<input type="text" class="amount">
+										</td>
+										<td>
+											<input type="text" class="amount">
+										</td>
+										<td>自动生成</td>
+									</tr>
+									<tr>
+										<td>38组</td>
+										<td>
+											<input type="text" class="amount">
+										</td>
+										<td>
+											<input type="text" class="amount">
+										</td>
+										<td>自动生成</td>
+									</tr>
+									<tr>
+										<td>合计</td>
+										<td>自动生成</td>
+										<td>自动生成</td>
+										<td>自动生成</td>
+									</tr>
+								</table>
+								<div class="leftblockbtn clear">
+									<span class="fr"><a class="btn_blue"><span>提交申请</span></a></span>
+									<span class="fr"><a class="btn_blue"><span>返回</span></a></span>
+								</div>
+							</div>
+
+						</div>
+						<div class="centerblock tb_block">
+							<h3>总预估</h3>
+							<div class="line">
+								<table cellpadding="0" cellspacing="0"  class="wb100 txtLeft ui_bottomtab noboder">
+									<tr>
+										<td>预计投资盈利：<span class="span3"><strong>10,123.00</strong></span>元</td>
+									</tr>
+									<tr>
+										<td>预计签单盈利：<span class="span3"><strong>10,123.00</strong></span>元</td>
+									</tr>
+									<tr>
+										<td>近半年产值比例：<span class="span4">1:23</span>
+										</td>
+									</tr>
+									<tr>
+										<td>近半年平均利润率：<span class="span4">21%</span>
+										</td>
+									</tr>
+									<tr>
+										<td>人资、运营总成本：<span class="span3"><strong>600,000.00</strong></span>元</td>
+									</tr>
+								</table>
+
+							</div>
+
+						</div>
+						<div class="rightblock tb_block">
+							<h3>总分析</h3>
+							<div class="line noline">
+								<table cellpadding="0" cellspacing="0"  class="wb100 txtLeft ui_bottomtab noboder">
+									<tr>
+										<td>已签但回款未达标项目：<span class="span3"><strong>10,123.00</strong></span>元</td>
+									</tr>
+									<tr>
+										<td>预算、合同阶段：<span class="span3"><strong>10,123.00</strong></span>元</td>
+									</tr>
+									<tr>
+										<td>近半年签单率：<span class="span4">45</span>%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;方案阶段：<span class="span4">45</span>个</td>
+									</tr>
+									<tr>
+										<td>近半年量房率：<span class="span4">45</span>%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01月客源新增量：<span class="span4">45</span>个</td>
+									</tr>
+									<tr>
+										<td>预估下月签单额：<span class="span3"><strong>600,000.00</strong></span>元</td>
+									</tr>
+								</table>
+
+							</div>
+
+						</div>
+
+					</div>
+				<div class="tb_sub_bottom">
+						<div class="tb_main" id="tb_main2">
+							
+						<div class="ui_toptable  j_outerheight" style="background-color: #ffffff;border-right:1px solid #e7e7e7;border-top:1px solid #e7e7e7;">
+							<table class="headtable wb100 notdcolor" id="headtable">
+								<thead>
+									<tr>
+										<th width="5%">&nbsp;</th>
+										<th width="15%">签单进度</th>
+										<th width="10%">签单目标</th>
+										<th width="10%">预投金额</th>
+										<th width="10%">追投金额</th>
+										<th width="10%">剩余金额</th>
+										<th width="8%">计划产值比</th>
+										<th width="8%">实际产值比</th>
+										<th>追加投资</th>
+									</tr>
+
+								</thead>
+							</table>
+						</div>
+						<div class="tableshow" style="overflow: auto;">
+							<table class="wb100 txtCenter ui_bottomtab" id="minshowtable">
+								<tbody>
+									<tr class="target_tr">
+										<td width="5%">36组</td>
+										<td width="15%">
+											<span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+										</td>
+										<td width="10%">1,234,000.00</td>
+										<td width="10%">1,234,000.00</td>
+										<td width="10%">0.00</td>
+										<td width="10%">1,234,000.00</td>
+										<td width="8%">1:20</td>
+										<td width="8%">1:20</td>
+										<td class="last">
+										</td>
+									</tr>
+									<tr class="target_tr">
+										<td>37组</td>
+										<td><span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+										</td>
+										<td>1,234,000.00</td>
+										<td>1,234,000.00</td>
+										<td>0.00</td>
+										<td>1,234,000.00</td>
+										<td>1:20</td>
+										<td>1:20</td>
+										<td class="last">
+											<span class="fl ml20"><input type="text" value="追加金额" class="greycolor ptb0lr5 input_sm" /></span>
+											<span class="fl ml10"><a class="btn_blue"><span>追加投资</span></a></span>
+										</td>
+									</tr>
+									<tr class="target_tr">
+										<td>38组</td>
+										<td><span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+										</td>
+										<td>1,234,000.00</td>
+										<td>1,234,000.00</td>
+										<td>0.00</td>
+										<td>1,234,000.00</td>
+										<td>1:20</td>
+										<td>1:20</td>
+										<td class="last">
+											<span class="fl ml20"><input type="text" value="追加金额" class="greycolor ptb0lr5 input_sm" /></span>
+											<span class="fl ml10"><a class="btn_blue"><span>追加投资</span></a></span>
+										</td>
+									</tr>
+									<tr class="target_tr">
+										<td>38组</td>
+										<td><span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+										</td>
+										<td>1,234,000.00</td>
+										<td>1,234,000.00</td>
+										<td>0.00</td>
+										<td>1,234,000.00</td>
+										<td>1:20</td>
+										<td>1:20</td>
+										<td class="last">
+											<span class="fl ml20"><input type="text" value="追加金额" class="greycolor ptb0lr5 input_sm" /></span>
+											<span class="fl ml10"><a class="btn_blue"><span>追加投资</span></a></span>
+										</td>
+									</tr>
+									<tr class="target_tr">
+										<td>38组</td>
+										<td><span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+										</td>
+										<td>1,234,000.00</td>
+										<td>1,234,000.00</td>
+										<td>0.00</td>
+										<td>1,234,000.00</td>
+										<td>1:20</td>
+										<td>1:20</td>
+										<td class="last">
+											<span class="fl ml20"><input type="text" value="追加金额" class="greycolor ptb0lr5 input_sm" /></span>
+											<span class="fl ml10"><a class="btn_blue"><span>追加投资</span></a></span>
+										</td>
+									</tr>
+									<tr class="target_tr">
+										<td>38组</td>
+										<td><span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+										</td>
+										<td>1,234,000.00</td>
+										<td>1,234,000.00</td>
+										<td>0.00</td>
+										<td>1,234,000.00</td>
+										<td>1:20</td>
+										<td>1:20</td>
+										<td class="last">
+											<span class="fl ml20"><input type="text" value="追加金额" class="greycolor ptb0lr5 input_sm" /></span>
+											<span class="fl ml10"><a class="btn_blue"><span>追加投资</span></a></span>
+										</td>
+									</tr>
+									<tr class="target_tr">
+										<td>38组</td>
+										<td><span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+										</td>
+										<td>1,234,000.00</td>
+										<td>1,234,000.00</td>
+										<td>0.00</td>
+										<td>1,234,000.00</td>
+										<td>1:20</td>
+										<td>1:20</td>
+										<td class="last">
+											<span class="fl ml20"><input type="text" value="追加金额" class="greycolor ptb0lr5 input_sm" /></span>
+											<span class="fl ml10"><a class="btn_blue"><span>追加投资</span></a></span>
+										</td>
+									</tr>
+									<tr class="target_tr">
+										<td>38组</td>
+										<td><span class="scroll_bar"><span class="scroll_bar_content"></span><span class="scroll_num">32%</span></span>
+										</td>
+										<td>1,234,000.00</td>
+										<td>1,234,000.00</td>
+										<td>0.00</td>
+										<td>1,234,000.00</td>
+										<td>1:20</td>
+										<td>1:20</td>
+										<td class="last">
+											<span class="fl ml20"><input type="text" class="ptb0lr5 input_sm greycolor" value="追加金额" /></span>
+											<span class="fl ml10"><a class="btn_blue"><span>追加投资</span></a></span>
+										</td>
+									</tr>
+									<tr class="target_tr">
+										<td>合计</td>
+										<td><span class="scroll_bar"><span class="scroll_bar_content scroll_bar_content_red"></span><span class="scroll_num">32%</span></span>
+										</td>
+										<td>1,234,000.00</td>
+										<td>1,234,000.00</td>
+										<td>0.00</td>
+										<td>1,234,000.00</td>
+										<td>1:20</td>
+										<td>1:20</td>
+										<td class="last">&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+							
+						</div>
+					</div>
+				<div style="height: 20px; overflow: hidden;" class="j_outerheight"></div>
+			</div>
+
+
+
+		</div>
+
+	</body>
+	
+	
+</html>
+<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../js/rxued.js"></script>
+<!--<script type="text/javascript" src="../js/listbase.js"></script>-->
+<script type="text/javascript">
+	$(function(){
+		//进度条
+		rxued.progress.doProgress($(".scroll_bar"),".scroll_bar_content",".scroll_num");
+		//input输入框获得焦点隐藏提示文字
+		rxued.focus.focusBlur(".input_sm");
+		//表格计算
+		function init(){
+			rxued.table.countTB($("body"),$('#headtable'),$('#minshowtable'),$(".tableshow"),function(){
+				//rxued.layer.tolayerWH($("#mask2"),$("#tb_main"),$(document));
+			}); 
+		};
+		//init();
+		$(window).load(function(){
+			init();
+		});
+		$(window).resize(function(){
+			init();
+		});
+		/*表格计算end*/
+	});
+		
+</script>

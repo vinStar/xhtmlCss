@@ -1,0 +1,961 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>项目总账-进行中</title>
+    <link href="../css/base.css" type="text/css" rel="stylesheet">
+    <link href="../css/layout.css" type="text/css" rel="stylesheet">
+    <link href="../css/alert.css" type="text/css" rel="stylesheet">
+    <link href="../css/listcase.css" type="text/css" rel="stylesheet">
+    <link href="../css/color.css" type="text/css" rel="stylesheet">
+</head>
+<body style="overflow-x:auto;">
+    <div id="serchbox" class="txtRight j_outerheight">
+        <div class="boxPos">
+            <input id="ph" class="ptb0lr5 fl mr5" placeholder="单号、项目名称..." type="text" value="单号、项目名称..." />
+            <a class="btn"><span>GO</span></a>
+        </div>
+    </div>
+    <div class="tb_container" id="tablecontent" style="padding-top:0;">
+        <div class="ui_toptable  j_outerheight">
+            <table cellpadding="0" cellspacing="0" class="headtable wb100 hasAdorn_table4" id="headtable">
+                <thead>
+                    <tr>
+                        <th width="4%">序号</th>
+                        <th width="8%">单号</th>
+                        <th width="10%">项目名称</th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">类型</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="22">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="33">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="33">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">签单时间</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">状态</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">总应收</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">已收</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">剩余应收</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">项目应付</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">项目已付</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">额外应收</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">额外应付</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">额外已收</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th width="6%">
+                            <div class="posRe">
+                                <a class="title_o">额外已付</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="posRe">
+                                <a class="title_o">项目余额</a>
+                                <div class="order order_fl">
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                    <a>
+                                        <input type="submit" value="">
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tableshow" style="overflow:auto;" id="j_scrollbox">
+            <table cellpadding="0" cellspacing="0" class="wb100 txtCenter ui_bottomtab" id="minshowtable">
+                <tbody>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td width="4%">01</td>
+                        <td width="8%">BJ454545</td>
+                        <td width="10%">北京阿里巴巴</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">设计</td>
+                        <td width="6%">绘图中</td>
+                        <td width="6%">500,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">250,000.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">150,00.00</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td width="6%">-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="cloneTr">
+                        <td colspan="16">
+                            <div class="trContent">
+                                <div id="trframe" class="trframe">
+                                    <iframe id="ifmTr" src="" name="trframe" frameborder="no" scrolling="no" style="width:100%;height:100%;"></iframe>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr class="target_tr" data-num='0'>
+                        <td>01</td>
+                        <td>BJ454545</td>
+                        <td>北京阿里巴巴</td>
+                        <td>设计</td>
+                        <td>设计</td>
+                        <td>绘图中</td>
+                        <td>500,000.00</td>
+                        <td>250,000.00</td>
+                        <td>250,000.00</td>
+                        <td>150,00.00</td>
+                        <td>150,00.00</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>20,000.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tbDiv3 j_outerheight">
+            <table class="tb_all" id="tb_3">
+                <tbody>
+                    <tr>
+                        <td width="4%">合计</td>
+                        <td width="8%">&nbsp;</td>
+                        <td width="10%">&nbsp;</td>
+                        <td width="6%">&nbsp;</td>
+                        <td width="6%">&nbsp;</td>
+                        <td width="6%">&nbsp;</td>
+                        <td width="6%">21,000.00</td>
+                        <td width="6%">21,000.00</td>
+                        <td width="6%">21,000.00</td>
+                        <td width="6%">21,000.00</td>
+                        <td width="6%">21,000.00</td>
+                        <td width="6%">21,000.00</td>
+                        <td width="6%">21,000.00</td>
+                        <td width="6%">21,000.00</td>
+                        <td width="6%">21,000.00</td>
+                        <td class="last">21,000.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../js/rxued.js"></script>
+<script type="text/javascript" src="../js/listbase.js"></script>
+<script type="text/javascript" src="../js/iframe.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //input输入框获得焦点隐藏提示文字
+        rxued.focus.focusBlur(".boxPos input");
+        $(".ui_bottomtab tr").unbind('hover');
+    })
+
+    $(".target_tr").each(function () {
+        $(this).click(function () {
+            //alert($("#tb_2").outerWidth());
+            if ($(this).attr('data-num') != 1) {
+                //$("#ifmTr").load()
+                $("#ifmTr").attr("src", 'xmzz_xx.html');
+                $(".cloneTr").show().insertAfter($(this));
+                //countTb_height(115);
+                $(this).attr('data-num', 1);
+                $(this).siblings().attr('data-num', 0);
+            } else {
+                $(".cloneTr").hide();
+
+                $(this).attr('data-num', 0);
+            }
+            auto_boxHeight('ifmTr', 10);
+        })
+
+    })
+
+
+    $(function () {
+        //判断浏览器是否支持placeholder属性
+        supportPlaceholder = 'placeholder' in document.createElement('input');
+        //var brower = rxued.Browser.getBrowserInfo();
+
+        placeholder = function (input) {
+            var text = input.attr('placeholder'),
+             defaultValue = input.get(0).defaultValue;
+            if (!defaultValue) {
+                input.val(text).addClass("phcolor");
+            }
+            input.focus(function () {
+                if (input.val() == text) {
+                    $(this).val("");
+                }
+            });
+            input.blur(function () {
+                if (input.val() == "") {
+                    $(this).val(text).addClass("phcolor");
+                }
+            });
+            //输入的字符不为灰色
+            input.keydown(function () {
+                $(this).removeClass("phcolor");
+            });
+        };
+        //当浏览器不支持placeholder属性时，调用placeholder函数
+        if (!supportPlaceholder) {
+            $('input').each(function () {
+                text = $(this).attr("placeholder");
+                if ($(this).attr("type") == "text") {
+                    placeholder($(this));
+                }
+            });
+        }
+    });
+</script>
+</html>

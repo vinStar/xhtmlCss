@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>薪酬管理</title>
+		<link href="../css/base.css" type="text/css" rel="stylesheet">
+		<link href="../css/sub.css" type="text/css" rel="stylesheet">
+		<link href="../css/layout.css" type="text/css" rel="stylesheet">
+		<link href="../css/alert.css" type="text/css" rel="stylesheet">
+		<link href="../css/listcase.css" type="text/css" rel="stylesheet">
+		<link href="../css/color.css" type="text/css" rel="stylesheet">
+
+	</head>
+
+	<body style="overflow-x:auto;">
+		<div class="tb_main" id="tb_main">
+			<div class="breadcrumbs j_outerheight" id="breadcrumbs">
+				<div class="breadcrumbs_mm">
+					<span class="home fl">首页</span><span class="color_1 fl arrow_sm"> > </span><span class="fl cur_page">薪酬管理</span>
+				</div>
+			</div>
+			<div class="tb_main" id="tb_main2">
+				<div  id="serchbox" class="txtRight j_outerheight" style="border: 0;">
+				<div class="statick">
+					<input type="button" value="全部人员（58人）" class="fl mr5 inpac" />
+					<input type="button" value="今日地产（25人）" class="fl mr5" />
+					<input type="button" value="设计公司（20人）" class="fl mr5" />
+					<input type="button" value="工程公司（7人）" class="fl mr5" />
+					<input type="button" value="投资公司（6人）" class="fl mr5" />
+				</div>
+				<div class="boxPos clear">
+					<select class="fl mr5">
+						<option>2014年12月</option>
+					</select>
+					<input class="ptb0lr5 fl" type="text" value="">
+					<a class="btn"><span>GO</span></a>
+				</div>
+			</div>
+
+			<div class="tb_container" id="tb_container1" style="padding:0;">
+				<div class="ui_toptable j_outerheight">
+					<table class="headtable wb100" id="headtable">
+						<thead>
+							<tr>
+								<th width="3%" rowspan="2" class="bdBottom1 minthHeight" style="border-right:0;">&nbsp;</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight" style="border-right:0;">&nbsp;</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight" style="border-right:0;">&nbsp;</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight">&nbsp;</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight">底薪（元）</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight">考勤</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight">社保/公积金</th>
+								<th colspan="2" class="bdBottom1 minthHeight">部门奖罚（元）</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight">部门小计</th>
+								<th colspan="2" class="bdBottom1 minthHeight">部门奖罚（元）</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight">底薪合计</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight">提成（元）</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight">已借（元）</th>
+								<th width="6%" rowspan="2" class="bdBottom1 minthHeight">未发（元）</th>
+								<th rowspan="3" class="last">操作 </th>
+							</tr>
+							<tr>
+								<th width="6%" class="bdBottom1 minthHeight">奖</th>
+								<th width="6%" class="bdBottom1 minthHeight">罚</th>
+								<th width="6%" class="bdBottom1 minthHeight">奖</th>
+								<th width="6%" class="bdBottom1 minthHeight">奖</th>
+							</tr>
+							<tr class="yellowcolor">
+								<th colspan="4">合计</th>
+								<th>300,0.00</th>
+								<th>-1,52.00</th>
+								<th>-16,02.00</th>
+								<th>-2,00.00</th>
+								<th>1,00.00</th>
+								<th>3,00.00</th>
+								<th>-2,00.00</th>
+								<th>1,00.00</th>
+								<th>200,0.00</th>
+								<th>220,0.00</th>
+								<th>0.00</th>
+								<th>516,0.00</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+					<div class="tableshow" style="overflow:auto;">
+						<table class="wb100 txtCenter ui_bottomtab" id="minshowtable">
+							<tbody>
+								<tr class="target_tr light-red">
+									<td colspan="4">今日地产</td>
+									<td width="6%">99,0.00</td>
+									<td width="6%">-1,40.00</td>
+									<td width="6%">-7,20.00</td>
+									<td width="6%">39,2.00</td>
+									<td width="6%"><span class="light-blue">900.00</span></td>
+									<td width="6%"><span class="color_4">3,400.00</span></td>
+									<td width="6%">127,.00</td>
+									<td width="6%"><span class="light-blue">900.00</span></td>
+									<td width="6%"><span class="color_4">3,400.00</span></td>
+									<td width="6%">127,.00</td>
+									<td width="6%"><span class="color_5">900.00</span></td>
+									<td width="6%"><span class="color_5">900.00</span></td>
+									<td class="last">&nbsp;</td>
+								</tr>
+								<tr class="target_tr light-red">
+									<td colspan="4">管理层</td>
+									<td><strong>99,0.00</strong></td>
+									<td>-1,2.00</td>
+									<td>-7,240.00</td>
+									<td><strong>39,.00</strong></td>
+									<td><strong>39.00</strong></td>
+									<td><strong>39.00</strong></td>
+									<td><strong>300.00</strong></td>
+									<td><strong>300.00</strong></td>
+									<td><strong>300.00</strong></td>
+									<td><strong>300.00</strong></td>
+									<td class="greencolor"><strong>30.00</strong></td>
+									<td><strong>30.00</strong></td>
+									<td class="last"><a href="#" class="txt_success fl mr2">[借支]</a><a href="#" class="txt_success  fl mr2">[批提成]</a><a href="#" class="txt_success  fl mr2">[批底薪]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td width="3%">01</td>
+									<td width="6%">张默默</td>
+									<td width="6%">00005562</td>
+									<td width="6%">今日经理</td>
+									<td width="6%">9.00</td>
+									<td width="6%">-1,.00</td>
+									<td width="6%">-7,0.00</td>
+									<td width="6%">300.00</td>
+									<td width="6%">300.00</td>
+									<td width="6%">300.00</td>
+									<td width="6%">00.00</td>
+									<td width="6%">300.00</td>
+									<td width="6%">300.00</td>
+									<td width="6%">300.00</td>
+									<td width="6%" class="greencolor">300.00</td>
+									<td width="6%">39,2.00</td>
+									<td class="last">&nbsp;</td>
+								</tr>
+								<tr class="target_tr">
+									<td>02</td>
+									<td>张默默</td>
+									<td>00005562</td>
+									<td>今日经理</td>
+									<td>99,000.00</td>
+									<td>-1,240.00</td>
+									<td>-7,240.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td class="greencolor">39,200.00</td>
+									<td>39,200.00</td>
+									<td class="last">&nbsp;</td>
+								</tr>
+								<tr class="target_tr light-red">
+									<td colspan="4"><strong>三十七组</strong></td>
+									<td><strong>99,000.00</strong></td>
+									<td><strong>-1,240.00</strong></td>
+									<td><strong>-7,240.00</strong></td>
+									<td><strong>39,200.00</strong></td>
+									<td><strong><span class="light-blue">900.00</span></strong></td>
+									<td><strong><span class="color_4">3,400.00</span></strong></td>
+									<td><strong>127,220.00</strong></td>
+									<td><strong><span class="light-blue">900.00</span></strong></td>
+									<td><strong><span class="color_4">3,400.00</span></strong></td>
+									<td><strong>127,220.00</strong></td>
+									<td><strong><span class="color_5">900.00</span></strong></td>
+									<td><strong><span class="color_5">900.00</span></strong></td>
+									<td class="last">&nbsp;</td>
+								</tr>
+								<tr class="target_tr">
+									<td>03</td>
+									<td>张默默</td>
+									<td>00005562</td>
+									<td>今日经理</td>
+									<td>99,000.00</td>
+									<td>-1,240.00</td>
+									<td>-7,240.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td class="greencolor">39,200.00</td>
+									<td>39,200.00</td>
+									<td class="last"><a href="#" class="txt_success fl mr2">[借支]</a><a href="#" class="txt_success  fl mr2">[批提成]</a><a href="#" class="txt_success  fl mr2">[批底薪]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>04</td>
+									<td>张默默</td>
+									<td>00005562</td>
+									<td>今日经理</td>
+									<td>99,000.00</td>
+									<td>-1,240.00</td>
+									<td>-7,240.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td class="greencolor">39,200.00</td>
+									<td>39,200.00</td>
+									<td class="last"><a href="#" class="txt_success fl mr2">[借支]</a><a href="#" class="txt_success  fl mr2">[批提成]</a><a href="#" class="txt_success  fl mr2">[批底薪]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>05</td>
+									<td>张默默</td>
+									<td>00005562</td>
+									<td>今日经理</td>
+									<td>99,000.00</td>
+									<td>-1,240.00</td>
+									<td>-7,240.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td class="greencolor">39,200.00</td>
+									<td>39,200.00</td>
+									<td class="last"><a href="#" class="txt_success fl mr2">[借支]</a><a href="#" class="txt_success  fl mr2">[批提成]</a><a href="#" class="txt_success  fl mr2">[批底薪]</a></td>
+								</tr>
+								<tr class="target_tr light-pink">
+									<td colspan="4">设计公司</td>
+									<td>99,000.00</td>
+									<td>-1,240.00</td>
+									<td>-7,240.00</td>
+									<td>39,200.00</td>
+									<td><span class="light-blue">900.00</span></td>
+									<td><span class="color_4">3,400.00</span></td>
+									<td>127,220.00</td>
+									<td><span class="light-blue">900.00</span></td>
+									<td><span class="color_4">3,400.00</span></td>
+									<td>127,220.00</td>
+									<td><span class="color_5">900.00</span></td>
+									<td><span class="color_5">900.00</span></td>
+									<td class="last">&nbsp;</td>
+								</tr>
+								<tr class="target_tr light-red">
+									<td colspan="4"><strong>三十七组</strong></td>
+									<td><strong>99,000.00</strong></td>
+									<td><strong>-1,240.00</strong></td>
+									<td><strong>-7,240.00</strong></td>
+									<td><strong>39,200.00</strong></td>
+									<td><strong><span class="light-blue">900.00</span></strong></td>
+									<td><strong><span class="color_4">3,400.00</span></strong></td>
+									<td><strong>127,220.00</strong></td>
+									<td><strong><span class="light-blue">900.00</span></strong></td>
+									<td><strong><span class="color_4">3,400.00</span></strong></td>
+									<td><strong>127,220.00</strong></td>
+									<td><strong><span class="color_5">900.00</span></strong></td>
+									<td><strong><span class="color_5">900.00</span></strong></td>
+									<td class="last">&nbsp;</td>
+								</tr>
+								<tr class="target_tr">
+									<td>06</td>
+									<td>张默默</td>
+									<td>00005562</td>
+									<td>今日经理</td>
+									<td>99,000.00</td>
+									<td>-1,240.00</td>
+									<td>-7,240.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td class="greencolor">39,200.00</td>
+									<td>39,200.00</td>
+									<td class="last"><a href="#" class="txt_success mr2">[借支]</a><a href="#" class="txt_success mr2">[批提成]</a><a href="#" class="txt_success mr2">[批底薪]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>06</td>
+									<td>张默默</td>
+									<td>00005562</td>
+									<td>今日经理</td>
+									<td>99,000.00</td>
+									<td>-1,240.00</td>
+									<td>-7,240.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td class="greencolor">39,200.00</td>
+									<td>39,200.00</td>
+									<td class="last"><a href="#" class="txt_success mr2">[借支]</a><a href="#" class="txt_success mr2">[批提成]</a><a href="#" class="txt_success mr2">[批底薪]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>06</td>
+									<td>张默默</td>
+									<td>00005562</td>
+									<td>今日经理</td>
+									<td>99,000.00</td>
+									<td>-1,240.00</td>
+									<td>-7,240.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td class="greencolor">39,200.00</td>
+									<td>39,200.00</td>
+									<td class="last"><a href="#" class="txt_success mr2">[借支]</a><a href="#" class="txt_success mr2">[批提成]</a><a href="#" class="txt_success mr2">[批底薪]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>06</td>
+									<td>张默默</td>
+									<td>00005562</td>
+									<td>今日经理</td>
+									<td>99,000.00</td>
+									<td>-1,240.00</td>
+									<td>-7,240.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td>39,200.00</td>
+									<td class="greencolor">39,200.00</td>
+									<td>39,200.00</td>
+									<td class="last"><a href="#" class="txt_success mr2">[借支]</a><a href="#" class="txt_success mr2">[批提成]</a><a href="#" class="txt_success mr2">[批底薪]</a></td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+					<div class="big_paging clear j_outerheight" style="text-align: center;padding: 10px 0;">
+						<div style="width: 250px;margin: 0 auto;">
+							<a class="btn"><span>重置</span></a>
+							<a class="btn"><span>保存并退出</span></a>
+							<a class="btn"><span>提交至集团人事</span></a>
+						</div>
+						
+					</div>
+					
+				
+			</div>
+			
+			</div>
+			
+
+		</div>
+
+	</body>
+	<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/rxued.js"></script>
+	<script type="text/javascript" src="../js/listbase.js"></script>
+
+</html>

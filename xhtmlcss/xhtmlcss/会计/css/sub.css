@@ -1,0 +1,80 @@
+/* 右边内容中的一级页面：例如tb_clxx */
+
+#tabnavbox { padding-top: 10px; margin-left:10px;}
+.secondnav{ padding-right: 25px; margin-top:5px;}
+.secondnav a { float:left; color:#199776; height: 26px; line-height: 26px;margin-left: 20px; display:inline;}
+
+.secondnav{
+	padding-right:25px;
+}
+.Statistics{
+	margin-bottom:-3px;
+	line-height:30px;
+}
+.Statistics .stnumber{
+	font-size:24px;
+	color:red;
+	padding-right:20px;
+}
+
+
+.breadcrumbs{
+	position: relative;
+	border-bottom: 1px solid #e5e5e5;
+	background-color: #f5f5f5;
+	min-height: 41px;
+	line-height: 40px;
+	padding: 0 12px 0 0;
+	display: block
+}
+
+.breadcrumbs_mm .home{
+	/*background:url(../img/icon5.png) left 40% no-repeat;*/
+	padding-left:22px;
+	margin-left:19px;
+}
+.breadcrumbs_mm .arrow_sm{margin:0 11px;}
+.breadcrumbs_mm .cur_page{color:#555;}
+
+.breadcrumb li{
+	display:inline-block;
+}
+
+.breadcrumb .home-icon {
+	margin-left: 4px;
+	margin-right: 2px;
+	font-size: 20px;
+	position: relative;
+	top: 2px
+}
+
+
+.tb_main{
+	min-width:1080px;
+}
+
+
+.tb_container{
+	height:100%;
+	padding-top:10px;
+	background-color:#fff;
+}
+
+
+.iframePanel{
+	position:relative;
+	z-index:6;
+}
+
+
+.btnpx,.btnpx2{
+	margin-top:15px;
+	text-align:center;
+	position:fixed;
+	left:50%;
+	bottom:3px;
+}
+.tbDiv3{
+	background-color: #a8d7ca;
+}
+

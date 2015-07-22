@@ -1,0 +1,54 @@
+﻿1、H_CWZK为"财务总况"文件夹，cwzk.html为财务综框页面
+
+	01、blue_page.html为“剩余应收”页面
+	02、yellow_page.html为“剩余应付”页面
+	03、red_page.html为“已收”页面
+	04、green_page.html为“已付”页面
+		
+		001、sgdml.html为“剩余应收”菜单下的“施工单毛利”页面.
+		002、sjdml.html为“剩余应收”菜单下的“设计单毛利”页面.
+		003、jjdml.html为“剩余应收”菜单下的“家具单毛利”页面.
+		004、rddml.html为“剩余应收”菜单下的“弱电单毛利”页面.
+		005、qtywml.html为“剩余应收”菜单下的“其他业务毛利”页面.
+		006、xc.html为“剩余应付”菜单下的“薪酬”页面.
+		007、yygl.html为“剩余应付”菜单下的“运营管理”页面.
+		008、y_sgdml.html为“已收”菜单下的“施工单毛利”页面.
+		009、y_sjdml.html为“已收”菜单下的“设计单毛利”页面.
+		010、y_jjdml.html为“已收”菜单下的“家具单毛利”页面.
+		011、y_rddml.html为“已收”菜单下的“弱电单毛利”页面.
+		012、y_qtywsr.html为“已收”菜单下的“其他业务收入”页面.
+		013、y_yywsr.html为“已收”菜单下的“营业外收入”页面、。
+2、H_TZFA为“投资方案”文件夹
+
+       05、ddtz.html为“多点投资”页面
+       06、singletz.html为“单点投资”页面
+3、H_YYZC为“运营支出”文件夹
+       
+       07、yyzc.html为“运营支出”页面
+4、H_XCGL2为“薪酬管理”文件夹
+   
+      08、xcgl.html为“薪酬管理”页面
+
+5、H_PZLS为“凭证流水”文件夹
+
+     09、pzls.html为“凭证流水”页面
+
+6、H_JNFH为“缴纳分红”文件夹
+
+    10、jnfh.html为“缴纳分红”页面
+    11、nbfp.html为“内部分配“页面
+    12、sjjt.html为”上缴集团“页面
+		
+7、H_GSZZ为”总账会计——财务总况“文件夹
+
+8、H_XMZZ为”项目总账“文件夹
+
+    13、xmzz.html为”项目总账“	页面
+    14、jxz.html为”进行中“页面
+    15、xmzz_xx.html为项目总账详细页面
+
+9、H_NBZZ为”内部总账“文件夹  
+
+   16、nbzz.html为”内部总账“页面
+
+10.pz为凭证文件夹

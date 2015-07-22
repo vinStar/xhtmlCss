@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8A7DE05-92AC-4520-9E56-94032F37CC2C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xhtmlcss</RootNamespace>
+    <AssemblyName>xhtmlcss</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="集团\Content\Images\pendingSate02.psd" />
+    <Content Include="会计\.project" />
+    <Content Include="会计\pz\js\json4.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="learn\Content\Images\tab.png" />
+    <Content Include="learn\Content\Script\jquery-1.8.3.min.js" />
+    <Content Include="learn\Content\Script\rxued.js" />
+    <Content Include="learn\Content\Style\base.css" />
+    <Content Include="learn\Content\Style\layout.css" />
+    <Content Include="learn\dot.html" />
+    <Content Include="learn\layout.html" />
+    <Content Include="learn\progress.html" />
+    <Content Include="learn\radius.html" />
+    <Content Include="learn\radius_ie.html" />
+    <Content Include="learn\scrile.html" />
+    <Content Include="learn\tab.html" />
+    <Content Include="learn\text-justify.html" />
+    <Content Include="Web.config" />
+    <Content Include="会计\css\alert.css" />
+    <Content Include="会计\css\base.css" />
+    <Content Include="会计\css\color.css" />
+    <Content Include="会计\css\layout.css" />
+    <Content Include="会计\css\listcase.css" />
+    <Content Include="会计\css\sub.css" />
+    <Content Include="会计\H_CWZK\blue_page.html" />
+    <Content Include="会计\H_CWZK\cwzk.html" />
+    <Content Include="会计\H_CWZK\green_page.html" />
+    <Content Include="会计\H_CWZK\jjdml.html" />
+    <Content Include="会计\H_CWZK\qtywml.html" />
+    <Content Include="会计\H_CWZK\rddml.html" />
+    <Content Include="会计\H_CWZK\red_page.html" />
+    <Content Include="会计\H_CWZK\sgdml.html" />
+    <Content Include="会计\H_CWZK\sjdml.html" />
+    <Content Include="会计\H_CWZK\xc.html" />
+    <Content Include="会计\H_CWZK\yellow_page.html" />
+    <Content Include="会计\H_CWZK\yygl.html" />
+    <Content Include="会计\H_CWZK\y_jjdml.html" />
+    <Content Include="会计\H_CWZK\y_qtywml.html" />
+    <Content Include="会计\H_CWZK\y_rddml.html" />
+    <Content Include="会计\H_CWZK\y_sgdml.html" />
+    <Content Include="会计\H_CWZK\y_sjdml.html" />
+    <Content Include="会计\H_CWZK\y_xc.html" />
+    <Content Include="会计\H_CWZK\y_yywsr.html" />
+    <Content Include="会计\H_CWZK\y_yyzc.html" />
+    <Content Include="会计\H_GSZZ\blue_page.html" />
+    <Content Include="会计\H_GSZZ\cwzk.html" />
+    <Content Include="会计\H_GSZZ\green_page.html" />
+    <Content Include="会计\H_GSZZ\gsnz.html" />
+    <Content Include="会计\H_GSZZ\jjd.html" />
+    <Content Include="会计\H_GSZZ\qtywsr.html" />
+    <Content Include="会计\H_GSZZ\rdd.html" />
+    <Content Include="会计\H_GSZZ\red_page.html" />
+    <Content Include="会计\H_GSZZ\sgd.html" />
+    <Content Include="会计\H_GSZZ\sjd.html" />
+    <Content Include="会计\H_GSZZ\xmcb.html" />
+    <Content Include="会计\H_GSZZ\yellow_page.html" />
+    <Content Include="会计\H_GSZZ\y_gsnz.html" />
+    <Content Include="会计\H_GSZZ\y_jjd.html" />
+    <Content Include="会计\H_GSZZ\y_qtyw.html" />
+    <Content Include="会计\H_GSZZ\y_rdd.html" />
+    <Content Include="会计\H_GSZZ\y_sgd.html" />
+    <Content Include="会计\H_GSZZ\y_sjd.html" />
+    <Content Include="会计\H_GSZZ\y_xmcb.html" />
+    <Content Include="会计\H_GSZZ\y_yywsr.html" />
+    <Content Include="会计\H_JNFH\jnfh.html" />
+    <Content Include="会计\H_JNFH\nbfp.html" />
+    <Content Include="会计\H_JNFH\sjjt.html" />
+    <Content Include="会计\H_NBZZ\nbzz.html" />
+    <Content Include="会计\H_PZLS\pzls.html" />
+    <Content Include="会计\H_TZFA\ddtz.html" />
+    <Content Include="会计\H_TZFA\singletz.html" />
+    <Content Include="会计\H_XCGL2\xcgl.html" />
+    <Content Include="会计\H_XMZZ\guanli.html" />
+    <Content Include="会计\H_XMZZ\jungong.html" />
+    <Content Include="会计\H_XMZZ\jxz.html" />
+    <Content Include="会计\H_XMZZ\sheji.html" />
+    <Content Include="会计\H_XMZZ\wangong.html" />
+    <Content Include="会计\H_XMZZ\xmzz.html" />
+    <Content Include="会计\H_XMZZ\xmzz_xx.html" />
+    <Content Include="会计\H_YYZC\yyzc.html" />
+    <Content Include="会计\H_YYZC\yyzc_wcl.html" />
+    <Content Include="会计\img\base\alertboxtopbg.png" />
+    <Content Include="会计\img\base\alert_botton.png" />
+    <Content Include="会计\img\base\angle_arrow.gif" />
+    <Content Include="会计\img\base\angle_arrow2.gif" />
+    <Content Include="会计\img\base\arrow_b.png" />
+    <Content Include="会计\img\base\btn.png" />
+    <Content Include="会计\img\base\btn2.png" />
+    <Content Include="会计\img\base\btn3.png" />
+    <Content Include="会计\img\base\btn4.png" />
+    <Content Include="会计\img\base\btnCur.png" />
+    <Content Include="会计\img\base\btnR.png" />
+    <Content Include="会计\img\base\darly.jpg" />
+    <Content Include="会计\img\base\del.png" />
+    <Content Include="会计\img\base\del_cur.png" />
+    <Content Include="会计\img\base\icon1.png" />
+    <Content Include="会计\img\base\icon10.png" />
+    <Content Include="会计\img\base\icon11.png" />
+    <Content Include="会计\img\base\icon11_cur.png" />
+    <Content Include="会计\img\base\icon12.png" />
+    <Content Include="会计\img\base\icon12_cur.png" />
+    <Content Include="会计\img\base\icon13.png" />
+    <Content Include="会计\img\base\icon13_cur.png" />
+    <Content Include="会计\img\base\icon14.png" />
+    <Content Include="会计\img\base\icon15.png" />
+    <Content Include="会计\img\base\icon16.png" />
+    <Content Include="会计\img\base\icon1_cur.png" />
+    <Content Include="会计\img\base\icon2.png" />
+    <Content Include="会计\img\base\icon2_cur.png" />
+    <Content Include="会计\img\base\icon3.png" />
+    <Content Include="会计\img\base\icon3_cur.png" />
+    <Content Include="会计\img\base\icon4.png" />
+    <Content Include="会计\img\base\icon4_cur.png" />
+    <Content Include="会计\img\base\icon5.png" />
+    <Content Include="会计\img\base\icon5_cur.png" />
+    <Content Include="会计\img\base\icon6.png" />
+    <Content Include="会计\img\base\icon6_cur.png" />
+    <Content Include="会计\img\base\icon7.png" />
+    <Content Include="会计\img\base\icon8.png" />
+    <Content Include="会计\img\base\icon9.png" />
+    <Content Include="会计\img\base\icontt.png" />
+    <Content Include="会计\img\base\icon_left.png" />
+    <Content Include="会计\img\base\icon_right.png" />
+    <Content Include="会计\img\base\logo.png" />
+    <Content Include="会计\img\base\tab.png" />
+    <Content Include="会计\img\base\version.png" />
+    <Content Include="会计\img\CL\btn2.png" />
+    <Content Include="会计\img\CL\collapse.png" />
+    <Content Include="会计\img\CL\del.png" />
+    <Content Include="会计\img\CL\order1.png" />
+    <Content Include="会计\index.html" />
+    <Content Include="会计\js\iframe.js" />
+    <Content Include="会计\js\index.js" />
+    <Content Include="会计\js\jquery-1.8.3.min.js" />
+    <Content Include="会计\js\listbase.js" />
+    <Content Include="会计\js\rxued.js" />
+    <Content Include="会计\js\scrollBar.js" />
+    <Content Include="会计\My97DatePicker\calendar.js" />
+    <Content Include="会计\My97DatePicker\lang\en.js" />
+    <Content Include="会计\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="会计\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="会计\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="会计\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="会计\My97DatePicker\skin\default\img.gif" />
+    <Content Include="会计\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="会计\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="会计\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="会计\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="会计\My97DatePicker\WdatePicker.js" />
+    <Content Include="会计\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="会计\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="会计\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="会计\My97DatePicker\开发包\readme.txt" />
+    <Content Include="会计\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="会计\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="会计\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="会计\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="会计\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="会计\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="会计\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="会计\pz\css\common.css" />
+    <Content Include="会计\pz\css\ui.css" />
+    <Content Include="会计\pz\css\voucher.css" />
+    <Content Include="会计\pz\img\datepicker_input_bg.png" />
+    <Content Include="会计\pz\img\loading.gif" />
+    <Content Include="会计\pz\img\money_rp.png" />
+    <Content Include="会计\pz\img\spr_icons.png" />
+    <Content Include="会计\pz\img\vchKeyBoard.jpg" />
+    <Content Include="会计\pz\js\jquery.combo.js" />
+    <Content Include="会计\pz\js\jquery1.8.2.js" />
+    <Content Include="会计\pz\js\spinbox.js" />
+    <Content Include="会计\pz\js\v1.js" />
+    <Content Include="会计\pz\jzpz.html" />
+    <Content Include="会计\说明.txt" />
+    <Content Include="集团\Content\CSS\alert.css" />
+    <Content Include="集团\Content\CSS\base.css" />
+    <Content Include="集团\Content\CSS\color.css" />
+    <Content Include="集团\Content\CSS\common.css" />
+    <Content Include="集团\Content\CSS\css\base.css" />
+    <Content Include="集团\Content\CSS\css\gzd.css" />
+    <Content Include="集团\Content\CSS\css\pz.css" />
+    <Content Include="集团\Content\CSS\css\pzfm.css" />
+    <Content Include="集团\Content\CSS\css\pzml.css" />
+    <Content Include="集团\Content\CSS\css\pzzd.css" />
+    <Content Include="集团\Content\CSS\css\skpz.css" />
+    <Content Include="集团\Content\CSS\css\zcpd.css" />
+    <Content Include="集团\Content\CSS\font-awesome.min.css" />
+    <Content Include="集团\Content\CSS\form.css" />
+    <Content Include="集团\Content\CSS\lanse\Inside_color.css" />
+    <Content Include="集团\Content\CSS\lanse\Outer_color.css" />
+    <Content Include="集团\Content\CSS\layout.css" />
+    <Content Include="集团\Content\CSS\listcase.css" />
+    <Content Include="集团\Content\CSS\login.css" />
+    <Content Include="集团\Content\CSS\lvse\Inside_color.css" />
+    <Content Include="集团\Content\CSS\lvse\Outer_color.css" />
+    <Content Include="集团\Content\CSS\mend.css" />
+    <Content Include="集团\Content\CSS\pz.css" />
+    <Content Include="集团\Content\CSS\sub.css" />
+    <Content Include="集团\Content\CSS\tab.css" />
+    <Content Include="集团\Content\CSS\ui.css" />
+    <Content Include="集团\Content\CSS\voucher.css" />
+    <Content Include="集团\Content\Images\11.png" />
+    <Content Include="集团\Content\Images\abandon.png" />
+    <Content Include="集团\Content\Images\addCustom.png" />
+    <Content Include="集团\Content\Images\addCustom_cur.png" />
+    <Content Include="集团\Content\Images\add_hover_left.png" />
+    <Content Include="集团\Content\Images\add_hover_mid.png" />
+    <Content Include="集团\Content\Images\add_hover_right.png" />
+    <Content Include="集团\Content\Images\alertboxtopbg.png" />
+    <Content Include="集团\Content\Images\alertboxtopbg1.png" />
+    <Content Include="集团\Content\Images\alert_bg_01.png" />
+    <Content Include="集团\Content\Images\alert_bg_02.png" />
+    <Content Include="集团\Content\Images\alert_bg_03.png" />
+    <Content Include="集团\Content\Images\alert_bg_044.png" />
+    <Content Include="集团\Content\Images\alert_bg_04x.png" />
+    <Content Include="集团\Content\Images\alert_bg_05.png" />
+    <Content Include="集团\Content\Images\alert_bg_06.png" />
+    <Content Include="集团\Content\Images\alert_bg_066.png" />
+    <Content Include="集团\Content\Images\alert_bg_07.png" />
+    <Content Include="集团\Content\Images\alert_bg_072.png" />
+    <Content Include="集团\Content\Images\alert_bg_077.png" />
+    <Content Include="集团\Content\Images\alert_bg_08.png" />
+    <Content Include="集团\Content\Images\alert_bg_082.png" />
+    <Content Include="集团\Content\Images\alert_bg_09.png" />
+    <Content Include="集团\Content\Images\alert_bg_092.png" />
+    <Content Include="集团\Content\Images\alert_bg_10.png" />
+    <Content Include="集团\Content\Images\alert_bg_102.png" />
+    <Content Include="集团\Content\Images\alert_botton.png" />
+    <Content Include="集团\Content\Images\alert_botton1.png" />
+    <Content Include="集团\Content\Images\alert_cur_left.png" />
+    <Content Include="集团\Content\Images\alert_cur_mid.png" />
+    <Content Include="集团\Content\Images\alert_cur_right.png" />
+    <Content Include="集团\Content\Images\angle_arrow.gif" />
+    <Content Include="集团\Content\Images\angle_arrow1.png" />
+    <Content Include="集团\Content\Images\angle_arrow2.gif" />
+    <Content Include="集团\Content\Images\arrow_b.png" />
+    <Content Include="集团\Content\Images\bg.png" />
+    <Content Include="集团\Content\Images\big_page_left.png" />
+    <Content Include="集团\Content\Images\big_page_mid.png" />
+    <Content Include="集团\Content\Images\big_page_right.png" />
+    <Content Include="集团\Content\Images\btn_cn.png" />
+    <Content Include="集团\Content\Images\btn_cnCur.png" />
+    <Content Include="集团\Content\Images\calendar.png" />
+    <Content Include="集团\Content\Images\calendar_2.png" />
+    <Content Include="集团\Content\Images\chuhuguanli.png" />
+    <Content Include="集团\Content\Images\chuhuguanli_cur.png" />
+    <Content Include="集团\Content\Images\closeDB.png" />
+    <Content Include="集团\Content\Images\close_aa_l.jpg" />
+    <Content Include="集团\Content\Images\c_pad1.png" />
+    <Content Include="集团\Content\Images\datepicker_input_bg.png" />
+    <Content Include="集团\Content\Images\dda.gif" />
+    <Content Include="集团\Content\Images\del.png" />
+    <Content Include="集团\Content\Images\del_cur.png" />
+    <Content Include="集团\Content\Images\diqiu.png" />
+    <Content Include="集团\Content\Images\drop_arrow.png" />
+    <Content Include="集团\Content\Images\favicon_acc.ico" />
+    <Content Include="集团\Content\Images\favicon_cash.ico" />
+    <Content Include="集团\Content\Images\favicon_group.ico" />
+    <Content Include="集团\Content\Images\fiter.png" />
+    <Content Include="集团\Content\Images\greenbtn.jpg" />
+    <Content Include="集团\Content\Images\houtaisheding.png" />
+    <Content Include="集团\Content\Images\houtaisheding_cur.png" />
+    <Content Include="集团\Content\Images\icon0.jpg" />
+    <Content Include="集团\Content\Images\icon1.jpg" />
+    <Content Include="集团\Content\Images\icon1.png" />
+    <Content Include="集团\Content\Images\icon10.png" />
+    <Content Include="集团\Content\Images\icon11.png" />
+    <Content Include="集团\Content\Images\icon1_cur.png" />
+    <Content Include="集团\Content\Images\icon2.png" />
+    <Content Include="集团\Content\Images\icon2_cur.png" />
+    <Content Include="集团\Content\Images\icon3.png" />
+    <Content Include="集团\Content\Images\icon3_cur.png" />
+    <Content Include="集团\Content\Images\icon4.png" />
+    <Content Include="集团\Content\Images\icon5.png" />
+    <Content Include="集团\Content\Images\icon5_cur.png" />
+    <Content Include="集团\Content\Images\icon6.png" />
+    <Content Include="集团\Content\Images\icon6_cur.png" />
+    <Content Include="集团\Content\Images\icon7.png" />
+    <Content Include="集团\Content\Images\icon7_cur.png" />
+    <Content Include="集团\Content\Images\icon8.png" />
+    <Content Include="集团\Content\Images\icon8_2.png" />
+    <Content Include="集团\Content\Images\icon9.png" />
+    <Content Include="集团\Content\Images\icon9_cur.png" />
+    <Content Include="集团\Content\Images\icon_10.png" />
+    <Content Include="集团\Content\Images\icon_11.png" />
+    <Content Include="集团\Content\Images\icon_a01.png" />
+    <Content Include="集团\Content\Images\icon_a02.png" />
+    <Content Include="集团\Content\Images\icon_a03.png" />
+    <Content Include="集团\Content\Images\icon_a04.png" />
+    <Content Include="集团\Content\Images\icon_add2.png" />
+    <Content Include="集团\Content\Images\icon_add2_cur.png" />
+    <Content Include="集团\Content\Images\icon_all_cur.png" />
+    <Content Include="集团\Content\Images\icon_cur_a01.png" />
+    <Content Include="集团\Content\Images\icon_cur_a02.png" />
+    <Content Include="集团\Content\Images\icon_cur_a03.png" />
+    <Content Include="集团\Content\Images\icon_cur_a04.png" />
+    <Content Include="集团\Content\Images\icon_k.png" />
+    <Content Include="集团\Content\Images\icon_k_cur.png" />
+    <Content Include="集团\Content\Images\icon_left.png" />
+    <Content Include="集团\Content\Images\icon_lskh2.png" />
+    <Content Include="集团\Content\Images\icon_lskh2_cur.png" />
+    <Content Include="集团\Content\Images\icon_nosign.png" />
+    <Content Include="集团\Content\Images\icon_nosign_cur.png" />
+    <Content Include="集团\Content\Images\icon_phone.png" />
+    <Content Include="集团\Content\Images\icon_phone_tb.png" />
+    <Content Include="集团\Content\Images\icon_right.png" />
+    <Content Include="集团\Content\Images\icon_signed.png" />
+    <Content Include="集团\Content\Images\icon_signed_cur.png" />
+    <Content Include="集团\Content\Images\icon_talking.png" />
+    <Content Include="集团\Content\Images\icon_talking_cur.png" />
+    <Content Include="集团\Content\Images\icon_tb_2.png" />
+    <Content Include="集团\Content\Images\icon_unsign.png" />
+    <Content Include="集团\Content\Images\icon_unsign_cur.png" />
+    <Content Include="集团\Content\Images\icon_x.png" />
+    <Content Include="集团\Content\Images\icon_x_cur.png" />
+    <Content Include="集团\Content\Images\images\首页_03.png" />
+    <Content Include="集团\Content\Images\images\首页_05.png" />
+    <Content Include="集团\Content\Images\images\首页_09.png" />
+    <Content Include="集团\Content\Images\images\首页_12.png" />
+    <Content Include="集团\Content\Images\img\bg.png" />
+    <Content Include="集团\Content\Images\img\bg2.png" />
+    <Content Include="集团\Content\Images\img\bg3.png" />
+    <Content Include="集团\Content\Images\img\icon.png" />
+    <Content Include="集团\Content\Images\img\logo3.png" />
+    <Content Include="集团\Content\Images\img\logo4.png" />
+    <Content Include="集团\Content\Images\InvestImg\activearr.png" />
+    <Content Include="集团\Content\Images\InvestImg\addDivbg.png" />
+    <Content Include="集团\Content\Images\InvestImg\alertboxtopbg.png" />
+    <Content Include="集团\Content\Images\InvestImg\alert_botton.png" />
+    <Content Include="集团\Content\Images\InvestImg\angle_arrow.gif" />
+    <Content Include="集团\Content\Images\InvestImg\angle_arrow2.gif" />
+    <Content Include="集团\Content\Images\InvestImg\arrow_b.png" />
+    <Content Include="集团\Content\Images\InvestImg\bank1.jpg" />
+    <Content Include="集团\Content\Images\InvestImg\bank2.jpg" />
+    <Content Include="集团\Content\Images\InvestImg\bank3.jpg" />
+    <Content Include="集团\Content\Images\InvestImg\bank4.jpg" />
+    <Content Include="集团\Content\Images\InvestImg\bank5.jpg" />
+    <Content Include="集团\Content\Images\InvestImg\bank6.jpg" />
+    <Content Include="集团\Content\Images\InvestImg\bank7.jpg" />
+    <Content Include="集团\Content\Images\InvestImg\bank8.jpg" />
+    <Content Include="集团\Content\Images\InvestImg\bgOrder2.png" />
+    <Content Include="集团\Content\Images\InvestImg\bgOrder3.png" />
+    <Content Include="集团\Content\Images\InvestImg\btn.png" />
+    <Content Include="集团\Content\Images\InvestImg\btn2.png" />
+    <Content Include="集团\Content\Images\InvestImg\btn3.png" />
+    <Content Include="集团\Content\Images\InvestImg\btn4.png" />
+    <Content Include="集团\Content\Images\InvestImg\btnCur.png" />
+    <Content Include="集团\Content\Images\InvestImg\btnR.png" />
+    <Content Include="集团\Content\Images\InvestImg\collapse.png" />
+    <Content Include="集团\Content\Images\InvestImg\darly.jpg" />
+    <Content Include="集团\Content\Images\InvestImg\del.png" />
+    <Content Include="集团\Content\Images\InvestImg\delTr.png" />
+    <Content Include="集团\Content\Images\InvestImg\delTrCur.png" />
+    <Content Include="集团\Content\Images\InvestImg\del_cur.png" />
+    <Content Include="集团\Content\Images\InvestImg\down.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon1.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon10.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon11.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon11_cur.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon12.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon12_cur.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon13.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon13_cur.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon14.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon15.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon16.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon1_cur.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon2.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon2_cur.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon3.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon3_cur.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon4.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon4_cur.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon5.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon5_cur.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon6.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon6_cur.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon7.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon8.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon9.png" />
+    <Content Include="集团\Content\Images\InvestImg\icontt.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon_left.png" />
+    <Content Include="集团\Content\Images\InvestImg\icon_right.png" />
+    <Content Include="集团\Content\Images\InvestImg\logo.png" />
+    <Content Include="集团\Content\Images\InvestImg\logobank1.png" />
+    <Content Include="集团\Content\Images\InvestImg\order1.png" />
+    <Content Include="集团\Content\Images\InvestImg\passwordCircle.png" />
+    <Content Include="集团\Content\Images\InvestImg\select.png" />
+    <Content Include="集团\Content\Images\InvestImg\selectbtn0.png" />
+    <Content Include="集团\Content\Images\InvestImg\selectbtn1.png" />
+    <Content Include="集团\Content\Images\InvestImg\tab.png" />
+    <Content Include="集团\Content\Images\InvestImg\up.png" />
+    <Content Include="集团\Content\Images\InvestImg\version.png" />
+    <Content Include="集团\Content\Images\KF\bank1.png" />
+    <Content Include="集团\Content\Images\KF\bank2.png" />
+    <Content Include="集团\Content\Images\KF\btn.png" />
+    <Content Include="集团\Content\Images\KF\btnBg1.png" />
+    <Content Include="集团\Content\Images\KF\btnBg2.png" />
+    <Content Include="集团\Content\Images\KF\btnBg3.png" />
+    <Content Include="集团\Content\Images\KF\btnBg4.png" />
+    <Content Include="集团\Content\Images\KF\btnBg5.png" />
+    <Content Include="集团\Content\Images\KF\btnCont2.png" />
+    <Content Include="集团\Content\Images\KF\btnCur.png" />
+    <Content Include="集团\Content\Images\KF\btnR.png" />
+    <Content Include="集团\Content\Images\KF\del.png" />
+    <Content Include="集团\Content\Images\KF\delBtn.png" />
+    <Content Include="集团\Content\Images\KF\del_cur.png" />
+    <Content Include="集团\Content\Images\KF\deNum1.png" />
+    <Content Include="集团\Content\Images\KF\deNum2.png" />
+    <Content Include="集团\Content\Images\KF\down.png" />
+    <Content Include="集团\Content\Images\KF\floor.png" />
+    <Content Include="集团\Content\Images\KF\floor_s.png" />
+    <Content Include="集团\Content\Images\KF\floor_s2.png" />
+    <Content Include="集团\Content\Images\KF\left1.png" />
+    <Content Include="集团\Content\Images\KF\money_rp.png" />
+    <Content Include="集团\Content\Images\KF\name_bg.png" />
+    <Content Include="集团\Content\Images\KF\pendState01.png" />
+    <Content Include="集团\Content\Images\KF\pendState02.png" />
+    <Content Include="集团\Content\Images\KF\right1.png" />
+    <Content Include="集团\Content\Images\KF\seek.png" />
+    <Content Include="集团\Content\Images\KF\star.png" />
+    <Content Include="集团\Content\Images\KF\tab.png" />
+    <Content Include="集团\Content\Images\KF\test1.png" />
+    <Content Include="集团\Content\Images\KF\test2.png" />
+    <Content Include="集团\Content\Images\KF\up.png" />
+    <Content Include="集团\Content\Images\KF\upload_1.png" />
+    <Content Include="集团\Content\Images\KF\upload_1cur.png" />
+    <Content Include="集团\Content\Images\lan_bg\add_hover_left.png" />
+    <Content Include="集团\Content\Images\lan_bg\add_hover_mid.png" />
+    <Content Include="集团\Content\Images\lan_bg\add_hover_right.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_bg_01.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_bg_02.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_bg_03.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_bg_044.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_bg_05.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_bg_066.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_bg_072.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_bg_082.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_bg_092.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_bg_102.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_cur_left.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_cur_mid.png" />
+    <Content Include="集团\Content\Images\lan_bg\alert_cur_right.png" />
+    <Content Include="集团\Content\Images\lan_bg\arrow_b.png" />
+    <Content Include="集团\Content\Images\lan_bg\calendar.png" />
+    <Content Include="集团\Content\Images\lan_bg\del_cur.png" />
+    <Content Include="集团\Content\Images\lan_bg\derive_order.png" />
+    <Content Include="集团\Content\Images\lan_bg\fiter.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon6_cur.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon7_cur.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon8.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon9_cur.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_11.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_a01.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_a02.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_a03.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_a04.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_add2.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_all_cur.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_back.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_k_cur.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_left.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_lskh2.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_nosign.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_right.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_signed.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_talking.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_unsign.png" />
+    <Content Include="集团\Content\Images\lan_bg\icon_x_cur.png" />
+    <Content Include="集团\Content\Images\lan_bg\left_btn_bg.png" />
+    <Content Include="集团\Content\Images\lan_bg\left_cur_bg.png" />
+    <Content Include="集团\Content\Images\lan_bg\left_square.png" />
+    <Content Include="集团\Content\Images\lan_bg\mid_btn_bg.png" />
+    <Content Include="集团\Content\Images\lan_bg\mid_cur_bg.png" />
+    <Content Include="集团\Content\Images\lan_bg\mid_square.png" />
+    <Content Include="集团\Content\Images\lan_bg\right_btn_bg.png" />
+    <Content Include="集团\Content\Images\lan_bg\right_cur_bg.png" />
+    <Content Include="集团\Content\Images\lan_bg\right_square.png" />
+    <Content Include="集团\Content\Images\lan_bg\search.png" />
+    <Content Include="集团\Content\Images\left_btn_bg.png" />
+    <Content Include="集团\Content\Images\left_cur_bg.png" />
+    <Content Include="集团\Content\Images\left_square.png" />
+    <Content Include="集团\Content\Images\loading.gif" />
+    <Content Include="集团\Content\Images\loading1.gif" />
+    <Content Include="集团\Content\Images\loginbg.jpg" />
+    <Content Include="集团\Content\Images\loginLbg.jpg" />
+    <Content Include="集团\Content\Images\loginRbg.jpg" />
+    <Content Include="集团\Content\Images\login_bg.jpg" />
+    <Content Include="集团\Content\Images\logo.png" />
+    <Content Include="集团\Content\Images\logo_j.png" />
+    <Content Include="集团\Content\Images\lv_bg\addCustom.png" />
+    <Content Include="集团\Content\Images\lv_bg\add_hover_left.png" />
+    <Content Include="集团\Content\Images\lv_bg\add_hover_mid.png" />
+    <Content Include="集团\Content\Images\lv_bg\add_hover_right.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_bg_01.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_bg_02.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_bg_03.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_bg_044.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_bg_05.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_bg_066.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_bg_072.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_bg_082.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_bg_092.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_bg_102.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_cur_left.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_cur_mid.png" />
+    <Content Include="集团\Content\Images\lv_bg\alert_cur_right.png" />
+    <Content Include="集团\Content\Images\lv_bg\arrow_b.png" />
+    <Content Include="集团\Content\Images\lv_bg\btn.png" />
+    <Content Include="集团\Content\Images\lv_bg\btn1.png" />
+    <Content Include="集团\Content\Images\lv_bg\btn4.png" />
+    <Content Include="集团\Content\Images\lv_bg\btn6.png" />
+    <Content Include="集团\Content\Images\lv_bg\btnActive1.png" />
+    <Content Include="集团\Content\Images\lv_bg\btnCur1.png" />
+    <Content Include="集团\Content\Images\lv_bg\btnCur4.png" />
+    <Content Include="集团\Content\Images\lv_bg\btnCur6.png" />
+    <Content Include="集团\Content\Images\lv_bg\calendar.png" />
+    <Content Include="集团\Content\Images\lv_bg\chuhuguanli_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\del_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\derive_order.png" />
+    <Content Include="集团\Content\Images\lv_bg\fiter.png" />
+    <Content Include="集团\Content\Images\lv_bg\houtaisheding_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon6_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon7_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon8.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon9_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_a01.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_a02.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_a03.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_a04.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_add2.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_all_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_back.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_k_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_left.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_lskh2.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_nosign.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_right.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_signed.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_talking.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_unsign.png" />
+    <Content Include="集团\Content\Images\lv_bg\icon_x_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\left_btn_bg.png" />
+    <Content Include="集团\Content\Images\lv_bg\left_cur_bg.png" />
+    <Content Include="集团\Content\Images\lv_bg\left_square.png" />
+    <Content Include="集团\Content\Images\lv_bg\mark.png" />
+    <Content Include="集团\Content\Images\lv_bg\mid_btn_bg.png" />
+    <Content Include="集团\Content\Images\lv_bg\mid_cur_bg.png" />
+    <Content Include="集团\Content\Images\lv_bg\mid_square.png" />
+    <Content Include="集团\Content\Images\lv_bg\ord1.png" />
+    <Content Include="集团\Content\Images\lv_bg\ord2.png" />
+    <Content Include="集团\Content\Images\lv_bg\right_btn_bg.png" />
+    <Content Include="集团\Content\Images\lv_bg\right_cur_bg.png" />
+    <Content Include="集团\Content\Images\lv_bg\right_square.png" />
+    <Content Include="集团\Content\Images\lv_bg\sche.png" />
+    <Content Include="集团\Content\Images\lv_bg\search.png" />
+    <Content Include="集团\Content\Images\lv_bg\spis.png" />
+    <Content Include="集团\Content\Images\lv_bg\spis1.png" />
+    <Content Include="集团\Content\Images\lv_bg\tongjifenxi_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\touziguanli_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\xitongbaobiao_cur.png" />
+    <Content Include="集团\Content\Images\lv_bg\yw.png" />
+    <Content Include="集团\Content\Images\lv_bg\zjptyz_cur.png" />
+    <Content Include="集团\Content\Images\mark_1.png" />
+    <Content Include="集团\Content\Images\mark_2.png" />
+    <Content Include="集团\Content\Images\mark_3.png" />
+    <Content Include="集团\Content\Images\mark_4.png" />
+    <Content Include="集团\Content\Images\mark_5.png" />
+    <Content Include="集团\Content\Images\mark_6.png" />
+    <Content Include="集团\Content\Images\mid_btn_bg.png" />
+    <Content Include="集团\Content\Images\mid_cur_bg.png" />
+    <Content Include="集团\Content\Images\mid_square.png" />
+    <Content Include="集团\Content\Images\money_rp.png" />
+    <Content Include="集团\Content\Images\numberbg.png" />
+    <Content Include="集团\Content\Images\numberbg1.png" />
+    <Content Include="集团\Content\Images\num_cn.png" />
+    <Content Include="集团\Content\Images\page_btn_bg.png" />
+    <Content Include="集团\Content\Images\page_cur.png" />
+    <Content Include="集团\Content\Images\page_left.png" />
+    <Content Include="集团\Content\Images\page_mid.png" />
+    <Content Include="集团\Content\Images\page_right.png" />
+    <Content Include="集团\Content\Images\pendingSate01.png" />
+    <Content Include="集团\Content\Images\pendingSate02.png" />
+    <Content Include="集团\Content\Images\pendingSate03.png" />
+    <Content Include="集团\Content\Images\pendingSate04.png" />
+    <Content Include="集团\Content\Images\prompt_infor.png" />
+    <Content Include="集团\Content\Images\pull_black.png" />
+    <Content Include="集团\Content\Images\right_btn_bg.png" />
+    <Content Include="集团\Content\Images\right_cur_bg.png" />
+    <Content Include="集团\Content\Images\right_square.png" />
+    <Content Include="集团\Content\Images\role.png" />
+    <Content Include="集团\Content\Images\scroll01.png" />
+    <Content Include="集团\Content\Images\scroll02.png" />
+    <Content Include="集团\Content\Images\scroll023.png" />
+    <Content Include="集团\Content\Images\scroll_bar.png" />
+    <Content Include="集团\Content\Images\short.gif" />
+    <Content Include="集团\Content\Images\short2.gif" />
+    <Content Include="集团\Content\Images\short3.gif" />
+    <Content Include="集团\Content\Images\short4.gif" />
+    <Content Include="集团\Content\Images\small_star.png" />
+    <Content Include="集团\Content\Images\spr_icons.png" />
+    <Content Include="集团\Content\Images\star.png" />
+    <Content Include="集团\Content\Images\star_wj.png" />
+    <Content Include="集团\Content\Images\star_wj_cur.png" />
+    <Content Include="集团\Content\Images\submit.jpg" />
+    <Content Include="集团\Content\Images\tab.png" />
+    <Content Include="集团\Content\Images\tele_phone.png" />
+    <Content Include="集团\Content\Images\tip_1.png" />
+    <Content Include="集团\Content\Images\tongjifenxi.png" />
+    <Content Include="集团\Content\Images\tongjifenxi_cur.png" />
+    <Content Include="集团\Content\Images\touziguanli.png" />
+    <Content Include="集团\Content\Images\touziguanli_cur.png" />
+    <Content Include="集团\Content\Images\u569.png" />
+    <Content Include="集团\Content\Images\vchKeyBoard.jpg" />
+    <Content Include="集团\Content\Images\version.png" />
+    <Content Include="集团\Content\Images\xitongbaobiao.png" />
+    <Content Include="集团\Content\Images\xitongbaobiao_cur.png" />
+    <Content Include="集团\Content\Images\zjptyz.png" />
+    <Content Include="集团\Content\Images\zjptyz_cur.png" />
+    <Content Include="集团\Content\Images\zwtp.png" />
+    <Content Include="集团\Content\Images\新建文件夹\alert_left_btn.png" />
+    <Content Include="集团\Content\Images\新建文件夹\alert_left_btn02.png" />
+    <Content Include="集团\Content\Images\新建文件夹\alert_mid_btn.png" />
+    <Content Include="集团\Content\Images\新建文件夹\alert_mid_btn02.png" />
+    <Content Include="集团\Content\Images\新建文件夹\alert_right_btn.png" />
+    <Content Include="集团\Content\Images\新建文件夹\alert_right_btn02.png" />
+    <Content Include="集团\Content\InvestCSS\alert.css" />
+    <Content Include="集团\Content\InvestCSS\base.css" />
+    <Content Include="集团\Content\InvestCSS\color.css" />
+    <Content Include="集团\Content\InvestCSS\common.css" />
+    <Content Include="集团\Content\InvestCSS\darktooltip.min.css" />
+    <Content Include="集团\Content\InvestCSS\layout.css" />
+    <Content Include="集团\Content\InvestCSS\listcase.css" />
+    <Content Include="集团\Content\InvestCSS\mend.css" />
+    <Content Include="集团\Content\InvestCSS\pz.css" />
+    <Content Include="集团\Content\InvestCSS\sub.css" />
+    <Content Include="集团\Content\InvestCSS\ui.css" />
+    <Content Include="集团\Content\InvestCSS\voucher.css" />
+    <Content Include="集团\staticHtml\Capital.html" />
+    <Content Include="集团\staticHtml\chgl.html" />
+    <Content Include="集团\staticHtml\ckmx.html" />
+    <Content Include="集团\staticHtml\htsd.html" />
+    <Content Include="集团\staticHtml\index.html" />
+    <Content Include="集团\staticHtml\jzpz.html" />
+    <Content Include="集团\staticHtml\tb_jzgl1.html" />
+    <Content Include="集团\staticHtml\tb_jzgl2.html" />
+    <Content Include="集团\staticHtml\tzgl.html" />
+    <Content Include="集团\staticHtml\tzgl_jxz.html" />
+    <Content Include="集团\staticHtml\tzgl_qb.html" />
+    <Content Include="集团\staticHtml\tzgl_ywc.html" />
+    <Content Include="集团\staticHtml\tzjh2.html" />
+    <Content Include="集团\staticHtml\uploadimage.html" />
+    <Content Include="集团\staticHtml\xzjd.html" />
+    <Content Include="集团\staticHtml\xztzjh.html" />
+    <Content Include="集团\staticHtml\zjptyz.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="集团\Content\CSS\lanse\.svn\prop-base\" />
+    <Folder Include="集团\Content\CSS\lanse\.svn\props\" />
+    <Folder Include="集团\Content\CSS\lanse\.svn\text-base\" />
+    <Folder Include="集团\Content\CSS\lanse\.svn\tmp\" />
+    <Folder Include="集团\Content\CSS\lvse\.svn\prop-base\" />
+    <Folder Include="集团\Content\CSS\lvse\.svn\props\" />
+    <Folder Include="集团\Content\CSS\lvse\.svn\text-base\" />
+    <Folder Include="集团\Content\CSS\lvse\.svn\tmp\" />
+    <Folder Include="集团\Content\Images\lan_bg\.svn\prop-base\" />
+    <Folder Include="集团\Content\Images\lan_bg\.svn\props\" />
+    <Folder Include="集团\Content\Images\lan_bg\.svn\text-base\" />
+    <Folder Include="集团\Content\Images\lan_bg\.svn\tmp\" />
+    <Folder Include="集团\Content\Images\lv_bg\.svn\prop-base\" />
+    <Folder Include="集团\Content\Images\lv_bg\.svn\props\" />
+    <Folder Include="集团\Content\Images\lv_bg\.svn\text-base\" />
+    <Folder Include="集团\Content\Images\lv_bg\.svn\tmp\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19686</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:19686/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

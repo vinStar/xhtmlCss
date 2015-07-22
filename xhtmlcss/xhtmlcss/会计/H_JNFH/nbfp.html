@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>内部分配</title>
+		<link href="../css/base.css" type="text/css" rel="stylesheet">
+		<link href="../css/sub.css" type="text/css" rel="stylesheet">
+		<link href="../css/layout.css" type="text/css" rel="stylesheet">
+		<link href="../css/alert.css" type="text/css" rel="stylesheet">
+		<link href="../css/listcase.css" type="text/css" rel="stylesheet">
+		<link href="../css/color.css" type="text/css" rel="stylesheet">
+
+	</head>
+
+	<body style="overflow-x:auto;">
+		<div class="tb_main" id="tb_main">
+			<div id="serchbox" class="txtRight j_outerheight" style="border: 0;">
+					<div class="boxPos">
+						<select class="fl mr10">
+							<option>查看历史</option>
+							<option>2014年12月</option>
+						</select>
+					</div>
+				</div>
+				<div class="tb_container" id="tablecontent" style="padding-top:0;">
+
+					<div class="ui_toptable  j_outerheight">
+						<table cellpadding="0" cellspacing="0" class="headtable wb100 hasAdorn_table" id="headtable">
+							<thead>
+								<tr>
+									<th width="8%">部门</th>
+									<th width="8%">小组</th>
+									<th width="10%">本月结余</th>
+									<th width="10%">留底基数</th>
+									<th width="10%">上缴金额</th>
+									<th width="10%">返点金额</th>
+									<th width="10%">职务</th>
+									<th width="8%">姓名</th>
+									<th width="10%">占比</th>
+									<th width="10%">分红金额</th>
+									<th class="last">操作</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<!-- -->
+					<div class="tableshow" style="overflow:auto;" id="j_scrollbox">
+						<table cellpadding="0" cellspacing="0" class="wb100 txtCenter ui_bottomtab" id="minshowtable">
+							<tbody>
+								<tr class="target_tr">
+									<td width="8%" rowspan="4">今日地产</td>
+									<td width="8%" rowspan="4">全部门</td>
+									<td width="10%" rowspan="4"><span class="greencolor">110,000.00</span></td>
+									<td width="10%" rowspan="4"><span class="greencolor">110,000.00</span></td>
+									<td width="10%" rowspan="4"><span class="greencolor">110,000.00</span></td>
+									<td width="10%" rowspan="4"><span class="greencolor">110,000.00</span></td>
+									<td width="10%">今日经理</td>
+									<td width="8%">张某某</td>
+									<td width="10%">50% (全部门)</td>
+									<td width="10%"><span class="greencolor">110,000.00</span> </td>
+									<td class="last">[已审批]</td>
+								</tr>
+								<tr class="target_tr">
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last">[已审批]</td>
+								</tr>
+								<tr class="target_tr">
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last">[已审批]</td>
+								</tr>
+								<tr class="target_tr">
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last">[已审批]</td>
+								</tr>
+								<tr class="target_tr">
+									<td rowspan="5">设计公司</td>
+									<td>36组</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last"><a href="javascript:;" class="greencolor under_line">[审批]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>37组</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last"><a href="javascript:;" class="greencolor under_line">[审批]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>38组</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last"><a href="javascript:;" class="greencolor under_line">[审批]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>39组</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last"><a href="javascript:;" class="greencolor under_line">[审批]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>40组</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last"><a href="javascript:;" class="greencolor under_line">[审批]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td rowspan="5">设计公司</td>
+									<td>36组</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last"><a href="javascript:;" class="greencolor under_line">[审批]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>37组</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last"><a href="javascript:;" class="greencolor under_line">[审批]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>38组</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last"><a href="javascript:;" class="greencolor under_line">[审批]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>39组</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last"><a href="javascript:;" class="greencolor under_line">[审批]</a></td>
+								</tr>
+								<tr class="target_tr">
+									<td>40组</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td>小组经理 (№1)</td>
+									<td>李某某</td>
+									<td>10% (全部门)</td>
+									<td><span class="greencolor">110,000.00</span></td>
+									<td class="last"><a href="javascript:;" class="greencolor under_line">[审批]</a></td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+					<div class="tbDiv3 j_outerheight">
+                    <table class="tb_all" id="tb_3">
+                        <tbody>
+                            <tr>
+                                <td width="8%">合计</td>
+                                <td width="8%">&nbsp;</td>
+                                <td width="10%">499,000.00</td>
+                                <td width="10%">499,000.00;</td>
+                                <td width="10%">499,000.00</td>
+                                <td width="10%">499,000.00</td>
+                                <td width="10%">&nbsp;</td>
+                                <td width="8%">&nbsp;</td>
+                                <td width="10%">&nbsp;</td>
+                                <td width="10%">45,000.00</td>
+                                <td class="last">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+					<!--<div class="big_paging clear j_outerheight">
+                                    <div class="big_paging_left">
+                                        <label>共有</label><span class="txt_danger">1</span><label>条数据 共</label><span class="txt_danger">1</span><label>页</label>
+                                        <span class="fl mr20">当日支出：<strong class="fz16">122,102.00</strong>元</span>
+                                        <span class="fl mr20">当日收入：<strong class="fz16">122,102.00</strong>元</span>
+                                        <span class="fl mr20">账户余额：<strong class="fz16">122,102.00</strong>元</span>
+                                    </div>
+                                    <div class="big_paging_right clear">
+                                        <div class="big_paging_content_l fl">
+                                            <div class="big_page_left fl"></div>
+                                            <div class="big_page_mid fl ">  
+                                                    <a href="#" class="pre">上一页</a>
+                                                    <a href="#" class="page_num active">1</a>
+                                                    <a href="#" class="page_num">2</a>
+                                                    <a href="#" class="page_num">...</a>
+                                                    <a href="#" class="page_num">4</a>
+                                                    <a href="#" class="next">下一页</a>
+                                            </div>
+                                            <div class="big_page_right fl"></div>
+                                        </div>
+                                        <div class="big_paging_content_r fl ">
+                                            <span class="fl">跳转至</span>
+                                           <input type="text" class="big_paging_txt fl">
+                                            <span class="fl">页</span>
+                                            <input type="button" value="确认" class="big_paging_btn fl">
+                                        </div>
+                                    </div>
+                </div>-->
+                <div class="remarks j_outerheight">
+                	 	<h3 class="fz12">备注：</h3>
+                	 	<p>1、施工单需达到公司制度的标准（除去回扣）且单个回款达30%算业绩，未达到不得进行利润分配   </p>
+                	 	<p>注：2015年1月施工单个回款达10%即算业绩，平均达10%不计，仅限1月份</p>
+                	 	<p>2、 设计公司设计单、家具单、弱电单金额按照当月设计回款金额核算，达到30%计算，未到30%不算本月签单业绩。按财务收付实现制进行核算当月回款金额。</p>
+                	 	<p>3、 投资买单金额剩余金额、扣款金额不得列为设计公司的利润分配范畴内</p>
+                	 	<p>4、 如设计公司当月投资失败未完成相应施工单金额，当月所签设计单、家具单、弱电单金额清零</p>
+                </div>
+				</div>
+			
+
+		</div>
+
+	</body>
+	<script src="../js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/rxued.js"></script>
+	<script type="text/javascript" src="../js/listbase.js"></script>
+</html>
