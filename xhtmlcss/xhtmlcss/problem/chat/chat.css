@@ -1,0 +1,29 @@
+html, body{background: #a5a5a5;}
+.chatbox{width: 1000px;margin: 40px auto;background: #fff;border-radius: 10px;}
+.chatbox .chat-title{background: url(chatlogo.png) no-repeat 20px center #ff422e;padding-left: 100px;padding: 10px 0 10px 100px;color: #fff;-webkit-border-top-left-radius: 10px;-moz-border-top-left-radius: 10px;border-top-left-radius: 10px;-webkit-border-top-right-radius: 10px;-moz-border-top-right-radius: 10px;border-top-right-radius: 10px;}
+.chatbox .chat-title h2{font-size: 28px;font-weight: bold;}
+.chatbox .chat-title p{color: #ffc5b6;}
+.chatbox .chat-list, .chatbox .aside{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.chatbox .chat-list{float: left;width: 70%;border-right: 1px solid #ebebeb;}
+.chatbox .chat-list ul{padding: 20px;background: #f6f6f6;}
+.chat-list li{margin-bottom: 20px;position: relative;}
+.chat-list .head{display: block;width: 40px;height: 40px;position: absolute;top: 0;}
+.chat-list .head img{width: 40px;height: 40px;border-radius: 50%;}
+.chat-list .text{border-radius: 3px;padding: 10px;position: relative;display: inline-block;margin-top: 15px;}
+.chat-list .answer .head{left: 0;}
+.chat-list .reply .head{right: 0;}
+.chat-list i{width: 0;height: 0;border-style: solid;position: absolute;top: 0;}
+.chat-list .answer i{left: -15px;border-width: 0 20px 20px 0;border-color: transparent #fff transparent transparent;}
+.chat-list .reply i{right: -15px;border-width: 20px 20px 0 0;border-color: #00aeff transparent transparent transparent;}
+.chat-list .answer .text{margin-left: 80px;background: #fff;box-shadow: 1px 1px 1px rgba(0,0,0,0.2);margin-right: 20px;word-break: break-all;}
+.chat-list .reply .text{background: #00aeff;margin-right: 80px;color: #fff;box-shadow: -1px 1px 1px rgba(0,0,0,0.2);margin-left: 20px;float: right;word-break:break-all;word-wrap:normal;}
+.chatbox .aside{float: right;width: 30%;}
+.chatbox .aside h3{background: #edecec;padding: 0 20px;font-size: 18px;color: #757575;}
+.chatbox .aside ul li{border-bottom: 1px solid #ebebeb;padding: 10px 20px;}
+.chatbox .aside ul li a{display: block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.chatbox .chat-bar{border-top: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb;padding: 5px 20px;}
+.chatbox .chat-bar a{display: inline-block;width: 30px;height: 30px;background-image: url(chat-icon.png);background-repeat: no-repeat;vertical-align: middle;margin-right: 10px;}
+.chatbox .chat-bar a.font{background-position: 0 0;}
+.chatbox .chat-bar a.pic{background-position: 0 -30px;}
+.chatbox .chat-send{padding: 20px;}
+.chatbox .chat-send textarea{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;width: 100%;padding: 10px;line-height: 24px;border: none;height: 200px;}

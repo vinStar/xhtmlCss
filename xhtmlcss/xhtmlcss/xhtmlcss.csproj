@@ -102,6 +102,7 @@
     <Content Include="BlockAndInline\Templates\.svn\entries" />
     <Content Include="BlockAndInline\Templates\.svn\text-base\dilog.dwt.svn-base" />
     <Content Include="BlockAndInline\Templates\dilog.dwt" />
+    <Content Include="problem\chat\Thumbs.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -151,6 +152,11 @@
     <Content Include="learn\scrile.html" />
     <Content Include="learn\tab.html" />
     <Content Include="learn\text-justify.html" />
+    <Content Include="problem\chat\111.html" />
+    <Content Include="problem\chat\chat-icon.png" />
+    <Content Include="problem\chat\chat.css" />
+    <Content Include="problem\chat\chatlogo.png" />
+    <Content Include="problem\chat\t.html" />
     <Content Include="V2.0\Html\api\AddAPIUser.html" />
     <Content Include="V2.0\Html\api\APIUserSearch.html" />
     <Content Include="V2.0\Html\temp\51.gif" />

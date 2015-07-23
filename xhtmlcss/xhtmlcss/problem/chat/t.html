@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        /*其他元素会侵入  块元素的border-width内边，而margin从border-width外边开始*/
+        /*块级元素（可设置宽高），行内元素（除不可替换元素，不可设置宽高）*/
+        /*行内元素不可替换元素 margin-left margin-right 有效 ，可替换元素全部有效，pandding 全部有效*/
+
+
+        html, body, div, span {
+            margin: 0px;
+            padding: 0px;
+            border-style: none;
+        }
+
+        #all {
+            margin: 40px;
+            /*padding: 20px;*/
+            width: 0px;
+            height: 0px;
+            border-top: 40px solid #000;
+            border-right: 40px solid #ff0000;
+            border-bottom: 40px solid #000;
+            border-left: 40px solid #ff0000;
+        }
+
+        div {
+            margin: 40px;
+            /*padding: 20px;*/
+            width: 0px;
+            height: 0px;
+            /*border-top: 40px solid #000;
+            border-right: 40px solid #ff0000;
+            border-bottom: 40px solid #000;
+            border-left: 40px solid #ff0000;*/
+            /*第一种方式*/
+            /*border-top: 40px solid #000;
+            border-right: 40px solid transparent;
+            border-bottom: 40px solid transparent;
+            border-left: 40px solid #000;*/
+            /*第二种方式*/
+            border-top: 40px solid #000;
+            border-right: 40px solid transparent;
+            border-bottom: 0px solid transparent;
+            border-left: 0px solid #000;
+        }
+
+        span {
+            border-top: 40px solid #00aeff;
+            border-right: 40px solid transparent;
+            border-bottom: 0px solid transparent;
+            border-left: 0px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all"> </div>
+    <div> </div>
+    <span></span>
+    <span> ok</span>
+    <a style="margin:10px; padding:20px;" href="#">ok</a>
+    <input style="margin:10px;padding:20px;" type="text" value="ok" />
+
+</body>
+</html>
