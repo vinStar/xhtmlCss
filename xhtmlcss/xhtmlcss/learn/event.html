@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Content/Script/event.js"></script>
+    <style>
+        /*reset*/
+        body, ul, ol, li, dl, dd, h1, h2, h3, h4, h5, h6, p, form, input[type='text'] {
+            margin: 0;
+        }
+        /*layout*/
+        html, body {
+            height: 100%;
+            background-color: #fff;
+        }
+    </style>
+    <script>
+        EventUtil.addHandler(window, "load", function () {
+            alert("loaded!");
+        });
+
+        //var div = document.getElementById("myDiv");
+        //EventUtil.addHandler(div, "click", function (event) {
+        //    event = EventUtil.getEvent(event);
+        //    alert("Client coordinates: " + event.clientX + "," + event.clientY);
+        //});
+
+    </script>
+</head>
+<body>
+    <form>
+        <div id="myDiv" style="width:100%;height:100%">
+            <input type="text" value="test" />
+
+        </div>
+        <script>
+            //鼠标页面坐标
+            var div = document.getElementById("myDiv");
+            EventUtil.addHandler(div, "click", function (event) {
+                event = EventUtil.getEvent(event);
+                var pageX = event.pageX,
+                pageY = event.pageY;
+                if (pageX === undefined) {
+                    pageX = event.clientX + (document.body.scrollLeft ||
+                    document.documentElement.scrollLeft);
+                }
+                if (pageY === undefined) {
+                    pageY = event.clientY + (document.body.scrollTop ||
+                    document.documentElement.scrollTop);
+                }
+                alert("Page coordinates: " + pageX + "," + pageY);
+            });
+            ////卸载
+            //EventUtil.addHandler(window, "unload", function (event) {
+            //    alert("Unloaded");
+            //});
+            //鼠标屏幕坐标
+            var div = document.getElementById("myDiv");
+            EventUtil.addHandler(div, "click", function (event) {
+                event = EventUtil.getEvent(event);
+                alert("Screen coordinates: " + event.screenX + "," + event.screenY);
+            });
+
+            //序列化
+            function serialize(form) {
+                var parts = [],
+                field = null,
+                i,
+                len,
+                j,
+                optLen,
+                option,
+                optValue;
+                for (i = 0, len = form.elements.length; i < len; i++) {
+                    field = form.elements[i];
+                    switch (field.type) {
+                        case "select-one":
+                        case "select-multiple":
+                            if (field.name.length) {
+                                for (j = 0, optLen = field.options.length; j < optLen; j++) {
+                                    option = field.options[j];
+                                    if (option.selected) {
+                                        optValue = "";
+                                        if (option.hasAttribute) {
+                                            optValue = (option.hasAttribute("value") ?
+                                            option.value : option.text);
+                                        } else {
+                                            optValue = (option.attributes["value"].specified ?
+                                            option.value : option.text);
+                                        }
+                                        parts.push(encodeURIComponent(field.name) + "=" +
+                                        encodeURIComponent(optValue));
+                                    }
+                                }
+                            }
+                            break;
+                        case undefined: //字段集
+                        case "file": //文件输入
+                        case "submit": //提交按钮
+                        case "reset": //重置按钮
+                        case "button": //自定义按钮
+                            break;
+                        case "radio": //单选按钮
+                        case "checkbox": //复选框
+                            if (!field.checked) {
+                                break;
+                            }
+                            /* 执行默认操作 */
+                        default:
+                            //不包含没有名字的表单字段
+                            if (field.name.length) {
+                                parts.push(encodeURIComponent(field.name) + "=" +
+                                encodeURIComponent(field.value));
+                            }
+                    }
+                }
+                return parts.join("&");
+            }
+
+            alert("ser" + serialize(document.forms[0]));
+
+
+        </script>
+    </form>
+</body>
+</html>
