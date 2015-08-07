@@ -103,10 +103,12 @@
     <Content Include="BlockAndInline\Templates\.svn\text-base\dilog.dwt.svn-base" />
     <Content Include="BlockAndInline\Templates\dilog.dwt" />
     <Content Include="learn\client.html" />
+    <Content Include="learn\canvas.html" />
     <Content Include="learn\Content\Script\client.js" />
     <Content Include="learn\Content\Script\event.js" />
     <Content Include="learn\csc.html" />
     <Content Include="learn\event.html" />
+    <Content Include="learn\tab2.html" />
     <Content Include="problem\chat\Thumbs.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
