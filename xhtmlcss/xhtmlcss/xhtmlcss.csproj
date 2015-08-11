@@ -108,7 +108,23 @@
     <Content Include="learn\Content\Script\event.js" />
     <Content Include="learn\csc.html" />
     <Content Include="learn\event.html" />
+    <Content Include="learn\index.html" />
     <Content Include="learn\tab2.html" />
+    <Content Include="learn\右下角广告（源代码）\icon.jpg" />
+    <Content Include="learn\右下角广告（源代码）\snow.gif" />
+    <Content Include="learn\右下角广告（源代码）\右下角弹框.html" />
+    <Content Include="learn\右下角广告（源代码）\右下角弹框1.html" />
+    <Content Include="learn\弹出层效果（源代码）\mydemo.html" />
+    <Content Include="learn\弹出层效果（源代码）\demo.html" />
+    <Content Include="learn\弹出层效果（源代码）\img\close.png" />
+    <Content Include="learn\弹出层效果（源代码）\img\footer_icon_logo.png" />
+    <Content Include="learn\弹出层效果（源代码）\img\freshtit.png" />
+    <Content Include="learn\弹出层效果（源代码）\img\index_banner01.jpg" />
+    <Content Include="learn\弹出层效果（源代码）\img\loginBg.png" />
+    <Content Include="learn\弹出层效果（源代码）\img\logo_index.png" />
+    <Content Include="learn\弹出层效果（源代码）\img\sprit.png" />
+    <Content Include="learn\弹出层效果（源代码）\img\weibo.png" />
+    <Content Include="learn\弹出层效果（源代码）\style\main.css" />
     <Content Include="problem\chat\Thumbs.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
