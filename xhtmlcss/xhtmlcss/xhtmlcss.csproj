@@ -107,6 +107,15 @@
     <Content Include="learn\Content\Script\client.js" />
     <Content Include="learn\Content\Script\event.js" />
     <Content Include="learn\Content\Script\JavaScript1.js" />
+    <Content Include="learn\NProgress\index.html" />
+    <Content Include="learn\NProgress\jquery-1.8.3.min.js" />
+    <Content Include="learn\NProgress\nprogress.css" />
+    <Content Include="learn\NProgress\nprogress.js" />
+    <Content Include="learn\NProgress\support\extras.css" />
+    <Content Include="learn\NProgress\support\style.css" />
+    <Content Include="learn\NProgress\test\component.html" />
+    <Content Include="learn\NProgress\test\index.html" />
+    <Content Include="learn\NProgress\test\test.js" />
     <Content Include="learn\theme.html" />
     <Content Include="learn\event.html" />
     <Content Include="learn\HtmlPage1.html" />
@@ -128,6 +137,10 @@
     <Content Include="learn\弹出层效果（源代码）\img\weibo.png" />
     <Content Include="learn\弹出层效果（源代码）\style\main.css" />
     <Content Include="problem\chat\Thumbs.db" />
+    <Content Include="learn\NProgress\License.md" />
+    <Content Include="learn\NProgress\Notes.md" />
+    <Content Include="learn\NProgress\package.json" />
+    <Content Include="learn\NProgress\Readme.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
