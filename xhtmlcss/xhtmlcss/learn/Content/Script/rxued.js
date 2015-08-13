@@ -334,7 +334,7 @@ rxued.cookie = {
 
 };
 
-
+ 
 
 
 //判断浏览器
@@ -365,6 +365,7 @@ rxued.Browser = {
             return agent.match(regStr_ie);
         }
     }
+    
 
 }
 

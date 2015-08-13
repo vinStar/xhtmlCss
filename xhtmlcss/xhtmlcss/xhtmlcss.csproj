@@ -106,8 +106,10 @@
     <Content Include="learn\canvas.html" />
     <Content Include="learn\Content\Script\client.js" />
     <Content Include="learn\Content\Script\event.js" />
-    <Content Include="learn\csc.html" />
+    <Content Include="learn\Content\Script\JavaScript1.js" />
+    <Content Include="learn\theme.html" />
     <Content Include="learn\event.html" />
+    <Content Include="learn\HtmlPage1.html" />
     <Content Include="learn\index.html" />
     <Content Include="learn\tab2.html" />
     <Content Include="learn\右下角广告（源代码）\icon.jpg" />
