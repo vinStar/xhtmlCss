@@ -107,6 +107,7 @@
     <Content Include="learn\Content\Script\client.js" />
     <Content Include="learn\Content\Script\event.js" />
     <Content Include="learn\Content\Script\JavaScript1.js" />
+    <Content Include="learn\NProgress\demo.html" />
     <Content Include="learn\NProgress\index.html" />
     <Content Include="learn\NProgress\jquery-1.8.3.min.js" />
     <Content Include="learn\NProgress\nprogress.css" />

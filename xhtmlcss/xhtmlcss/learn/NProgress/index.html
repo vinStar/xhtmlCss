@@ -66,35 +66,35 @@
     </div>
     <script>
 
-        //$('.version').text(NProgress.version);
-        //NProgress.start();
-        //setTimeout(function () { NProgress.done(); $('.fade').removeClass('out'); }, 1e3);
+        $('.version').text(NProgress.version);
+        NProgress.start();
+        setTimeout(function () { NProgress.done(); $('.fade').removeClass('out'); }, 1e3);
 
-        //$("#b-0").click(function () { NProgress.start(); });
-        //$("#b-40").click(function () { NProgress.set(0.4); });
-        //$("#b-inc").click(function () { NProgress.inc(); });
-        //$("#b-100").click(function () { NProgress.done(); });
+        $("#b-0").click(function () { NProgress.start(); });
+        $("#b-40").click(function () { NProgress.set(0.4); });
+        $("#b-inc").click(function () { NProgress.inc(); });
+        $("#b-100").click(function () { NProgress.done(); });
 
 
-        (function () {
-            var e = $.browser || {},
-                t = NProgress;
-            if (e.msie && $.browser.versionNumber < 8) return;
-            t.configure({
-                parent: "body",
-                template: '<div class="bar" role="bar"></div>'
-            }), t.start(), $(document).ready(function () {
-                t.inc(.5), setTimeout(function () {
-                    t.done()
-                }, 4e3)
-            }).ajaxStart(function () {
-                t.start()
-            }).ajaxComplete(function () {
-                t.done()
-            }), $(window).load(function () {
-                t.done()
-            })
-        })() 
+        //(function () {
+        //    var e = $.browser || {},
+        //        t = NProgress;
+        //    if (e.msie && $.browser.versionNumber < 8) return;
+        //    t.configure({
+        //        parent: "body",
+        //        template: '<div class="bar" role="bar"></div>'
+        //    }), t.start(), $(document).ready(function () {
+        //        t.inc(.5), setTimeout(function () {
+        //            t.done()
+        //        }, 4e3)
+        //    }).ajaxStart(function () {
+        //        t.start()
+        //    }).ajaxComplete(function () {
+        //        t.done()
+        //    }), $(window).load(function () {
+        //        t.done()
+        //    })
+        //})() 
     </script>
 
 </body>
